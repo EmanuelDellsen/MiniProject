@@ -1,13 +1,15 @@
 public class TeamMate {
     public String name;
-    public double salary;
+    public String salary;
     public int id;
 
-    public TeamMate(String name, int id, double salary) {
+    public TeamMate(String name, int id, String salary) {
         this.name = name;
         this.id = id;
         this.salary = salary;
     }
+
+
 
     public String getName() {
         return name;
@@ -17,11 +19,11 @@ public class TeamMate {
         this.name = name;
     }
 
-    public double getSalary() {
+    public String getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(String salary) {
         this.salary = salary;
     }
 
@@ -33,7 +35,9 @@ public class TeamMate {
         this.id = id;
     }
 
-    /*public String toString(){
+   /* public String toString(){
+
+
 
     }*/
 }

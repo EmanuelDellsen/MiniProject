@@ -4,12 +4,11 @@ import org.json.simple.parser.JSONParser;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public class jsonreading {
-
-
-    List<TeamMate> list = new ArrayList<>();
 
 
     public static void main(String[] args) {
@@ -17,35 +16,34 @@ public class jsonreading {
         JSONParser parser = new JSONParser();
 
         try {
-            Object object = parser.parse(new FileReader("/Users/emanueldellsen/Desktop/MiniProject/resources/teammates.json"));
+            Object object = parser.parse(new FileReader("C:\\Users\\Emanuel Dellsén\\Downloads\\MiniProject-master\\MiniProject-master\\MiniProject\\resources\\Project.json"));
 
-            //convert object to JSONObject
             JSONObject jsonObject = (JSONObject) object;
 
-            //reading the string
+            Project project = new Project((String)jsonObject.get("name"),(String) jsonObject.get("startDate"),(String) jsonObject.get("endDate"),Double.valueOf((String)jsonObject.get("budgetedCost")));
 
+            project.setTeammateList(new ArrayList<>());
 
-            String name = (String) jsonObject.get("name");
-            int id = (int) jsonObject.get("ID");
-            double salary = (double) jsonObject.get("salary");
+            JSONArray teammates = (JSONArray) jsonObject.get("teammates");
 
-            JSONArray teammate = (JSONArray) jsonObject.get("teammate");
+            Iterator<Map> iterator = teammates.iterator();
 
-            System.out.println(name);
-            System.out.println(id);
-            System.out.println(salary);
+            while (iterator.hasNext()){
 
+                Map member = iterator.next();
 
-            for (Object TeamMate : teammate){
+                String name = (String) member.get("name");
+                int id = Integer.valueOf( (String) member.get("id"));
+                String salary = (String) member.get("salary");
 
-                TeamMate member = new TeamMate((String) jsonObject.get(name), (int) jsonObject.get(id), (double) jsonObject.get(salary));
+                TeamMate person = new TeamMate(name, id, salary);
 
+                project.getTeammateList().add(person);
 
+                System.out.println(member);
 
             }
 
-        } catch (FileNotFoundException fe) {
-            fe.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }

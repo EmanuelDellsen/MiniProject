@@ -9,12 +9,43 @@ public class Project {
     public String name;
     public String startDate;
     public String endDate;
-    public double budgetedActualCost;
+    public double budgetedCost;
 
     private ArrayList<task> tasksList;
     private ArrayList<TeamMate> teammateList;
     private ArrayList<risk> riskList;
 
+    public double getBudgetedCost() {
+        return budgetedCost;
+    }
+
+    public void setBudgetedCost(double budgetedCost) {
+        this.budgetedCost = budgetedCost;
+    }
+
+    public ArrayList<task> getTasksList() {
+        return tasksList;
+    }
+
+    public void setTasksList(ArrayList<task> tasksList) {
+        this.tasksList = tasksList;
+    }
+
+    public ArrayList<TeamMate> getTeammateList() {
+        return teammateList;
+    }
+
+    public void setTeammateList(ArrayList<TeamMate> teammateList) {
+        this.teammateList = teammateList;
+    }
+
+    public ArrayList<risk> getRiskList() {
+        return riskList;
+    }
+
+    public void setRiskList(ArrayList<risk> riskList) {
+        this.riskList = riskList;
+    }
 
     public String getName() {
         return name;
@@ -41,18 +72,18 @@ public class Project {
     }
 
     public double getBudgetedActualCost() {
-        return budgetedActualCost;
+        return budgetedCost;
     }
 
     public void setBudgetedActualCost(double budgetedActualCost) {
-        this.budgetedActualCost = budgetedActualCost;
+        this.budgetedCost = budgetedActualCost;
     }
 
-    public Project(String name, String startDate, String endDate, double budgetedActualCost) {
+    public Project(String name, String startDate, String endDate, double budgetedCost) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.budgetedActualCost = budgetedActualCost;
+        this.budgetedCost = budgetedCost;
     }
 
 
