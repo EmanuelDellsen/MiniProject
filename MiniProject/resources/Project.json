@@ -49,14 +49,14 @@
         "startDate": "2018-11-01",
         "endDate": "2018-11-02",
         "completedTask": false,
-        "assignedTeamMates": [
+        "taskMate": [
           {
             "id": "1",
-            "hours": 10
+            "hoursWorked": 10
           },
           {
             "id": "2",
-            "hours": 12
+            "hoursWorked": 12
           }
         ]
       },
@@ -67,14 +67,14 @@
         "startDate": "2018-11-02",
         "endDate": "2018-11-03",
         "completedTask": true,
-        "assignedTeamMates": [
+        "taskMate": [
           {
             "id": "2",
-            "hours": 5
+            "hoursWorked": 5
           },
           {
             "id": "1",
-            "hours": 8
+            "hoursWorked": 8
           }
         ]
       }

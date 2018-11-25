@@ -1,7 +1,9 @@
+
+
 public class TeamMate {
-    public String name;
-    public String salary;
-    public int id;
+    private String name;
+    private String salary;
+    private int id;
 
     public TeamMate(String name, int id, String salary) {
         this.name = name;

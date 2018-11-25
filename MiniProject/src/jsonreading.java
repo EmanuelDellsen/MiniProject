@@ -24,13 +24,17 @@ public class jsonreading {
 
             project.setTeammateList(new ArrayList<>());
 
+            project.setTasksList(new ArrayList<>());
+
+
+
             JSONArray teammates = (JSONArray) jsonObject.get("teammates");
 
-            Iterator<Map> iterator = teammates.iterator();
+            Iterator<Map> teamMateIterator = teammates.iterator();
 
-            while (iterator.hasNext()){
+            while (teamMateIterator.hasNext()){
 
-                Map member = iterator.next();
+                Map member = teamMateIterator.next();
 
                 String name = (String) member.get("name");
                 int id = Integer.valueOf( (String) member.get("id"));
@@ -43,6 +47,31 @@ public class jsonreading {
                 System.out.println(member);
 
             }
+
+
+            JSONArray tasks = (JSONArray) jsonObject.get("tasks");
+
+            Iterator<Map> taskIterator = tasks.iterator();
+
+            while(taskIterator.hasNext()){
+
+                Map task = taskIterator.next();
+
+                int id = Integer.valueOf( (String) task.get("id"));
+                String name = (String) task.get("name");
+                String description = (String) task.get("description");
+                String startDate = (String) task.get("startDate");
+                String endDate = (String) task.get("endDate");
+                boolean completedTask = Boolean.valueOf( (String) task.get("completedTask"));
+
+                ProjTask projTask1 = new ProjTask(id, name, description, startDate, endDate, completedTask);
+
+                project.getTasksList().add(projTask1);
+
+
+
+            }
+
 
         } catch (Exception e) {
             e.printStackTrace();
