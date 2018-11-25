@@ -9,9 +9,9 @@ public class Project {
     private String name;
     private String startDate;
     private String endDate;
-    private double budgetedCost;
+    private double budgetedActualCost;
 
-    private ArrayList<ProjTask> tasksList;
+    private ArrayList<ProjectTask> tasksList;
     private ArrayList<TeamMate> teammateList;
     private ArrayList<risk> riskList;
 
@@ -20,7 +20,7 @@ public class Project {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.budgetedCost = budgetedCost;
+        this.budgetedActualCost = budgetedCost;
     }
 
 
@@ -78,18 +78,18 @@ public class Project {
     }
 
     public double getBudgetedCost() {
-        return budgetedCost;
+        return budgetedActualCost;
     }
 
     public void setBudgetedCost(double budgetedCost) {
-        this.budgetedCost = budgetedCost;
+        this.budgetedActualCost = budgetedCost;
     }
 
-    public ArrayList<ProjTask> getTasksList() {
+    public ArrayList<ProjectTask> getTasksList() {
         return tasksList;
     }
 
-    public void setTasksList(ArrayList<ProjTask> tasksList) {
+    public void setTasksList(ArrayList<ProjectTask> tasksList) {
         this.tasksList = tasksList;
     }
 
@@ -134,11 +134,11 @@ public class Project {
     }
 
     public double getBudgetedActualCost() {
-        return budgetedCost;
+        return budgetedActualCost;
     }
 
     public void setBudgetedActualCost(double budgetedActualCost) {
-        this.budgetedCost = budgetedActualCost;
+        this.budgetedActualCost = budgetedActualCost;
     }
 
 
