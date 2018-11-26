@@ -31,6 +31,8 @@ public class jsonreading {
             project.setRiskList(new ArrayList<>());
 
 
+
+
             JSONArray teammates = (JSONArray) jsonObject.get("teammates");
 
             Iterator<Map> teamMateIterator = teammates.iterator();
@@ -54,6 +56,8 @@ public class jsonreading {
 
             JSONArray tasks = (JSONArray) jsonObject.get("tasks");
 
+
+
             Iterator<Map> taskIterator = tasks.iterator();
 
             while (taskIterator.hasNext()) {
@@ -69,19 +73,31 @@ public class jsonreading {
 
                 ProjectTask projectTask = new ProjectTask(id, name, description, startDate, endDate, completedTask);
 
+                project.getTasksList().add(projectTask);
 
-                JSONArray taskmate = (JSONArray) jsonObject.get("taskMate");
+                System.out.println(projectTask);
 
-                Iterator<Map> taskMateIterator = taskmate.iterator();
 
-                while (taskMateIterator.hasNext()) {
-
-                    Map taskMate = taskMateIterator.next();
-
-                    int id = Integer.valueOf( (String) task.get("id"));
 
                 }
-                project.getTasksList().add(projectTask);
+
+
+            JSONArray taskmate = (JSONArray) jsonObject.get("taskMate");
+
+            Iterator<Map> taskMateIterator = taskmate.iterator();
+
+            while (taskMateIterator.hasNext()) {
+
+                Map taskMate = taskMateIterator.next();
+
+                int id = Integer.valueOf( (String) taskmate.get("id"));
+                Double hoursWorked = Double.valueOf((String) taskmate.get("hoursWorked"));
+
+                TaskMate taskMate1 = new TaskMate(id, hoursWorked);
+
+
+
+
 
 
             }
