@@ -37,9 +37,9 @@ public class TeamMate {
         this.id = id;
     }
 
-   /* public String toString(){
 
+    public String toString() {
+        return "name= " + name + '\'' + ", salary= " + salary + '\'' + ", id=" + id;
+    }
 
-
-    }*/
 }

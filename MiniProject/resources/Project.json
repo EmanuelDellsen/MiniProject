@@ -43,54 +43,54 @@
     ],
     "tasks": [
       {
-        "id": 1,
+        "id": "1",
         "name": "CreateTrelloWorkSpace",
         "description": "We need a Trello workspace",
         "startDate": "2018-11-01",
         "endDate": "2018-11-02",
-        "completedTask": false,
+        "completedTask": "false",
         "taskMate": [
           {
             "id": "1",
-            "hoursWorked": 10
+            "hoursWorked": "10"
           },
           {
             "id": "2",
-            "hoursWorked": 12
+            "hoursWorked": "12"
           }
         ]
       },
       {
-        "id": 2,
+        "id": "2",
         "name": "CreateSlackWorkspace",
         "description": "We need a Slack workspace",
         "startDate": "2018-11-02",
         "endDate": "2018-11-03",
-        "completedTask": true,
+        "completedTask": "true",
         "taskMate": [
           {
             "id": "2",
-            "hoursWorked": 5
+            "hoursWorked": "5"
           },
           {
             "id": "1",
-            "hoursWorked": 8
+            "hoursWorked": "8"
           }
         ]
       }
     ],
     "risks": [
       {
-        "id": 1,
+        "id": "1",
         "name": "BadCommunication",
-        "probability": 0.2,
-        "impact": 2
+        "probability": "0.2",
+        "impact": "2"
       },
       {
-        "id": 2,
+        "id": "2",
         "name": "LateForMeeting",
-        "probability": 0.9,
-        "impact": 4
+        "probability": "0.9",
+        "impact": "4"
       }
     ]
   }

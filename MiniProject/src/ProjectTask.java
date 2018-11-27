@@ -24,6 +24,16 @@ public class ProjectTask {
 
     }
 
+
+    public String toString() {
+        return "id=" + id + ", name= " + name + '\'' +
+                ", description='" + description + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", completedTask=" + completedTask +
+                '}';
+    }
+
     public int getId() {
         return id;
     }

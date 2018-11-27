@@ -17,7 +17,7 @@ public class jsonreading {
         JSONParser parser = new JSONParser();
 
         try {
-            Object object = parser.parse(new FileReader("C:\\Users\\Emanuel Dellsén\\Downloads\\MiniProject-master\\MiniProject-master\\MiniProject\\resources\\Project.json"));
+            Object object = parser.parse(new FileReader("/Users/emanueldellsen/Desktop/MiniProject1/MiniProject/resources/Project.json"));
 
             JSONObject jsonObject = (JSONObject) object;
 
@@ -49,10 +49,12 @@ public class jsonreading {
 
                 project.getTeammateList().add(person);
 
-                System.out.println(member);
+                System.out.println(person);
+
 
             }
 
+            System.out.println(project.getTeammateList().get(1));
 
             JSONArray tasks = (JSONArray) jsonObject.get("tasks");
 
@@ -82,7 +84,7 @@ public class jsonreading {
                 }
 
 
-            JSONArray taskmate = (JSONArray) jsonObject.get("taskMate");
+           /* JSONArray taskmate = (JSONArray) jsonObject.get("taskMate");
 
             Iterator<Map> taskMateIterator = taskmate.iterator();
 
@@ -100,7 +102,7 @@ public class jsonreading {
 
 
 
-            }
+            }*/
 
 
         } catch (Exception e) {
