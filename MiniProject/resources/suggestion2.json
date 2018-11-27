@@ -27,7 +27,7 @@
       "description":"We need a Trello workspace",
       "startDate": "2018-11-01",
       "endDate": "2018-11-02",
-      "completedTask":false,
+      "taskIsComplete":false,
       "assignedTeamMates":	[
         {
           "object<1>":"Karl Westgårdh",
@@ -45,7 +45,7 @@
     "description":"We need a Slack workspace",
     "startDate": "2018-11-02",
     "endDate": "2018-11-03",
-    "completedTask":true,
+    "taskIsComplete":true,
     "assignedTeamMates":	[
       {
         "object<2>":"Emanuel Dellsén",

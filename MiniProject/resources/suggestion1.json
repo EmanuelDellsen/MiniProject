@@ -26,7 +26,7 @@
         		"description":"We need a Trello workspace",
 			"startDate": "2018-11-01",
 			"endDate": "2018-11-02",
-			"completedTask":false
+			"taskIsComplete":false
 			"assignedTeamMates":	[
 					{
         					<id>1,
@@ -42,7 +42,7 @@
                 	"description":"We need a Slack workspace",
 			"startDate": "2018-11-02",
 			"endDate": "2018-11-03",
-			"completedTask":true
+			"taskIsComplete":true
 			"assignedTeamMates":	[
 					{
         					<id>2,

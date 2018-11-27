@@ -8,19 +8,19 @@ public class Task {
     private String description;
     private String startDate;
     private String endDate;
-    private boolean completedTask;
+    private boolean taskIsComplete;
 
     public ArrayList<TaskMember> taskMatesList;
 
 
-    public Task(int id, String name, String description, String startDate, String endDate, boolean completedTask) {
+    public Task(int id, String name, String description, String startDate, String endDate, boolean taskIsComplete) {
 
         this.id = id;
         this.name = name;
         this.description = description;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.completedTask = completedTask;
+        this.taskIsComplete = taskIsComplete;
 
     }
 
@@ -30,7 +30,7 @@ public class Task {
                 ", description='" + description + '\'' +
                 ", startDate='" + startDate + '\'' +
                 ", endDate='" + endDate + '\'' +
-                ", completedTask=" + completedTask +
+                ", taskIsComplete=" + taskIsComplete +
                 '}';
     }
 
@@ -74,12 +74,12 @@ public class Task {
         this.endDate = endDate;
     }
 
-    public boolean isCompletedTask() {
-        return completedTask;
+    public boolean isTaskIsComplete() {
+        return taskIsComplete;
     }
 
-    public void setCompletedTask(boolean completedTask) {
-        this.completedTask = completedTask;
+    public void setTaskIsComplete(boolean taskIsComplete) {
+        this.taskIsComplete = taskIsComplete;
     }
 
     public  ArrayList<TaskMember> getTaskMatesList() {
