@@ -1,37 +1,37 @@
 [{
   "name": "Nafen Haj Ahmad",
   "id": "1",
-  "salary": "30000"
+  "salaryPerHour": "30000"
 },
   {
     "name": "Simon Johansson",
     "id": "2",
-    "salary": "27000"
+    "salaryPerHour": "27000"
   },
   {
     "name": "Karl Westgardh",
     "id": "3",
-    "salary": "27000"
+    "salaryPerHour": "27000"
   },
   {
     "name": "Clemens Lans",
     "id": "4",
-    "salary": "27000"
+    "salaryPerHour": "27000"
   },
   {
     "name": "Emanuel Dellsen",
     "id": "5",
-    "salary": "27000"
+    "salaryPerHour": "27000"
   },
   {
     "name": "Niklas Moller",
     "id": "6",
-    "salary": "27000"
+    "salaryPerHour": "27000"
   },
   {
     "name": "Thiago Hlebanja Oliva",
     "id": "7",
-    "salary": "27000"
+    "salaryPerHour": "27000"
   }
 ]
 

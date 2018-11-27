@@ -38,7 +38,7 @@ public class vamos {
 
     public static void parseTeammateObject( JSONObject teammate){
 
-        JSONObject teammateObject = (JSONObject) teammate.get("TeamMate");
+        JSONObject teammateObject = (JSONObject) teammate.get("TeamMember");
 
         String name = (String) teammateObject.get("name");
         System.out.println(name);

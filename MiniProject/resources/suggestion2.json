@@ -4,7 +4,7 @@
     "name": "Duckies",
     "startDate": "2018-11-12",
     "endDate": "2019-01-12",
-    "budgetedCost": 10000,
+    "budgetAtCompletion": 10000,
     "teammate": [
       {
         "id": 1,

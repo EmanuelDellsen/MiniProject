@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ProjectTask {
+public class Task {
 
 
     private int id;
@@ -10,10 +10,10 @@ public class ProjectTask {
     private String endDate;
     private boolean completedTask;
 
-    public ArrayList<TaskMate> taskMatesList;
+    public ArrayList<TaskMember> taskMatesList;
 
 
-    public ProjectTask(int id, String name, String description, String startDate, String endDate, boolean completedTask) {
+    public Task(int id, String name, String description, String startDate, String endDate, boolean completedTask) {
 
         this.id = id;
         this.name = name;
@@ -82,11 +82,11 @@ public class ProjectTask {
         this.completedTask = completedTask;
     }
 
-    public  ArrayList<TaskMate> getTaskMatesList() {
+    public  ArrayList<TaskMember> getTaskMatesList() {
         return taskMatesList ;
     }
 
-    public void setTaskMatesList(ArrayList<TaskMate> taskMatesList) {
+    public void setTaskMatesList(ArrayList<TaskMember> taskMatesList) {
         this.taskMatesList = taskMatesList;
     }
 
