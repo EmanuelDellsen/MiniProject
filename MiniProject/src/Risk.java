@@ -1,2 +1,2 @@
-public class risk {
+public class Risk {
 }

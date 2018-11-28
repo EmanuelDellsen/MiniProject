@@ -13,7 +13,7 @@ public class Project {
     //private ArrayList<ArrayList<Task>> taskList;
     private ArrayList<Task> taskList;
     private ArrayList<TeamMember> teamMemberList;
-    private ArrayList<risk> riskList;
+    private ArrayList<Risk> riskList;
 
 
     public Project(String name, String startDate, String endDate, double budgetAtCompletion) {
@@ -101,11 +101,11 @@ public class Project {
         this.teamMemberList = teamMemberList;
     }
 
-    public ArrayList<risk> getRiskList() {
+    public ArrayList<Risk> getRiskList() {
         return riskList;
     }
 
-    public void setRiskList(ArrayList<risk> riskList) {
+    public void setRiskList(ArrayList<Risk> riskList) {
         this.riskList = riskList;
     }
 
