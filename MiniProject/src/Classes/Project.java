@@ -1,4 +1,4 @@
-
+package Classes;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ public class Project {
     private String endDate;
     private double budgetAtCompletion;
 
-    //private ArrayList<ArrayList<Task>> taskList;
+    //private ArrayList<ArrayList<Classes.Task>> taskList;
     private ArrayList<Task> taskList;
     private ArrayList<TeamMember> teamMemberList;
     private ArrayList<Risk> riskList;

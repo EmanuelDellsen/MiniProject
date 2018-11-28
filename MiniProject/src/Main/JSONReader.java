@@ -1,3 +1,10 @@
+package Main;
+
+
+import Classes.Project;
+import Classes.Task;
+import Classes.TaskMember;
+import Classes.TeamMember;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -13,7 +20,7 @@ public class JSONReader {
         JSONParser parser = new JSONParser();
 
         try {
-            Object object = parser.parse(new FileReader("/Users/emanueldellsen/Desktop/MiniProject1/MiniProject/resources/Project.json"));
+            Object object = parser.parse(new FileReader("/Users/emanueldellsen/Desktop/MiniProject1/MiniProject/resources/Classes.Project.json"));
 
             JSONObject jsonObject = (JSONObject) object;
 
@@ -25,9 +32,6 @@ public class JSONReader {
             project.setTaskList(new ArrayList<>());
 
             project.setRiskList(new ArrayList<>());
-
-
-
 
             JSONArray teammates = (JSONArray) jsonObject.get("teamMembers");
 
@@ -72,32 +76,29 @@ public class JSONReader {
 
                 System.out.println(newTask);
 
-               // Map<String, String> mapObject = new HashMap<> ();
+                // Map<String, String> mapObject = new HashMap<> ();
 
 
-            JSONArray taskmate = (JSONArray) jsonObject.get("taskMember");
+                JSONArray taskmate = (JSONArray) jsonObject.get("taskMember");
 
-            Iterator<Map> taskMateIterator = taskmate.iterator();
+                Iterator<Map> taskMateIterator = taskmate.iterator();
 
-            while (taskMateIterator.hasNext()) {
+                while (taskMateIterator.hasNext()) {
 
-                Map taskMate = taskMateIterator.next();
+                    Map taskMate = taskMateIterator.next();
 
-                id = Integer.valueOf((String) taskMate.get("id"));
-                Double hoursWorked = Double.valueOf((String) taskMate.get("hoursWorked"));
+                    id = Integer.valueOf((String) taskMate.get("id"));
+                    Double hoursWorked = Double.valueOf((String) taskMate.get("hoursWorked"));
 
-                TaskMember taskMember1 = new TaskMember(id, hoursWorked);
+                    TaskMember taskMember1 = new TaskMember(id, hoursWorked);
 
-                newTask.getTaskMatesList().add(taskMember1);
+                    newTask.getTaskMatesList().add(taskMember1);
 
-                System.out.println(taskMember1);
+                    System.out.println(taskMember1);
 
-            }
-
-
+                }
 
             }
-
 
         } catch (Exception e) {
             e.printStackTrace();
