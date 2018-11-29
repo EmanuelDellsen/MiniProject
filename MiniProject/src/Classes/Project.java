@@ -1,7 +1,6 @@
-
+package Classes;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class Project {
@@ -10,18 +9,19 @@ public class Project {
     private String name;
     private String startDate;
     private String endDate;
-    private double budgetedActualCost;
+    private double budgetAtCompletion;
 
-    private ArrayList<ProjectTask> tasksList;
-    private ArrayList<TeamMate> teammateList;
-    private ArrayList<risk> riskList;
+    //private ArrayList<ArrayList<Classes.Task>> taskList;
+    private ArrayList<Task> taskList;
+    private ArrayList<TeamMember> teamMemberList;
+    private ArrayList<Risk> riskList;
 
 
-    public Project(String name, String startDate, String endDate, double budgetedCost) {
+    public Project(String name, String startDate, String endDate, double budgetAtCompletion) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.budgetedActualCost = budgetedCost;
+        this.budgetAtCompletion = budgetAtCompletion;
     }
 
 
@@ -79,34 +79,34 @@ public class Project {
     }
 
     public double getBudgetedCost() {
-        return budgetedActualCost;
+        return budgetAtCompletion;
     }
 
-    public void setBudgetedCost(double budgetedCost) {
-        this.budgetedActualCost = budgetedCost;
+    public void setBudgetedCost(double budgetAtCompletion) {
+        this.budgetAtCompletion = budgetAtCompletion;
     }
 
-    public ArrayList<ProjectTask> getTasksList() {
-        return tasksList;
+    public ArrayList<Task> getTaskList() {
+        return taskList;
     }
 
-    public void setTasksList(ArrayList<ProjectTask> tasksList) {
-        this.tasksList = tasksList;
+    public void setTaskList(ArrayList<Task> taskList) {
+        this.taskList = taskList;
     }
 
-    public ArrayList<TeamMate> getTeammateList() {
-        return teammateList;
+    public ArrayList<TeamMember> getTeamMemberList() {
+        return teamMemberList;
     }
 
-    public void setTeammateList(ArrayList<TeamMate> teammateList) {
-        this.teammateList = teammateList;
+    public void setTeamMemberList(ArrayList<TeamMember> teamMemberList) {
+        this.teamMemberList = teamMemberList;
     }
 
-    public ArrayList<risk> getRiskList() {
+    public ArrayList<Risk> getRiskList() {
         return riskList;
     }
 
-    public void setRiskList(ArrayList<risk> riskList) {
+    public void setRiskList(ArrayList<Risk> riskList) {
         this.riskList = riskList;
     }
 
@@ -134,12 +134,12 @@ public class Project {
         this.endDate = endDate;
     }
 
-    public double getBudgetedActualCost() {
-        return budgetedActualCost;
+    public double getBudgetAtCompletion() {
+        return budgetAtCompletion;
     }
 
-    public void setBudgetedActualCost(double budgetedActualCost) {
-        this.budgetedActualCost = budgetedActualCost;
+    public void setBudgetAtCompletion(double budgetAtCompletion) {
+        this.budgetAtCompletion = budgetAtCompletion;
     }
 
 

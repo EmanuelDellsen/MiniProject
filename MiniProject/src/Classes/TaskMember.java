@@ -1,9 +1,11 @@
-public class TaskMate {
+package Classes;
+
+public class TaskMember {
 
     private int id;
     private double hoursWorked;
 
-    public TaskMate (int id, double hoursWorked){
+    public TaskMember(int id, double hoursWorked){
 
         this.id=id;
         this.hoursWorked=hoursWorked;

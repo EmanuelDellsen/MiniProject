@@ -1,6 +1,8 @@
+package Classes;
+
 import java.util.ArrayList;
 
-public class ProjectTask {
+public class Task {
 
 
     private int id;
@@ -8,20 +10,30 @@ public class ProjectTask {
     private String description;
     private String startDate;
     private String endDate;
-    private boolean completedTask;
+    private boolean taskIsComplete;
 
-    public ArrayList<TaskMate> taskMatesList;
+    private ArrayList<TaskMember> taskMatesList;
 
 
-    public ProjectTask(int id, String name, String description, String startDate, String endDate, boolean completedTask) {
+    public Task(int id, String name, String description, String startDate, String endDate, boolean taskIsComplete) {
 
         this.id = id;
         this.name = name;
         this.description = description;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.completedTask = completedTask;
+        this.taskIsComplete = taskIsComplete;
 
+    }
+
+
+    public String toString() {
+        return "id=" + id + ", name= " + name + '\'' +
+                ", description='" + description + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", taskIsComplete=" + taskIsComplete +
+                '}';
     }
 
     public int getId() {
@@ -64,19 +76,19 @@ public class ProjectTask {
         this.endDate = endDate;
     }
 
-    public boolean isCompletedTask() {
-        return completedTask;
+    public boolean isTaskIsComplete() {
+        return taskIsComplete;
     }
 
-    public void setCompletedTask(boolean completedTask) {
-        this.completedTask = completedTask;
+    public void setTaskIsComplete(boolean taskIsComplete) {
+        this.taskIsComplete = taskIsComplete;
     }
 
-    public  ArrayList<TaskMate> getTaskMatesList() {
+    public  ArrayList<TaskMember> getTaskMatesList() {
         return taskMatesList ;
     }
 
-    public void setTaskMatesList(ArrayList<TaskMate> taskMatesList) {
+    public void setTaskMatesList(ArrayList<TaskMember> taskMatesList) {
         this.taskMatesList = taskMatesList;
     }
 

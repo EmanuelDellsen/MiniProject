@@ -3,94 +3,94 @@
     "name": "Duckies",
     "startDate": "2018-11-12",
     "endDate": "2019-01-12",
-    "budgetedCost": "10000",
-    "teammates": [
+    "budgetAtCompletion": "10000",
+    "teamMembers": [
       {
         "name": "Nafen Haj Ahmad",
         "id": "1",
-        "salary": "30000"
+        "salaryPerHour": "30000"
       },
         {
           "name": "Simon Johansson",
           "id": "2",
-          "salary": "27000"
+          "salaryPerHour": "27000"
         },
         {
           "name": "Karl Westgardh",
           "id": "3",
-          "salary": "27000"
+          "salaryPerHour": "27000"
         },
         {
           "name": "Clemens Lans",
           "id": "4",
-          "salary": "27000"
+          "salaryPerHour": "27000"
         },
         {
           "name": "Emanuel Dellsen",
           "id": "5",
-          "salary": "27000"
+          "salaryPerHour": "27000"
         },
         {
           "name": "Niklas Moller",
           "id": "6",
-          "salary": "27000"
+          "salaryPerHour": "27000"
         },
         {
           "name": "Thiago Hlebanja Oliva",
           "id": "7",
-          "salary": "27000"
+          "salaryPerHour": "27000"
         }
     ],
     "tasks": [
       {
-        "id": 1,
+        "id": "1",
         "name": "CreateTrelloWorkSpace",
         "description": "We need a Trello workspace",
         "startDate": "2018-11-01",
         "endDate": "2018-11-02",
-        "completedTask": false,
-        "taskMate": [
+        "taskIsComplete": "false",
+        "taskMembers": [
           {
             "id": "1",
-            "hoursWorked": 10
+            "hoursWorked": "10"
           },
           {
             "id": "2",
-            "hoursWorked": 12
+            "hoursWorked": "12"
           }
         ]
       },
       {
-        "id": 2,
+        "id": "2",
         "name": "CreateSlackWorkspace",
         "description": "We need a Slack workspace",
         "startDate": "2018-11-02",
         "endDate": "2018-11-03",
-        "completedTask": true,
-        "taskMate": [
+        "taskIsComplete": "true",
+        "taskMembers": [
           {
             "id": "2",
-            "hoursWorked": 5
+            "hoursWorked": "5"
           },
           {
             "id": "1",
-            "hoursWorked": 8
+            "hoursWorked": "8"
           }
         ]
       }
     ],
     "risks": [
       {
-        "id": 1,
+        "id": "1",
         "name": "BadCommunication",
-        "probability": 0.2,
-        "impact": 2
+        "probability": "0.2",
+        "impact": "2"
       },
       {
-        "id": 2,
+        "id": "2",
         "name": "LateForMeeting",
-        "probability": 0.9,
-        "impact": 4
+        "probability": "0.9",
+        "impact": "4"
       }
     ]
   }
