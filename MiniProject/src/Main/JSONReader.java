@@ -1,6 +1,5 @@
 package Main;
 
-
 import Classes.Project;
 import Classes.Task;
 import Classes.TaskMember;
@@ -24,14 +23,14 @@ public class JSONReader {
 
             JSONObject jsonObject = (JSONObject) object;
 
-            Project project = new Project((String) jsonObject.get("name"), (String) jsonObject.get("startDate"),
+            Project newProject = new Project((String) jsonObject.get("name"), (String) jsonObject.get("startDate"),
                     (String) jsonObject.get("endDate"), Double.valueOf((String) jsonObject.get("budgetAtCompletion")));
 
-            project.setTeamMemberList(new ArrayList<>());
+            newProject.setTeamMemberList(new ArrayList<>());
 
-            project.setTaskList(new ArrayList<>());
+            newProject.setTaskList(new ArrayList<>());
 
-            project.setRiskList(new ArrayList<>());
+            newProject.setRiskList(new ArrayList<>());
 
             JSONArray teammates = (JSONArray) jsonObject.get("teamMembers");
 
@@ -45,11 +44,11 @@ public class JSONReader {
                 int id = Integer.valueOf((String) member.get("id"));
                 String salary = (String) member.get("salaryPerHour");
 
-                TeamMember person = new TeamMember(name, id, salary);
+                TeamMember newTeamMember = new TeamMember(name, id, salary);
 
-                project.getTeamMemberList().add(person);
+                newProject.getTeamMemberList().add(newTeamMember);
 
-                System.out.println(person);
+                System.out.println(newTeamMember);
 
             }
 
@@ -70,13 +69,15 @@ public class JSONReader {
 
                 Task newTask = new Task(id, name, description, startDate, endDate, completedTask);
 
-                project.getTaskList().add(newTask);
+                newProject.getTaskList().add(newTask);
 
                 newTask.setTaskMatesList(new ArrayList<>());
 
                 System.out.println(newTask);
 
                 // Map<String, String> mapObject = new HashMap<> ();
+
+            }
 
 
                 JSONArray taskmate = (JSONArray) jsonObject.get("taskMember");
@@ -87,18 +88,18 @@ public class JSONReader {
 
                     Map taskMate = taskMateIterator.next();
 
-                    id = Integer.valueOf((String) taskMate.get("id"));
+                    int id = Integer.valueOf((String) taskMate.get("id"));
                     Double hoursWorked = Double.valueOf((String) taskMate.get("hoursWorked"));
 
                     TaskMember taskMember1 = new TaskMember(id, hoursWorked);
 
-                    newTask.getTaskMatesList().add(taskMember1);
+                    Task.getTaskMatesList().add(taskMember1);
 
                     System.out.println(taskMember1);
 
                 }
 
-            }
+
 
         } catch (Exception e) {
             e.printStackTrace();

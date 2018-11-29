@@ -12,7 +12,7 @@ public class Task {
     private String endDate;
     private boolean taskIsComplete;
 
-    public ArrayList<TaskMember> taskMatesList;
+    private ArrayList<TaskMember> taskMatesList;
 
 
     public Task(int id, String name, String description, String startDate, String endDate, boolean taskIsComplete) {
