@@ -5,6 +5,10 @@ public class Risk {
     private String riskName;
     private double probability;
     private int impact;
+    protected final double CATESTROPHIC_LEVEL= 4.0;
+    protected final double SEVERE_LEVEL= 3.0;
+    protected final double MODERATE_LEVEL= 2.0;
+
 
     public Risk( int riskId, String riskName, double probability, int impact){
         this.riskId= riskId;
@@ -13,6 +17,24 @@ public class Risk {
         this.impact= impact;
 
     }
+    public String returnRisk(){
+        String risk="";
+        double riskLevel= this.probability*this.impact;
+
+        if(riskLevel>=CATESTROPHIC_LEVEL){
+            risk="Catastrophic";
+        }
+        else if(riskLevel<CATESTROPHIC_LEVEL && riskLevel>=SEVERE_LEVEL) {
+            risk = "Severe";
+        }
+        else if(riskLevel< SEVERE_LEVEL && riskLevel>= MODERATE_LEVEL) {
+            risk = "Moderate";
+        }
+        else if(riskLevel<MODERATE_LEVEL){
+            risk="Low";
+            }
+        return risk;
+        }
 
     public int getRiskId(){
         return this.riskId;
@@ -25,7 +47,6 @@ public class Risk {
     }
     public int getImpact(){
         return this.impact;
-
 
     }
 }

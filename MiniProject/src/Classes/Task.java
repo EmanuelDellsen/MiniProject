@@ -1,55 +1,57 @@
 package Classes;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Task {
 
 
-    private int id;
-    private String name;
+    private int taskId;
+    private String taskName;
     private String description;
-    private String startDate;
-    private String endDate;
-    private boolean taskIsComplete;
-
-    private ArrayList<TaskMember> taskMatesList;
+    private String actualStartDate;
+    private String projectedCompletedDate;
+    private String actualCompletedDate;
 
 
-    public Task(int id, String name, String description, String startDate, String endDate, boolean taskIsComplete) {
+    //private Map<TaskMember, hoursWorked> taskMatesList; this needs to go to the constructor
 
-        this.id = id;
-        this.name = name;
+
+    public Task(int taskId, String taskName, String description, String actualStartDate, String projectedCompletedDate, String actualCompletedDate) {
+
+        this.taskId = taskId;
+        this.taskName = taskName;
         this.description = description;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.taskIsComplete = taskIsComplete;
+        this.actualStartDate = actualStartDate;
+        this.projectedCompletedDate = projectedCompletedDate;
+        this.actualCompletedDate = actualCompletedDate;
 
     }
 
 
     public String toString() {
-        return "id=" + id + ", name= " + name + '\'' +
+        return "id=" + taskId + ", name= " + taskName + '\'' +
                 ", description='" + description + '\'' +
-                ", startDate='" + startDate + '\'' +
-                ", endDate='" + endDate + '\'' +
-                ", taskIsComplete=" + taskIsComplete +
+                ", start date='" + actualStartDate + '\'' +
+                ", project completed date='" + projectedCompletedDate + '\'' +
+                ", actual completed date='" + actualCompletedDate +
                 '}';
     }
 
     public int getId() {
-        return id;
+        return taskId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.taskId = taskId;
     }
 
     public String getName() {
-        return name;
+        return taskName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.taskName = taskName;
     }
 
     public String getDescription() {
@@ -61,29 +63,29 @@ public class Task {
     }
 
     public String getStartDate() {
-        return startDate;
+        return actualStartDate;
     }
 
     public void setStartDate(String startDate) {
-        this.startDate = startDate;
+        this.actualStartDate = actualStartDate;
     }
 
-    public String getEndDate() {
-        return endDate;
+    public String getProjectedCompletedDate() {
+        return projectedCompletedDate;
     }
 
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
+    public void setProjectedCompletedDate(String projectedCompletedDate) {
+        this.projectedCompletedDate = projectedCompletedDate;
     }
 
-    public boolean isTaskIsComplete() {
-        return taskIsComplete;
+    public String getActualCompletedDate() {
+        return actualCompletedDate;
     }
 
-    public void setTaskIsComplete(boolean taskIsComplete) {
-        this.taskIsComplete = taskIsComplete;
+    public void setActualCompletedDate(String actualCompletedDate) {
+        this.actualCompletedDate = actualCompletedDate;
     }
-
+/*
     public  ArrayList<TaskMember> getTaskMatesList() {
         return taskMatesList ;
     }
@@ -91,7 +93,7 @@ public class Task {
     public void setTaskMatesList(ArrayList<TaskMember> taskMatesList) {
         this.taskMatesList = taskMatesList;
     }
-
+*/
 }
 
 
