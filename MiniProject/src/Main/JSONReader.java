@@ -7,21 +7,32 @@ import Classes.TeamMember;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 public class JSONReader {
 
 
+    public void readJSONFile() throws FileNotFoundException, ParseException, IOException {
+
+    }
+
+    public void createProject(){
+
+    }
+
     public static void main(String[] args) {
 
-        JSONParser parser = new JSONParser();
 
         try {
-            Object object = parser.parse(new FileReader("/Users/emanueldellsen/Desktop/MiniProject1/MiniProject/resources/Classes.Project.json"));
-
+            JSONParser parser = new JSONParser();
+            Object object = parser.parse(new FileReader("Project.json"));
             JSONObject jsonObject = (JSONObject) object;
+
 
             Project newProject = new Project((String) jsonObject.get("name"), (String) jsonObject.get("startDate"),
                     (String) jsonObject.get("endDate"), Double.valueOf((String) jsonObject.get("budgetAtCompletion")));
@@ -80,7 +91,12 @@ public class JSONReader {
             }
 
 
-                JSONArray taskmate = (JSONArray) jsonObject.get("taskMember");
+            HashMap<String, Double> map = new HashMap<String, Double>();
+
+            JSONObject taskmate = (JSONObject) jsonObject.get("taskMember");
+            Iterator<Map> taskMateIterator = ;
+
+                /*JSONArray taskmate = (JSONArray) jsonObject.get("taskMember");
 
                 Iterator<Map> taskMateIterator = taskmate.iterator();
 
@@ -98,7 +114,7 @@ public class JSONReader {
                     System.out.println(taskMember1);
 
                 }
-
+*/
 
 
         } catch (Exception e) {
