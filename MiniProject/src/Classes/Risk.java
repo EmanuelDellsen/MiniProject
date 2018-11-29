@@ -6,9 +6,9 @@ public class Risk {
     private double probability;
     private int impact;
 
-    public Risk( int riskId, String riskname, double probability, int impact){
+    public Risk( int riskId, String riskName, double probability, int impact){
         this.riskId= riskId;
-        this.riskName= riskname;
+        this.riskName= riskName;
         this.probability= probability;
         this.impact= impact;
 
@@ -25,6 +25,8 @@ public class Risk {
     }
     public int getImpact(){
         return this.impact;
+
+
     }
 }
 
