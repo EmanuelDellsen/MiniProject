@@ -8,37 +8,37 @@
       {
         "name": "Nafen Haj Ahmad",
         "id": "1",
-        "salaryPerHour": "30000"
+        "salaryPerHour": "200"
       },
         {
           "name": "Simon Johansson",
           "id": "2",
-          "salaryPerHour": "27000"
+          "salaryPerHour": "200"
         },
         {
           "name": "Karl Westgardh",
           "id": "3",
-          "salaryPerHour": "27000"
+          "salaryPerHour": "200"
         },
         {
           "name": "Clemens Lans",
           "id": "4",
-          "salaryPerHour": "27000"
+          "salaryPerHour": "200"
         },
         {
           "name": "Emanuel Dellsen",
           "id": "5",
-          "salaryPerHour": "27000"
+          "salaryPerHour": "200"
         },
         {
           "name": "Niklas Moller",
           "id": "6",
-          "salaryPerHour": "27000"
+          "salaryPerHour": "200"
         },
         {
           "name": "Thiago Hlebanja Oliva",
           "id": "7",
-          "salaryPerHour": "27000"
+          "salaryPerHour": "200"
         }
     ],
     "tasks": [
@@ -49,16 +49,10 @@
         "startDate": "2018-11-01",
         "endDate": "2018-11-02",
         "taskIsComplete": "false",
-        "taskMembers": [
+        "taskMembers":
           {
-            "id": "1",
-            "hoursWorked": "10"
-          },
-          {
-            "id": "2",
-            "hoursWorked": "12"
-          }
-        ]
+            "1": "10", "2": "12"}
+
       },
       {
         "id": "2",
@@ -67,16 +61,8 @@
         "startDate": "2018-11-02",
         "endDate": "2018-11-03",
         "taskIsComplete": "true",
-        "taskMembers": [
-          {
-            "id": "2",
-            "hoursWorked": "5"
-          },
-          {
-            "id": "1",
-            "hoursWorked": "8"
-          }
-        ]
+        "taskMembers":
+          { "2": "5", "1": "8"}
       }
     ],
     "risks": [
