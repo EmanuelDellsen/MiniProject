@@ -2,6 +2,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import java.awt.*;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class jsonreading {
         JSONParser parser = new JSONParser();
 
         try {
-            Object object = parser.parse(new FileReader("C:\\Users\\Emanuel Dellsén\\Downloads\\MiniProject-master\\MiniProject-master\\MiniProject\\resources\\Project.json"));
+            Object object = parser.parse(new FileReader("C:\Users\Nafen Haj Ahmad\Desktop\MiniProject\MiniProject\resources\Project.json"));
 
             JSONObject jsonObject = (JSONObject) object;
 
