@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Project {
 
+    private int projectId;
     private String projectName;
     private String actualStartDate;
     private String projectedCompletedDate;
@@ -14,11 +15,18 @@ public class Project {
     private ArrayList<TeamMember> teamMemberList;
     private ArrayList<Risk> riskList;
 
-    public Project(String projectName, String actualStartDate, String projectedCompletedDate, double budgetAtCompletion) {
+    public Project(int projectId, String projectName, String actualStartDate,
+                   String projectedCompletedDate, double budgetAtCompletion,
+                   ArrayList<Task> taskList, ArrayList<TeamMember> teamMemberList,
+                   ArrayList<Risk> riskList) {
+        this.projectId = projectId;
         this.projectName = projectName;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.budgetAtCompletion = budgetAtCompletion;
+        this.taskList = taskList;
+        this.teamMemberList = teamMemberList;
+        this.riskList = riskList;
     }
 
     public double calcEstimValue(){
