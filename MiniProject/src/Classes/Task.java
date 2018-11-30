@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class Task {
 
-
     private int taskId;
     private String taskName;
     private String description;
@@ -13,11 +12,11 @@ public class Task {
     private String projectedCompletedDate;
     private String actualCompletedDate;
 
-
     //private Map<TaskMember, hoursWorked> taskMatesList; this needs to go to the constructor
 
-
-    public Task(int taskId, String taskName, String description, String actualStartDate, String projectedCompletedDate, String actualCompletedDate) {
+    public Task(int taskId, String taskName, String description,
+                String actualStartDate, String projectedCompletedDate,
+                String actualCompletedDate) {
 
         this.taskId = taskId;
         this.taskName = taskName;
@@ -25,9 +24,7 @@ public class Task {
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
-
     }
-
 
     public String toString() {
         return "id=" + taskId + ", name= " + taskName + '\'' +

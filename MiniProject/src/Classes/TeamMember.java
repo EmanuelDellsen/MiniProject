@@ -1,24 +1,22 @@
 package Classes;
 
 public class TeamMember {
-    private String TeamMemeberName;
+    private String teamMemberName;
     private double salaryPerHour;
     private int teamMemberId;
 
     public TeamMember(String name, int id, double salaryPerHour) {
-        this.TeamMemeberName = name;
+        this.teamMemberName = name;
         this.teamMemberId = id;
         this.salaryPerHour = salaryPerHour;
     }
 
-
-
-    public String getTeamMemeberName() {
-        return TeamMemeberName;
+    public String getTeamMemberName() {
+        return teamMemberName;
     }
 
-    public void setTeamMemeberName(String teamMemeberName) {
-        this.TeamMemeberName = teamMemeberName;
+    public void setTeamMemberName(String teamMemberName) {
+        this.teamMemberName = teamMemberName;
     }
 
     public double getSalaryPerHour() {
@@ -39,7 +37,9 @@ public class TeamMember {
 
 
     public String toString() {
-        return "TeamMemeberName= " + TeamMemeberName + '\'' + ", salaryPerHour= " + salaryPerHour + '\'' + ", teamMemberId=" + teamMemberId;
+        return "teamMemberName= " +
+                teamMemberName +
+                '\'' + ", salaryPerHour= " + salaryPerHour + '\'' + ", teamMemberId=" + teamMemberId;
     }
 
 }

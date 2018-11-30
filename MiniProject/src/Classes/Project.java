@@ -2,28 +2,24 @@ package Classes;
 
 import java.util.ArrayList;
 
-
 public class Project {
 
+    private String projectName;
+    private String actualStartDate;
+    private String projectedCompletedDate;
 
-    private String name;
-    private String startDate;
-    private String endDate;
     private double budgetAtCompletion;
 
-    //private ArrayList<ArrayList<Classes.Task>> taskList;
     private ArrayList<Task> taskList;
     private ArrayList<TeamMember> teamMemberList;
     private ArrayList<Risk> riskList;
 
-
-    public Project(String name, String startDate, String endDate, double budgetAtCompletion) {
-        this.name = name;
-        this.startDate = startDate;
-        this.endDate = endDate;
+    public Project(String projectName, String actualStartDate, String projectedCompletedDate, double budgetAtCompletion) {
+        this.projectName = projectName;
+        this.actualStartDate = actualStartDate;
+        this.projectedCompletedDate = projectedCompletedDate;
         this.budgetAtCompletion = budgetAtCompletion;
     }
-
 
     public double calcEstimValue(){
 
@@ -33,49 +29,33 @@ public class Project {
     }
 
     public void scheduleVariance(){
-
-
     }
 
     public void retrieveRisk(){
-
-
     }
 
     public void workDoneByMember(){
-
-
     }
 
     public void workDoneByAll(){
-
-
     }
 
     public void timeWorkedByMember(){
-
-
     }
 
     public void calcCostVariance(){
-
-
     }
 
     public double calcPlannedValue(){
 
        double plannedValue = 0;
-        return plannedValue;
+       return plannedValue;
     }
 
     public void projectSchedule(){
-
-
     }
 
     public void retrieveTeamMember(){
-
-
     }
 
     public double getBudgetedCost() {
@@ -110,28 +90,28 @@ public class Project {
         this.riskList = riskList;
     }
 
-    public String getName() {
-        return name;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
-    public String getStartDate() {
-        return startDate;
+    public String getActualStartDate() {
+        return actualStartDate;
     }
 
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
+    public void setActualStartDate(String actualStartDate) {
+        this.actualStartDate = actualStartDate;
     }
 
-    public String getEndDate() {
-        return endDate;
+    public String getProjectedCompletionDate() {
+        return projectedCompletedDate;
     }
 
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
+    public void setProjectedCompletionDate(String projectedCompletionDate) {
+        this.projectedCompletedDate = projectedCompletionDate;
     }
 
     public double getBudgetAtCompletion() {
@@ -141,9 +121,4 @@ public class Project {
     public void setBudgetAtCompletion(double budgetAtCompletion) {
         this.budgetAtCompletion = budgetAtCompletion;
     }
-
-
-
-
-
 }
