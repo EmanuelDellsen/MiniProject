@@ -2,18 +2,18 @@ package Classes;
 
 public class TaskMember {
 
-    private int id;
-    private double hoursWorked;
+    private Object id; //Object since it worked best with the JSONSimple. Can it be Strings/ints?
+    private Object hoursWorked;
 
-    public TaskMember(int id, double hoursWorked){
+    public TaskMember(Object id, Object hoursWorked){
 
         this.id=id;
-        this.hoursWorked=hoursWorked;
+        this.hoursWorked = hoursWorked;
 
     }
 
 
-    public int getId() {
+    public Object getId() {
         return id;
     }
 
@@ -21,12 +21,11 @@ public class TaskMember {
         this.id = id;
     }
 
-    public double getHoursWorked() {
+    public Object getHoursWorked() {
         return hoursWorked;
     }
 
-    public void setHoursWorked(double hoursWorked) {
+    public void setHoursWorked(int hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
-
 }

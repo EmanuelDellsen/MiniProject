@@ -1,6 +1,8 @@
 package Classes;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Task {
 
@@ -12,10 +14,12 @@ public class Task {
     private String endDate;
     private boolean taskIsComplete;
 
-    private ArrayList<TaskMember> taskMatesList;
+    //private ArrayList<TaskMember> taskMatesList;
+    Map<Integer, Double> taskMembers;
 
 
-    public Task(int id, String name, String description, String startDate, String endDate, boolean taskIsComplete) {
+
+    public Task(int id, String name, String description, String startDate, String endDate, boolean taskIsComplete, Map taskMembers) {
 
         this.id = id;
         this.name = name;
@@ -23,6 +27,7 @@ public class Task {
         this.startDate = startDate;
         this.endDate = endDate;
         this.taskIsComplete = taskIsComplete;
+        this.taskMembers = taskMembers;
 
     }
 
@@ -84,6 +89,7 @@ public class Task {
         this.taskIsComplete = taskIsComplete;
     }
 
+/*
     public  ArrayList<TaskMember> getTaskMatesList() {
         return taskMatesList ;
     }
@@ -91,6 +97,7 @@ public class Task {
     public void setTaskMatesList(ArrayList<TaskMember> taskMatesList) {
         this.taskMatesList = taskMatesList;
     }
+*/
 
 }
 

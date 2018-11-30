@@ -50,8 +50,10 @@
         "endDate": "2018-11-02",
         "taskIsComplete": "false",
         "taskMembers":
-          {
-            "1": "10", "2": "12"}
+          [{"ID": "1",
+          "hoursWorked": "2"},
+            {"ID": "2",
+              "hoursWorked": "4"} ]
 
       },
       {
@@ -62,7 +64,11 @@
         "endDate": "2018-11-03",
         "taskIsComplete": "true",
         "taskMembers":
-          { "2": "5", "1": "8"}
+         [ {"ID": "1",
+           "hoursWorked": "3"},
+           {"ID": "2",
+             "hoursWorked": "10"}]
+
       }
     ],
     "risks": [
