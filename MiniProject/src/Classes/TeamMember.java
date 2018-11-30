@@ -1,45 +1,45 @@
 package Classes;
 
 public class TeamMember {
-    private String name;
-    private String salaryPerHour;
-    private int id;
+    private String teamMemberName;
+    private double salaryPerHour;
+    private int teamMemberId;
 
-    public TeamMember(String name, int id, String salaryPerHour) {
-        this.name = name;
-        this.id = id;
+    public TeamMember(String name, int id, double salaryPerHour) {
+        this.teamMemberName = name;
+        this.teamMemberId = id;
         this.salaryPerHour = salaryPerHour;
     }
 
-
-
-    public String getName() {
-        return name;
+    public String getTeamMemberName() {
+        return teamMemberName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTeamMemberName(String teamMemberName) {
+        this.teamMemberName = teamMemberName;
     }
 
-    public String getSalaryPerHour() {
-        return salaryPerHour;
+    public double getSalaryPerHour() {
+        return this.salaryPerHour;
     }
 
-    public void setSalaryPerHour(String salaryPerHour) {
+    public void setSalaryPerHour(double salaryPerHour) {
         this.salaryPerHour = salaryPerHour;
     }
 
-    public int getId() {
-        return id;
+    public int getTeamMemberId() {
+        return teamMemberId;
     }
 
     public void setID(int id) {
-        this.id = id;
+        this.teamMemberId = id;
     }
 
 
     public String toString() {
-        return "name= " + name + '\'' + ", salaryPerHour= " + salaryPerHour + '\'' + ", id=" + id;
+        return "teamMemberName= " +
+                teamMemberName +
+                '\'' + ", salaryPerHour= " + salaryPerHour + '\'' + ", teamMemberId=" + teamMemberId;
     }
 
 }
