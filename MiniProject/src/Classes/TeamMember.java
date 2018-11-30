@@ -1,13 +1,14 @@
 package Classes;
 
 public class TeamMember {
+
+    private int teamMemberId;
     private String teamMemberName;
     private double salaryPerHour;
-    private int teamMemberId;
 
-    public TeamMember(String name, int id, double salaryPerHour) {
-        this.teamMemberName = name;
-        this.teamMemberId = id;
+    public TeamMember(int teamMemberId, String teamMemberName, double salaryPerHour) {
+        this.teamMemberId = teamMemberId;
+        this.teamMemberName = teamMemberName;
         this.salaryPerHour = salaryPerHour;
     }
 
