@@ -30,9 +30,9 @@ public class JSONReader {
             Object object = parser.parse(new FileReader("Project.json"));
             JSONObject jsonObject = (JSONObject) object;
 
-            Project newProject = new Project(Integer.valueOf((String) jsonObject.get("id")),(String) jsonObject.get("name"), (String) jsonObject.get("startDate"),
-                    (String) jsonObject.get("endDate"), Double.valueOf((String) jsonObject.get("budgetAtCompletion")),
-                    (JSONArray) jsonObject.get("teamMemberList"), (JSONArray) jsonObject.get("taskList"), (JSONArray) jsonObject.get("riskList"));
+            Project newProject = new Project(Integer.valueOf((String) jsonObject.get("projectId")),(String) jsonObject.get("projectName"), (String) jsonObject.get("actualStartDate"),
+                    (String) jsonObject.get("projectCompletedDate"), Double.valueOf((String) jsonObject.get("budgetAtCompletion"))/*,
+                    (JSONArray) jsonObject.get("teamMemberList"), (JSONArray) jsonObject.get("taskList"), (JSONArray) jsonObject.get("riskList")*/);
             //ArrayList<TeamMember> teamMemberList, ArrayList<Task> taskList, ArrayList< Risk > riskList) ;
 
             newProject.setTeamMemberList(new ArrayList<>());
@@ -41,7 +41,7 @@ public class JSONReader {
 
             newProject.setRiskList(new ArrayList<>());
 
-            JSONArray teammates = (JSONArray) jsonObject.get("teamMembers");
+            JSONArray teammates = (JSONArray) jsonObject.get("teamMemberList");
 
             // System.out.println(teammates);
             // as a reference, here it prints in this format [{"salaryPerHour":"200","name":"Nafen Haj Ahmad","id":"1"},
@@ -52,8 +52,8 @@ public class JSONReader {
 
                 Map member = teamMateIterator.next();
 
-                String name = (String) member.get("name");
-                int id = Integer.valueOf((String) member.get("id"));
+                String name = (String) member.get("teamMemberName");
+                int id = Integer.valueOf((String) member.get("teamMemberId"));
                 double salary = Double.valueOf((String) member.get("salaryPerHour"));
 
                 TeamMember newTeamMember = new TeamMember(name, id, salary);
@@ -64,15 +64,15 @@ public class JSONReader {
 
 
 
-            JSONArray tasks = (JSONArray) jsonObject.get("tasks");
+            JSONArray tasks = (JSONArray) jsonObject.get("taskList");
             Iterator<Map> taskIterator = tasks.iterator();
 
             while (taskIterator.hasNext()) {
 
                 Map taskMap = taskIterator.next();
 
-                int id = Integer.valueOf((String) taskMap.get("id"));
-                String name = (String) taskMap.get("name");
+                int id = Integer.valueOf((String) taskMap.get("taskId"));
+                String name = (String) taskMap.get("taskName");
                 String description = (String) taskMap.get("description");
                 String actualStartDate = (String) taskMap.get("actualStartDate");
                 String projectedCompletedDate = (String) taskMap.get("projectedCompletedDate");

@@ -11,22 +11,22 @@ public class Project {
 
     private double budgetAtCompletion;
 
-    private ArrayList<Task> taskList;
     private ArrayList<TeamMember> teamMemberList;
+    private ArrayList<Task> taskList;
     private ArrayList<Risk> riskList;
 
     public Project(int projectId, String projectName, String actualStartDate,
-                   String projectedCompletedDate, double budgetAtCompletion,
-                   ArrayList<Task> taskList, ArrayList<TeamMember> teamMemberList,
-                   ArrayList<Risk> riskList) {
+                   String projectedCompletedDate, double budgetAtCompletion
+           /* ArrayList<TeamMember> teamMemberList, ArrayList<Task> taskList,
+                   ArrayList<Risk> riskList*/) {
         this.projectId = projectId;
         this.projectName = projectName;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.budgetAtCompletion = budgetAtCompletion;
-        this.taskList = taskList;
+      /*  this.taskList = taskList;
         this.teamMemberList = teamMemberList;
-        this.riskList = riskList;
+        this.riskList = riskList;*/
     }
 
     public double calcEstimValue(){
@@ -128,5 +128,21 @@ public class Project {
 
     public void setBudgetAtCompletion(double budgetAtCompletion) {
         this.budgetAtCompletion = budgetAtCompletion;
+    }
+
+    public int getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(int projectId) {
+        this.projectId = projectId;
+    }
+
+    public String getProjectedCompletedDate() {
+        return projectedCompletedDate;
+    }
+
+    public void setProjectedCompletedDate(String projectedCompletedDate) {
+        this.projectedCompletedDate = projectedCompletedDate;
     }
 }
