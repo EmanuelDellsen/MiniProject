@@ -1,9 +1,6 @@
 package Main;
 
-import Classes.Project;
-import Classes.Task;
-import Classes.TaskMember;
-import Classes.TeamMember;
+import Classes.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -33,8 +30,10 @@ public class JSONReader {
             Object object = parser.parse(new FileReader("Project.json"));
             JSONObject jsonObject = (JSONObject) object;
 
-            Project newProject = new Project((String) jsonObject.get("name"), (String) jsonObject.get("startDate"),
-                    (String) jsonObject.get("endDate"), Double.valueOf((String) jsonObject.get("budgetAtCompletion")));
+            Project newProject = new Project(Integer.valueOf((String) jsonObject.get("id")),(String) jsonObject.get("name"), (String) jsonObject.get("startDate"),
+                    (String) jsonObject.get("endDate"), Double.valueOf((String) jsonObject.get("budgetAtCompletion")),
+                    (JSONArray) jsonObject.get("teamMemberList"), (JSONArray) jsonObject.get("taskList"), (JSONArray) jsonObject.get("riskList"));
+            //ArrayList<TeamMember> teamMemberList, ArrayList<Task> taskList, ArrayList< Risk > riskList) ;
 
             newProject.setTeamMemberList(new ArrayList<>());
 
@@ -55,7 +54,7 @@ public class JSONReader {
 
                 String name = (String) member.get("name");
                 int id = Integer.valueOf((String) member.get("id"));
-                String salary = (String) member.get("salaryPerHour");
+                double salary = Double.valueOf((String) member.get("salaryPerHour"));
 
                 TeamMember newTeamMember = new TeamMember(name, id, salary);
 
@@ -75,11 +74,12 @@ public class JSONReader {
                 int id = Integer.valueOf((String) taskMap.get("id"));
                 String name = (String) taskMap.get("name");
                 String description = (String) taskMap.get("description");
-                String startDate = (String) taskMap.get("startDate");
-                String endDate = (String) taskMap.get("endDate");
-                boolean completedTask = Boolean.valueOf((String) taskMap.get("completedTask"));
+                String actualStartDate = (String) taskMap.get("actualStartDate");
+                String projectedCompletedDate = (String) taskMap.get("projectedCompletedDate");
+                String actualCompletedDate = (String) taskMap.get("actualCompletedDate");
+               // boolean completedTask = Boolean.valueOf((String) taskMap.get("completedTask"));
 
-                Map<Object, Object> assignedMembers = new HashMap<>();
+                Map<Integer, Double> taskMembers = new HashMap<>();
 
 
 
@@ -98,8 +98,11 @@ public class JSONReader {
 
                     Map member = taskMemberIterator.next();
 
-                    Object id2 = member.get("ID");
-                    Object hoursWorked = member.get("hoursWorked");
+                    //This works niklas if we want to move away from using "object" and use int+double instead
+                    int id2 = Integer.valueOf((String) member.get("id"));
+                    double hoursWorked = Double.valueOf((String)member.get("hoursWorked"));
+                   // Object id2 = member.get("id");
+                   // Object hoursWorked = member.get("hoursWorked");
 
 
                     TaskMember newTaskMember = new TaskMember(id2, hoursWorked);
@@ -115,17 +118,17 @@ public class JSONReader {
 
                     // Loop to put key and value into the HasMap, can possibly be an enhanced for-loop later on
                     for (int i = 0; i < taskMates.size(); i++){
-                        assignedMembers.put(newTaskMember.getId(), newTaskMember.getHoursWorked());
+                        taskMembers.put(newTaskMember.getId(), newTaskMember.getHoursWorked());
                     }
 
                 }
 
                 // Print for our reference, to see that the HashMap workes
-                for (Object key : assignedMembers.keySet()){
-                    System.out.println("Pritning from HashMap:  ID " + key + " - Hours Worked : " + assignedMembers.get(key));
+                for (Object key : taskMembers.keySet()){
+                    System.out.println("Pritning from HashMap:  ID " + key + " - Hours Worked : " + taskMembers.get(key));
                 }
 
-                Task newTask = new Task(id, name, description, startDate, endDate, completedTask, assignedMembers);
+                Task newTask = new Task(id, name, description, actualStartDate, projectedCompletedDate,  actualCompletedDate, taskMembers);
 
                 newProject.getTaskList().add(newTask);
 

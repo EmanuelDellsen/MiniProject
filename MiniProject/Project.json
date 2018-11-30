@@ -1,86 +1,86 @@
 {
-    "id": 1,
-    "name": "Duckies",
-    "startDate": "2018-11-12",
-    "endDate": "2019-01-12",
+    "projectId": 1,
+    "projectName": "Duckies",
+    "actualStartDate": "2018-11-12",
+    "projectedCompletedDate": "2019-01-12",
     "budgetAtCompletion": "10000",
-    "teamMembers": [
+    "teamMemberList": [
       {
-        "name": "Nafen Haj Ahmad",
-        "id": "1",
+        "teamMemberName": "Nafen Haj Ahmad",
+        "teamMemberId": "1",
         "salaryPerHour": "200"
       },
         {
-          "name": "Simon Johansson",
-          "id": "2",
+          "teamMemberName": "Simon Johansson",
+          "teamMemberId": "2",
           "salaryPerHour": "200"
         },
         {
-          "name": "Karl Westgardh",
-          "id": "3",
+          "teamMemberName": "Karl Westgardh",
+          "teamMemberId": "3",
           "salaryPerHour": "200"
         },
         {
-          "name": "Clemens Lans",
-          "id": "4",
+          "teamMemberName": "Clemens Lans",
+          "teamMemberId": "4",
           "salaryPerHour": "200"
         },
         {
-          "name": "Emanuel Dellsen",
-          "id": "5",
+          "teamMemberName": "Emanuel Dellsen",
+          "teamMemberId": "5",
           "salaryPerHour": "200"
         },
         {
-          "name": "Niklas Moller",
-          "id": "6",
+          "teamMemberName": "Niklas Moller",
+          "teamMemberId": "6",
           "salaryPerHour": "200"
         },
         {
-          "name": "Thiago Hlebanja Oliva",
-          "id": "7",
+          "teamMemberName": "Thiago Hlebanja Oliva",
+          "teamMemberId": "7",
           "salaryPerHour": "200"
         }
     ],
-    "tasks": [
+    "taskList": [
       {
-        "id": "1",
-        "name": "CreateTrelloWorkSpace",
+        "taskId": "1",
+        "taskName": "CreateTrelloWorkSpace",
         "description": "We need a Trello workspace",
-        "startDate": "2018-11-01",
-        "endDate": "2018-11-02",
-        "taskIsComplete": "false",
+        "actualStartDate": "2018-11-01",
+        "projectedCompletedDate": "2018-11-02",
+        "actualCompletedDate": "",
         "taskMembers":
-          [{"ID": "1",
+          [{"id": "1",
           "hoursWorked": "2"},
-            {"ID": "2",
+            {"id": "2",
               "hoursWorked": "4"} ]
 
       },
       {
-        "id": "2",
-        "name": "CreateSlackWorkspace",
+        "taskId": "2",
+        "taskName": "CreateSlackWorkspace",
         "description": "We need a Slack workspace",
-        "startDate": "2018-11-02",
-        "endDate": "2018-11-03",
-        "taskIsComplete": "true",
+        "actualStartDate": "2018-11-02",
+        "projectedCompletedDate": "2018-11-03",
+        "actualCompletedDate": "",
         "taskMembers":
-         [ {"ID": "1",
+         [ {"id": "1",
            "hoursWorked": "3"},
-           {"ID": "2",
+           {"id": "2",
              "hoursWorked": "10"}]
 
       }
     ],
-    "risks": [
+    "riskList": [
       {
-        "id": "1",
-        "name": "BadCommunication",
+        "riskId": "1",
+        "riskName": "BadCommunication",
         "probability": "0.2",
         "impact": "2"
       },
       {
-        "id": "2",
-        "name": "LateForMeeting",
+        "riskId": "2",
+        "riskName": "LateForMeeting",
         "probability": "0.9",
         "impact": "4"
       }
