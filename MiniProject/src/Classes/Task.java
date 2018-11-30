@@ -1,6 +1,7 @@
 package Classes;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Task {
@@ -8,19 +9,33 @@ public class Task {
     private int taskId;
     private String taskName;
     private String description;
+    private String startDate;
+    private String endDate;
+    private boolean taskIsComplete;
+
+    //private ArrayList<TaskMember> taskMatesList;
+    Map<Integer, Double> taskMembers;
+   
     private String actualStartDate;
     private String projectedCompletedDate;
     private String actualCompletedDate;
 
     //private Map<TaskMember, hoursWorked> taskMatesList; this needs to go to the constructor
 
-    public Task(int taskId, String taskName, String description,
+    public Task(int id, String name, String description, String startDate, String endDate, boolean taskIsComplete, Map taskMembers) {
+    
+      public Task(int taskId, String taskName, String description,
                 String actualStartDate, String projectedCompletedDate,
                 String actualCompletedDate) {
 
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.taskIsComplete = taskIsComplete;
+        this.taskMembers = taskMembers;
+
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
@@ -82,6 +97,7 @@ public class Task {
     public void setActualCompletedDate(String actualCompletedDate) {
         this.actualCompletedDate = actualCompletedDate;
     }
+
 /*
     public  ArrayList<TaskMember> getTaskMatesList() {
         return taskMatesList ;
