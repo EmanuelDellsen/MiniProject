@@ -8,7 +8,6 @@ public class Project {
     private String projectName;
     private String actualStartDate;
     private String projectedCompletedDate;
-
     private double budgetAtCompletion;
 
     private ArrayList<TeamMember> teamMemberList;
@@ -16,14 +15,21 @@ public class Project {
     private ArrayList<Risk> riskList;
 
     public Project(int projectId, String projectName, String actualStartDate,
-                   String projectedCompletedDate, double budgetAtCompletion
-           /* ArrayList<TeamMember> teamMemberList, ArrayList<Task> taskList,
-                   ArrayList<Risk> riskList*/) {
+                   String projectedCompletedDate, double budgetAtCompletion) {
+
+//        ArrayList<TeamMember> teamMemberList, ArrayList<Task> taskList,
+//                ArrayList<Risk> riskList
+
         this.projectId = projectId;
         this.projectName = projectName;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.budgetAtCompletion = budgetAtCompletion;
+
+        taskList = new ArrayList<>();
+        teamMemberList = new ArrayList<>();
+        riskList = new ArrayList<>();
+
       /*  this.taskList = taskList;
         this.teamMemberList = teamMemberList;
         this.riskList = riskList;*/

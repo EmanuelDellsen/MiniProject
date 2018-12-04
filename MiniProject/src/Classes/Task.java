@@ -1,7 +1,5 @@
 package Classes;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 public class Task {
@@ -10,29 +8,29 @@ public class Task {
     private String taskName;
     private String description;
 
-   // private boolean taskIsComplete;
+    // private boolean taskIsComplete;
 
     private Map<Integer, Double> taskMembers;
-   
+
     private String actualStartDate;
     private String projectedCompletedDate;
     private String actualCompletedDate;
 
     //private Map<TaskMember, hoursWorked> taskMatesList; this needs to go to the constructor
 
-
-      public Task(int taskId, String taskName, String description,
+    public Task(int taskId, String taskName, String description,
                 String actualStartDate, String projectedCompletedDate,
                 String actualCompletedDate, Map<Integer, Double> taskMembers) {
-
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
-       // this.taskIsComplete = taskIsComplete;
+
+        // this.taskIsComplete = taskIsComplete;
         this.taskMembers = taskMembers;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
+        this.taskMembers = taskMembers;
     }
 
     public String toString() {
@@ -92,15 +90,5 @@ public class Task {
         this.actualCompletedDate = actualCompletedDate;
     }
 
-/*
-    public  ArrayList<TaskMember> getTaskMatesList() {
-        return taskMatesList ;
-    }
-
-    public void setTaskMatesList(ArrayList<TaskMember> taskMatesList) {
-        this.taskMatesList = taskMatesList;
-    }
-*/
 }
-
 
