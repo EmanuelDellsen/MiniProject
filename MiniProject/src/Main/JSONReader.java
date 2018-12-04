@@ -13,11 +13,20 @@ import org.json.simple.parser.ParseException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class JSONReader {
 
-    public JSONObject readJSONFile() throws FileNotFoundException, ParseException, IOException {
+    public void methodToCallFromProgram() throws IOException, ParseException {
+        createJSONObject();
+
+
+    }
+
+
+    public JSONObject createJSONObject() throws FileNotFoundException, ParseException, IOException {
         JSONParser parser = new JSONParser();
         Object object = parser.parse(new FileReader("Project.json"));
         JSONObject jsonObject = (JSONObject) object;
@@ -26,8 +35,8 @@ public class JSONReader {
 
     public Project createProject() throws IOException, ParseException {
 
-        Project newProject = new Project(Integer.valueOf((String) readJSONFile().get("projectId")), (String) readJSONFile().get("projectName"), (String) readJSONFile().get("actualStartDate"),
-                (String) readJSONFile().get("projectCompletedDate"), Double.valueOf((String) readJSONFile().get("budgetAtCompletion")));
+        Project newProject = new Project(Integer.valueOf((String) createJSONObject().get("projectId")), (String) createJSONObject().get("projectName"), (String) createJSONObject().get("actualStartDate"),
+                (String) createJSONObject().get("projectCompletedDate"), Double.valueOf((String) createJSONObject().get("budgetAtCompletion")));
 
         newProject.setTeamMemberList(new ArrayList<>());
         newProject.setTaskList(new ArrayList<>());
@@ -39,11 +48,11 @@ public class JSONReader {
 
     public JSONArray createTeamMembers() throws IOException, ParseException {
 
-        JSONArray teammates = (JSONArray) readJSONFile().get("teamMemberList");
+        JSONArray teammates = (JSONArray) createJSONObject().get("teamMemberList");
 
         Iterator teamMateIterator = teammates.iterator();
 
-        while (teamMateIterator.hasNext()){
+        while (teamMateIterator.hasNext()) {
 
             Map member = (Map) teamMateIterator.next();
             int teamMemberId = Integer.valueOf((String) member.get("teamMemberId"));
@@ -52,6 +61,7 @@ public class JSONReader {
 
             TeamMember newTeamMember = new TeamMember(teamMemberId, teamMemberName, salaryPerHour);
             createProject().getTeamMemberList().add(newTeamMember);
+
         }
 
         return teammates;
@@ -61,8 +71,12 @@ public class JSONReader {
 
     public JSONArray createTask() throws IOException, ParseException {
 
-        JSONArray tasks = (JSONArray) readJSONFile().get("taskList");
+        JSONArray tasks = (JSONArray) createJSONObject().get("taskList");
         Iterator taskIterator = tasks.iterator();
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-DD");
+
+
 
         while (taskIterator.hasNext()) {
 
@@ -71,19 +85,58 @@ public class JSONReader {
             int taskId = Integer.valueOf((String) taskMap.get("taskId"));
             String taskName = (String) taskMap.get("taskName");
             String description = (String) taskMap.get("description");
-            String actualStartDate = (String) taskMap.get("actualStartDate");
-            String projectedCompletedDate = (String) taskMap.get("projectedCompletedDate");
-            String actualCompletedDate = (String) taskMap.get("actualCompletedDate");
+            LocalDate actualStartDate = LocalDate.parse((String) taskMap.get("actualStartDate"), formatter);
+            LocalDate projectedCompletedDate = LocalDate.parse((String) taskMap.get("projectedCompletedDate"), formatter);
+            LocalDate actualCompletedDate = LocalDate.parse((String) taskMap.get("actualCompletedDate"), formatter);
             // boolean completedTask = Boolean.valueOf((String) taskMap.get("completedTask"));
 
             Task newTask = new Task(taskId, taskName, description, actualStartDate, projectedCompletedDate, actualCompletedDate);
 
             createProject().getTaskList().add(newTask);
-
+            newTask.setTeamMembers= new HashMap<Integer, Double>();
 
         }
+        return tasks;
 
     }
+
+    public JSONArray taskMembers() throws IOException, ParseException {
+
+        JSONArray taskMembers = (JSONArray) createJSONObject().get("taskMembers");
+        Iterator taskMemberIterator = taskMembers.iterator();
+
+
+        while (taskMemberIterator.hasNext()) {
+
+            Map taskMember = (Map) taskMemberIterator.next();
+
+            int id2 = Integer.valueOf((String) taskMember.get("id"));
+            double hoursWorked = Double.valueOf((String) taskMember.get("hoursWorked"));
+
+            TaskMember newTaskMember = new TaskMember(id2, hoursWorked);
+
+
+            System.out.println("Printing ID for taskmember: " + newTaskMember.getId());  //Print only as a reference for us
+            System.out.println("Printing hoursWorked for ID " + newTaskMember.getId() + " : " + newTaskMember.getHoursWorked()); //Print only as a reference for us
+
+            // Loop to put key and value into the HasMap, can possibly be an enhanced for-loop later on
+            for (int i = 0; i < taskMembers.size(); i++) {
+                taskMember.put(newTaskMember.getId(), newTaskMember.getHoursWorked());
+            }
+        }
+
+        // Print for our reference, to see that the HashMap workes
+        for (Object key : taskMembers.keySet()) {
+            System.out.println("Pritning from HashMap:  ID " + key + " - Hours Worked : " + taskMembers.get(key));
+        }
+
+        Task newTask = new Task(id, name, description, actualStartDate, projectedCompletedDate, actualCompletedDate, taskMembers);
+        newProject.getTaskList().add(newTask);
+
+        // newTask.setTaskMatesList(new ArrayList<>());
+        //  System.out.println(newTask);
+    }
+}
 
 
 
@@ -117,37 +170,7 @@ public class JSONReader {
 
                     Map member = (Map) taskMemberIterator.next();
 
-                    //This works niklas if we want to move away from using "object" and use int+double instead
-                    int id2 = Integer.valueOf((String) member.get("id"));
-                    double hoursWorked = Double.valueOf((String) member.get("hoursWorked"));
-                    // Object id2 = member.get("id");
-                    // Object hoursWorked = member.get("hoursWorked");
 
-                    TaskMember newTaskMember = new TaskMember(id2, hoursWorked);
-
-                    //newProject.getTeamMemberList().add(newTeamMember);
-                    //Commented this line out since it gave error
-
-                    System.out.println("Printing ID for taskmember: " + newTaskMember.getId());  //Print only as a reference for us
-                    System.out.println("Printing hoursWorked for ID " + newTaskMember.getId() + " : " + newTaskMember.getHoursWorked()); //Print only as a reference for us
-
-                    // Loop to put key and value into the HasMap, can possibly be an enhanced for-loop later on
-                    for (int i = 0; i < taskMates.size(); i++) {
-                        taskMembers.put(newTaskMember.getId(), newTaskMember.getHoursWorked());
-                    }
-                }
-
-                // Print for our reference, to see that the HashMap workes
-                for (Object key : taskMembers.keySet()) {
-                    System.out.println("Pritning from HashMap:  ID " + key + " - Hours Worked : " + taskMembers.get(key));
-                }
-
-                Task newTask = new Task(id, name, description, actualStartDate, projectedCompletedDate, actualCompletedDate, taskMembers);
-                newProject.getTaskList().add(newTask);
-
-                // newTask.setTaskMatesList(new ArrayList<>());
-                //  System.out.println(newTask);
-            }
 
             HashMap<String, Double> map = new HashMap<String, Double>();
             JSONObject taskmate = (JSONObject) jsonObject.get("taskMember");
