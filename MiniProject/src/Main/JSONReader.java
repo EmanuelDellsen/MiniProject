@@ -33,23 +33,7 @@ public class JSONReader {
         return jsonObject;
     }
 
-    public JSONArray createProject() throws IOException, ParseException {
 
-        JSONArray listOfProjects = (JSONArray) createJSONObject().get("listOfProjects");
-
-        Iterator projectIterator = listOfProjects.iterator();
-
-        while(projectIterator.hasNext()) {
-
-
-            Project newProject = new Project(Integer.valueOf((String) createJSONObject().get("projectId")), (String) createJSONObject().get("projectName"), (String) createJSONObject().get("actualStartDate"),
-                    (String) createJSONObject().get("projectCompletedDate"), Double.valueOf((String) createJSONObject().get("budgetAtCompletion")));
-
-            Program.getListOfProjects().add(newProject);
-        }
-        return newProject;
-
-    }
 
     public JSONArray createTeamMembers() throws IOException, ParseException {
 
@@ -65,7 +49,7 @@ public class JSONReader {
             double salaryPerHour = Double.valueOf((String) member.get("salaryPerHour"));
 
             TeamMember newTeamMember = new TeamMember(teamMemberId, teamMemberName, salaryPerHour);
-            Project.getTeamMemberList().add(newTeamMember);
+            // Project.getTeamMemberList().add(newTeamMember);
 
         }
 
@@ -97,7 +81,7 @@ public class JSONReader {
 
             Task newTask = new Task(taskId, taskName, description, actualStartDate, projectedCompletedDate, actualCompletedDate);
 
-            Project.getTaskList().add(newTask);
+            // Project.getTaskList().add(newTask);
             newTask.setTaskMembers( new HashMap<>()) ;
 
         }
@@ -193,3 +177,5 @@ public class JSONReader {
     }
 
 }
+
+   */
