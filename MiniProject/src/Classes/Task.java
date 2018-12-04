@@ -47,18 +47,6 @@ public class Task {
         return this.actualCompletedDate.isBefore(date);
     }
 
-        /*
-    public boolean taskIsComplete(){
-        String actualCompletedDate = this.actualCompletedDate.replace("-","");
-        String currentDate = LocalDate.now().toString().replace("-","");
-
-        int actualCompletedDateAsInteger = Integer.parseInt(actualCompletedDate);
-        int actualCurrentDateAsInteger = Integer.parseInt(currentDate);
-
-        return actualCurrentDateAsInteger >= actualCompletedDateAsInteger;
-    }
-*/
-
     public Map<Integer, Double> getTaskMembers() {
         return taskMembers;
     }
