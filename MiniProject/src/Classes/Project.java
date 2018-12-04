@@ -1,22 +1,23 @@
 package Classes;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 public class Project {
 
     private int projectId;
     private String projectName;
-    private String actualStartDate;
-    private String projectedCompletedDate;
+    private LocalDate actualStartDate;
+    private LocalDate projectedCompletedDate;
     private double budgetAtCompletion;
 
     private ArrayList<TeamMember> teamMemberList;
     private ArrayList<Task> taskList;
     private ArrayList<Risk> riskList;
 
-    public Project(int projectId, String projectName, String actualStartDate,
-                   String projectedCompletedDate, double budgetAtCompletion) {
+    public Project(int projectId, String projectName, LocalDate actualStartDate,
+                   LocalDate projectedCompletedDate, double budgetAtCompletion) {
 
         this.projectId = projectId;
         this.projectName = projectName;
@@ -34,6 +35,7 @@ public class Project {
         return (percentageOfCompletedTasks(date)*this.budgetAtCompletion);
     }
 
+    // should be private later on.... - Karl
     public double percentageOfCompletedTasks(LocalDate date){
         double valueOfCompletedTasks = 0.0;
         double valueOfAllTasks = 0.0;
@@ -49,7 +51,18 @@ public class Project {
         return (valueOfCompletedTasks/valueOfAllTasks);
     }
 
-    public void calculateSV(){
+    public double calculateSV(LocalDate date){
+        this.calculateEV(date)
+    }
+
+    public double calculatePV(){
+        Long timeElapsed = ChronoUnit.DAYS.between(this.actualStartDate,LocalDate.now());
+        Long projectDuration = ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
+
+        double percentageOfProjectComplete = (timeElapsed/projectDuration);
+
+
+
     }
 
     public void calculateCV(){
@@ -113,23 +126,6 @@ public class Project {
     public void setProjectName(String projectName) {
         this.projectName = projectName;
     }
-
-    public String getActualStartDate() {
-        return actualStartDate;
-    }
-
-    public void setActualStartDate(String actualStartDate) {
-        this.actualStartDate = actualStartDate;
-    }
-
-    public String getProjectedCompletionDate() {
-        return projectedCompletedDate;
-    }
-
-    public void setProjectedCompletionDate(String projectedCompletionDate) {
-        this.projectedCompletedDate = projectedCompletionDate;
-    }
-
     public double getBudgetAtCompletion() {
         return budgetAtCompletion;
     }
@@ -140,17 +136,5 @@ public class Project {
 
     public int getProjectId() {
         return projectId;
-    }
-
-    public void setProjectId(int projectId) {
-        this.projectId = projectId;
-    }
-
-    public String getProjectedCompletedDate() {
-        return projectedCompletedDate;
-    }
-
-    public void setProjectedCompletedDate(String projectedCompletedDate) {
-        this.projectedCompletedDate = projectedCompletedDate;
     }
 }
