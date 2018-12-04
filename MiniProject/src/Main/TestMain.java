@@ -11,11 +11,16 @@ import java.time.format.DateTimeFormatter;
 public class TestMain {
 
     public static void main(String[] args) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         //1 - Creating a new project
 
-        Project project1 = new Project(1,"Duckies",
-                "2018-11-01","2018-12-01",
+        String strA1 = "2018-10-01";
+        LocalDate dateA1 = LocalDate.parse(strA1,formatter);
+        String strB1 = "2019-02-01";
+        LocalDate dateA2 = LocalDate.parse(strB1,formatter);
+
+        Project project1 = new Project(1,"Duckies",dateA1,dateA2,
                 430000);
 
         //2 - Creating 3 new risks & inserting them into the riskList in project1
@@ -40,7 +45,6 @@ public class TestMain {
 
         //4 - Creating 2 new tasks & inserting it into the taskList in project1
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String str1 = "2018-11-01";
         LocalDate date1 = LocalDate.parse(str1,formatter);
         String str2 = "2018-12-01";
@@ -62,10 +66,10 @@ public class TestMain {
 
         Task task2 = new Task(1,"CreateGittyKitty","Github 4-life",
                 dateb1,dateb2,dateb3);
-        task2.getTaskMembers().put(1,10.0);
+        task2.getTaskMembers().put(2,10.0);
         project1.getTaskList().add(task2);
 
-        // 5 - Printing content of project1
+        // 5 - testing calculateEV
         System.out.println(project1.getTaskList());
         System.out.println(task1.getTaskValue());
         System.out.println(task2.getTaskValue());
@@ -75,6 +79,20 @@ public class TestMain {
         System.out.println(task2.taskIsComplete(date4));
         System.out.println(project1.percentageOfCompletedTasks(date4));
         System.out.println(project1.calculateEV(date4));
+
+        //6 - testing calculate SV
+        System.out.println("*****************************");
+        System.out.println(project1.calculateEV(date4));
+        System.out.println(project1.calculatePV(date4));
+        System.out.println(project1.calculateSV(date4));
+
+        //7 - testing workByMember
+
+        System.out.println(project1.assignedTasksByMember(2));
+
+        //8 - testing retrieveRisks
+
+        System.out.println(project1.retrieveRisks());
 
 
     }

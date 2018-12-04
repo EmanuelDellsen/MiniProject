@@ -34,7 +34,6 @@ public class Task {
                 "Description: " + description + "\n" +
                 "Start date: " + actualStartDate + "\n" +
                 "Projected completed date: " + projectedCompletedDate + "\n" +
-                "Description: " + description + "\n" +
                 // should call retrieve taskMembers ", TaskMembers="+taskMembers+
                 '}';
     }
@@ -63,7 +62,7 @@ public class Task {
         this.taskId = taskId;
     }
 
-    public String getName() {
+    public String getName(){
         return taskName;
     }
 

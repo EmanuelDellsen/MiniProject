@@ -3,6 +3,9 @@ package Classes;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Project {
 
@@ -35,51 +38,65 @@ public class Project {
         return (percentageOfCompletedTasks(date)*this.budgetAtCompletion);
     }
 
+    public int calculateSV(LocalDate date){
+        return (int)(this.calculateEV(date)-calculatePV(date));
+    }
+/*
+    public double calculateCV(LocalDate date){
+        return this.calculateEV(date)-this.calculateAC(date);
+    }
+*/
     // should be private later on.... - Karl
     public double percentageOfCompletedTasks(LocalDate date){
         double valueOfCompletedTasks = 0.0;
         double valueOfAllTasks = 0.0;
 
-        for(int i = 0; i < this.taskList.size();i++){
-            if(this.taskList.get(i).taskIsComplete(date)){
-                valueOfCompletedTasks += this.taskList.get(i).getTaskValue();
-            }
-        }
         for(Task task : this.taskList){
             valueOfAllTasks += task.getTaskValue();
+            if(task.taskIsComplete(date)){
+                valueOfCompletedTasks += task.getTaskValue();
+            }
         }
         return (valueOfCompletedTasks/valueOfAllTasks);
     }
 
-    public double calculateSV(LocalDate date){
-        this.calculateEV(date)
-    }
-
-    public double calculatePV(){
-        Long timeElapsed = ChronoUnit.DAYS.between(this.actualStartDate,LocalDate.now());
+    //should be private later on.... -Karl
+    public double calculatePV(LocalDate date){
+        Long timeElapsed = ChronoUnit.DAYS.between(this.actualStartDate,date);
         Long projectDuration = ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
 
-        double percentageOfProjectComplete = (timeElapsed/projectDuration);
+        double percentageOfProjectCompleted = ((double)timeElapsed/(double)projectDuration);
 
-
+        return (percentageOfProjectCompleted*this.budgetAtCompletion);
+    }
+    /*
+    public double calculateAC(LocalDate date){
+        double sumOfHoursWorked;
+        for(TeamMember teamMember : this.teamMemberList){
+            sumOfHoursWorked += task.getTaskValue();
+        }
 
     }
+    */
+    public List<String> assignedTasksByMember(int teamMemberId){
+        List<String> collect = taskList.stream()
+                .filter(task -> task.getTaskMembers().containsKey(teamMemberId))
+                .sorted(Comparator.comparing(Task::getName))
+                //.sorted() - ??
+                .map(Task::getName)
+                .collect(Collectors.toList());
 
-    public void calculateCV(){
+        return collect; //string building here instead and use String as type?
     }
-
-    public void retrieveRisk(){
-    }
-
-    public void workDoneByMember(){
+    public List<Risk> retrieveRisks(){
+        List<Risk> collect = riskList.stream()
+                .sorted(Comparator.comparing(Risk::getRiskName))
+                .collect(Collectors.toList());
+        return collect;
     }
 
     public void workDoneByAll(){
     }
-
-    public void timeWorkedByMember(){
-    }
-
 
     public void projectSchedule(){
     }
@@ -136,5 +153,19 @@ public class Project {
 
     public int getProjectId() {
         return projectId;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "projectId=" + projectId +
+                ", projectName='" + projectName + '\'' +
+                ", actualStartDate=" + actualStartDate +
+                ", projectedCompletedDate=" + projectedCompletedDate +
+                ", budgetAtCompletion=" + budgetAtCompletion +
+                ", teamMemberList=" + teamMemberList +
+                ", taskList=" + taskList +
+                ", riskList=" + riskList +
+                '}';
     }
 }
