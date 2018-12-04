@@ -40,27 +40,24 @@ public class TestMain {
         project1.getTeamMemberList().add(teamMember2);
         project1.getTeamMemberList().add(teamMember3);
 
-        //4 - Creating 3 new tasks & inserting them into the taskList in project1
-
-        Map<Integer,Double> taskMember1 = new HashMap<>();
-        taskMember1.put(1,10.0);
+        //4 - Creating 1 new tasks & inserting it into the taskList in project1
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String str = "2018-11-01";
         LocalDate date1 = LocalDate.parse(str,formatter);
-        String str2 = "2018-12-01";
+        String str2 = "2018-10-01";
         LocalDate date2 = LocalDate.parse(str2,formatter);
         String str3 = "2018-11-11";
         LocalDate date3 = LocalDate.parse(str3,formatter);
 
         Task task1 = new Task(1,"CreateGitRepository","Github 4-life",
                 date1,date2,date3);
-
+        task1.getTaskMembers().put(1,10.0);
         project1.getTaskList().add(task1);
 
-
-        // Printing content of project1
+        // 5 - Printing content of project1
         System.out.println(task1.getTaskValue());
+        project1.calculateEV()
     }
 
 }
