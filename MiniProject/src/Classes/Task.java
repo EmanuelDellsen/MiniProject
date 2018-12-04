@@ -2,6 +2,7 @@ package Classes;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Task {
@@ -18,15 +19,14 @@ public class Task {
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
-                LocalDate actualCompletedDate, Map<Integer, Double> taskMembers) {
+                LocalDate actualCompletedDate) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
-        this.taskMembers = taskMembers;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
-        this.taskMembers = taskMembers;
+        this.taskMembers = new HashMap<>();
     }
 
     public String toString() {
@@ -58,6 +58,14 @@ public class Task {
         return actualCurrentDateAsInteger >= actualCompletedDateAsInteger;
     }
 */
+
+    public Map<Integer, Double> getTaskMembers() {
+        return taskMembers;
+    }
+
+    public void setTaskMembers(Map<Integer, Double> taskMembers) {
+        this.taskMembers = taskMembers;
+    }
 
     public int getId() {
         return taskId;

@@ -49,7 +49,10 @@ public class Project {
         return (valueOfCompletedTasks/valueOfAllTasks);
     }
 
-    public void scheduleVariance(){
+    public void calculateSV(){
+    }
+
+    public void calculateCV(){
     }
 
     public void retrieveRisk(){
@@ -64,14 +67,6 @@ public class Project {
     public void timeWorkedByMember(){
     }
 
-    public void calcCostVariance(){
-    }
-
-    public double calcPlannedValue(){
-
-       double plannedValue = 0;
-       return plannedValue;
-    }
 
     public void projectSchedule(){
     }
