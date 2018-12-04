@@ -1,5 +1,6 @@
 package Classes;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Project {
@@ -8,7 +9,6 @@ public class Project {
     private String projectName;
     private String actualStartDate;
     private String projectedCompletedDate;
-
     private double budgetAtCompletion;
 
     private ArrayList<TeamMember> teamMemberList;
@@ -16,27 +16,43 @@ public class Project {
     private ArrayList<Risk> riskList;
 
     public Project(int projectId, String projectName, String actualStartDate,
-                   String projectedCompletedDate, double budgetAtCompletion
-           /* ArrayList<TeamMember> teamMemberList, ArrayList<Task> taskList,
-                   ArrayList<Risk> riskList*/) {
+                   String projectedCompletedDate, double budgetAtCompletion) {
+
         this.projectId = projectId;
         this.projectName = projectName;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.budgetAtCompletion = budgetAtCompletion;
-      /*  this.taskList = taskList;
-        this.teamMemberList = teamMemberList;
-        this.riskList = riskList;*/
+
+        taskList = new ArrayList<>();
+        teamMemberList = new ArrayList<>();
+        riskList = new ArrayList<>();
+
     }
 
-    public double calcEstimValue(){
-
-        double estimatedValue = 0;
-
-    return estimatedValue;
+    public double calculateEV(LocalDate date){
+        return (percentageOfCompletedTasks(date)*this.budgetAtCompletion);
     }
 
-    public void scheduleVariance(){
+    public double percentageOfCompletedTasks(LocalDate date){
+        double valueOfCompletedTasks = 0.0;
+        double valueOfAllTasks = 0.0;
+
+        for(int i = 0; i < this.taskList.size();i++){
+            if(this.taskList.get(i).taskIsComplete(date)){
+                valueOfCompletedTasks += this.taskList.get(i).getTaskValue();
+            }
+        }
+        for(Task task : this.taskList){
+            valueOfAllTasks += task.getTaskValue();
+        }
+        return (valueOfCompletedTasks/valueOfAllTasks);
+    }
+
+    public void calculateSV(){
+    }
+
+    public void calculateCV(){
     }
 
     public void retrieveRisk(){
@@ -51,14 +67,6 @@ public class Project {
     public void timeWorkedByMember(){
     }
 
-    public void calcCostVariance(){
-    }
-
-    public double calcPlannedValue(){
-
-       double plannedValue = 0;
-       return plannedValue;
-    }
 
     public void projectSchedule(){
     }
