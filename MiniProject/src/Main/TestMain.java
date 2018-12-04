@@ -40,24 +40,45 @@ public class TestMain {
         project1.getTeamMemberList().add(teamMember2);
         project1.getTeamMemberList().add(teamMember3);
 
-        //4 - Creating 1 new tasks & inserting it into the taskList in project1
+        //4 - Creating 2 new tasks & inserting it into the taskList in project1
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String str = "2018-11-01";
-        LocalDate date1 = LocalDate.parse(str,formatter);
-        String str2 = "2018-10-01";
+        String str1 = "2018-11-01";
+        LocalDate date1 = LocalDate.parse(str1,formatter);
+        String str2 = "2018-12-01";
         LocalDate date2 = LocalDate.parse(str2,formatter);
         String str3 = "2018-11-11";
         LocalDate date3 = LocalDate.parse(str3,formatter);
 
         Task task1 = new Task(1,"CreateGitRepository","Github 4-life",
                 date1,date2,date3);
-        task1.getTaskMembers().put(1,10.0);
+        task1.getTaskMembers().put(2,10.0);
         project1.getTaskList().add(task1);
 
+        String strb1 = "2018-11-02";
+        LocalDate dateb1 = LocalDate.parse(strb1,formatter);
+        String strb2 = "2018-12-02";
+        LocalDate dateb2 = LocalDate.parse(strb2,formatter);
+        String strb3 = "2018-11-30";
+        LocalDate dateb3 = LocalDate.parse(strb3,formatter);
+
+        Task task2 = new Task(1,"CreateGittyKitty","Github 4-life",
+                dateb1,dateb2,dateb3);
+        task2.getTaskMembers().put(1,10.0);
+        project1.getTaskList().add(task2);
+
         // 5 - Printing content of project1
+        System.out.println(project1.getTaskList());
         System.out.println(task1.getTaskValue());
-        project1.calculateEV()
+        System.out.println(task2.getTaskValue());
+        String str4 = "2018-11-15";
+        LocalDate date4 = LocalDate.parse(str4,formatter);
+        System.out.println(task1.taskIsComplete(date4));
+        System.out.println(task2.taskIsComplete(date4));
+        System.out.println(project1.percentageOfCompletedTasks(date4));
+        System.out.println(project1.calculateEV(date4));
+
+
     }
 
 }
