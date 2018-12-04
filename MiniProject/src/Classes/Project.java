@@ -1,5 +1,6 @@
 package Classes;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Project {
@@ -17,9 +18,6 @@ public class Project {
     public Project(int projectId, String projectName, String actualStartDate,
                    String projectedCompletedDate, double budgetAtCompletion) {
 
-//        ArrayList<TeamMember> teamMemberList, ArrayList<Task> taskList,
-//                ArrayList<Risk> riskList
-
         this.projectId = projectId;
         this.projectName = projectName;
         this.actualStartDate = actualStartDate;
@@ -30,16 +28,25 @@ public class Project {
         teamMemberList = new ArrayList<>();
         riskList = new ArrayList<>();
 
-      /*  this.taskList = taskList;
-        this.teamMemberList = teamMemberList;
-        this.riskList = riskList;*/
     }
 
-    public double calcEstimValue(){
+    public double calculateEV(LocalDate date){
+        return (percentageOfCompletedTasks(date)*this.budgetAtCompletion);
+    }
 
-        double estimatedValue = 0;
+    public double percentageOfCompletedTasks(LocalDate date){
+        double valueOfCompletedTasks = 0.0;
+        double valueOfAllTasks = 0.0;
 
-    return estimatedValue;
+        for(int i = 0; i < this.taskList.size();i++){
+            if(this.taskList.get(i).taskIsComplete(date)){
+                valueOfCompletedTasks += this.taskList.get(i).getTaskValue();
+            }
+        }
+        for(Task task : this.taskList){
+            valueOfAllTasks += task.getTaskValue();
+        }
+        return (valueOfCompletedTasks/valueOfAllTasks);
     }
 
     public void scheduleVariance(){

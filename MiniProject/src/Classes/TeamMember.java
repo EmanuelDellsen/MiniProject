@@ -38,9 +38,9 @@ public class TeamMember {
 
 
     public String toString() {
-        return "teamMemberName= " +
-                teamMemberName +
-                '\'' + ", salaryPerHour= " + salaryPerHour + '\'' + ", teamMemberId=" + teamMemberId;
+        return  "Name: "+teamMemberName+"\n"+
+                "ID: "+teamMemberId+"\n"+
+                "Salary: "+salaryPerHour+"\n";
     }
 
 }
