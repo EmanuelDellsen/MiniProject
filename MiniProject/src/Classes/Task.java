@@ -7,18 +7,26 @@ public class Task {
     private int taskId;
     private String taskName;
     private String description;
+
+    // private boolean taskIsComplete;
+
+    private Map<Integer, Double> taskMembers;
+
     private String actualStartDate;
     private String projectedCompletedDate;
     private String actualCompletedDate;
 
-    Map<Integer, Double> taskMembers;
+    //private Map<TaskMember, hoursWorked> taskMatesList; this needs to go to the constructor
 
-    public Task(int taskId, String taskName, String description, String actualStartDate,
-                String projectedCompletedDate, String actualCompletedDate,
-                Map<Integer, Double> taskMembers) {
+    public Task(int taskId, String taskName, String description,
+                String actualStartDate, String projectedCompletedDate,
+                String actualCompletedDate, Map<Integer, Double> taskMembers) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
+
+        // this.taskIsComplete = taskIsComplete;
+        this.taskMembers = taskMembers;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
@@ -83,5 +91,4 @@ public class Task {
     }
 
 }
-
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e15849ba-4cae-4191-bb26-7aff1142b87c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/MiniProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Classes/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Classes/Project.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Classes/Risk.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Classes/Risk.class" afterDir="false" />
@@ -10,6 +11,19 @@
       <change beforePath="$PROJECT_DIR$/src/Classes/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/TeamMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/TeamMember.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Project.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Classes/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Classes/Project.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Classes/Risk.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Classes/Risk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Classes/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Classes/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Classes/TaskMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Classes/TaskMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Classes/TeamMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Classes/TeamMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Main/JSONReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Main/JSONReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/risk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/TaskMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/TaskMember.java" afterDir="false" />
+>>>>>>> master
       <change beforePath="$PROJECT_DIR$/src/Main/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/JSONReader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,6 +33,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
@@ -26,23 +41,243 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+=======
+  <component name="FUSProjectUsageTrigger">
+    <session id="1574812024">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="3" />
+          <entry key="json" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="3" />
+          <entry key="JSON" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="630" />
+          <entry key="json" value="59" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="630" />
+          <entry key="JSON" value="59" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1012355763">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1973" />
+          <entry key="json" value="43" />
+          <entry key="txt" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1973" />
+          <entry key="JSON" value="43" />
+          <entry key="PLAIN_TEXT" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1810092253">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="10" />
+          <entry key="json" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="10" />
+          <entry key="JSON5" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="2366" />
+          <entry key="json" value="190" />
+          <entry key="txt" value="49" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="2366" />
+          <entry key="JSON5" value="190" />
+          <entry key="PLAIN_TEXT" value="49" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-609920776">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1260" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1260" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-997488299">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="iml" value="1" />
+          <entry key="java" value="3" />
+          <entry key="json" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="3" />
+          <entry key="JSON" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main/JSONReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="55" column="74" selection-start-line="55" selection-start-column="74" selection-end-line="55" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5000#5016#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Classes/TeamMember.java">
+        <entry file="file://$PROJECT_DIR$/src/Classes/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="270">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="38" />
+>>>>>>> master
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1584#1585#0" expanded="true" />
+                <element signature="e#1613#1614#0" expanded="true" />
+                <element signature="e#1646#1647#0" expanded="true" />
+                <element signature="e#1682#1683#0" expanded="true" />
+                <element signature="e#1713#1714#0" expanded="true" />
+                <element signature="e#1744#1745#0" expanded="true" />
+                <element signature="e#1784#1785#0" expanded="true" />
+                <element signature="e#1824#1825#0" expanded="true" />
+                <element signature="e#1862#1863#0" expanded="true" />
+                <element signature="e#1896#1897#0" expanded="true" />
+                <element signature="e#1950#1951#0" expanded="true" />
+                <element signature="e#1996#1997#0" expanded="true" />
+                <element signature="e#2032#2033#0" expanded="true" />
+                <element signature="e#2070#2071#0" expanded="true" />
+                <element signature="e#2120#2121#0" expanded="true" />
+                <element signature="e#2174#2175#0" expanded="true" />
+                <element signature="e#2223#2224#0" expanded="true" />
+                <element signature="e#2268#2269#0" expanded="true" />
+                <element signature="e#2458#2459#0" expanded="true" />
+                <element signature="e#2500#2501#0" expanded="true" />
+                <element signature="e#2570#2571#0" expanded="true" />
+                <element signature="e#2632#2633#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/Classes/TeamMember.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/Classes/TaskMember.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Classes/Risk.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="27" />
+              <folding>
+                <element signature="e#986#987#0" expanded="true" />
+                <element signature="e#1020#1021#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
+                <element signature="e#1089#1090#0" expanded="true" />
+                <element signature="e#1126#1127#0" expanded="true" />
+                <element signature="e#1165#1166#0" expanded="true" />
+                <element signature="e#1193#1194#0" expanded="true" />
+                <element signature="e#1227#1228#0" expanded="true" />
+              </folding>
+>>>>>>> master
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/Classes/Project.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -61,12 +296,32 @@
                 <element signature="e#1443#1444#0" expanded="true" />
                 <element signature="e#1474#1475#0" expanded="true" />
                 <element signature="method#setProjectedCompletionDate#0;class#Project#0" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/Classes/TeamMember.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+              <folding>
+                <element signature="e#368#369#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#598#599#0" expanded="true" />
+                <element signature="e#656#657#0" expanded="true" />
+                <element signature="e#706#707#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+>>>>>>> master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/Classes/Risk.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -75,11 +330,18 @@
                 <element signature="method#returnRisk#0;class#Risk#0" />
                 <element signature="method#toString#0;class#Risk#0" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/Main/CurrentDate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/Classes/Task.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -96,6 +358,49 @@
                 <element signature="e#1932#1933#0" expanded="true" />
                 <element signature="e#2164#2165#0" expanded="true" />
                 <element signature="e#2296#2297#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/Classes/Project.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="41" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="41" />
+              <folding>
+                <element signature="e#1612#1613#0" expanded="true" />
+                <element signature="e#1653#1654#0" expanded="true" />
+                <element signature="e#1715#1716#0" expanded="true" />
+                <element signature="e#1775#1776#0" expanded="true" />
+                <element signature="e#1819#1820#0" expanded="true" />
+                <element signature="e#1850#1851#0" expanded="true" />
+                <element signature="e#1907#1908#0" expanded="true" />
+                <element signature="e#1947#1948#0" expanded="true" />
+                <element signature="e#2003#2004#0" expanded="true" />
+                <element signature="e#2040#2041#0" expanded="true" />
+                <element signature="e#2115#2116#0" expanded="true" />
+                <element signature="e#2167#2168#0" expanded="true" />
+                <element signature="e#2211#2212#0" expanded="true" />
+                <element signature="e#2242#2243#0" expanded="true" />
+                <element signature="e#2299#2300#0" expanded="true" />
+                <element signature="e#2339#2340#0" expanded="true" />
+                <element signature="e#2377#2378#0" expanded="true" />
+                <element signature="e#2411#2412#0" expanded="true" />
+                <element signature="e#2465#2466#0" expanded="true" />
+                <element signature="e#2511#2512#0" expanded="true" />
+                <element signature="e#2553#2554#0" expanded="true" />
+                <element signature="e#2591#2592#0" expanded="true" />
+                <element signature="e#2653#2654#0" expanded="true" />
+                <element signature="e#2707#2708#0" expanded="true" />
+                <element signature="e#2757#2758#0" expanded="true" />
+                <element signature="e#2802#2803#0" expanded="true" />
+                <element signature="e#2994#2995#0" expanded="true" />
+                <element signature="e#3035#3036#0" expanded="true" />
+                <element signature="e#3103#3104#0" expanded="true" />
+                <element signature="e#3163#3164#0" expanded="true" />
+                <element signature="e#3196#3197#0" expanded="true" />
+                <element signature="e#3228#3229#0" expanded="true" />
+                <element signature="e#3275#3276#0" expanded="true" />
+                <element signature="e#3317#3318#0" expanded="true" />
+                <element signature="e#3366#3367#0" expanded="true" />
+                <element signature="e#3411#3412#0" expanded="true" />
+>>>>>>> master
               </folding>
             </state>
           </provider>
@@ -104,8 +409,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/JSONReader.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="399">
               <caret line="170" column="2" selection-start-line="170" selection-start-column="2" selection-end-line="170" selection-end-column="2" />
+=======
+            <state relative-caret-position="142">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="22" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -118,6 +428,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Object</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -139,6 +454,7 @@
         <option value="$PROJECT_DIR$/src/Project.java" />
         <option value="$PROJECT_DIR$/src/JSONReader.java" />
         <option value="$PROJECT_DIR$/resources/Project.json" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Project.json" />
         <option value="$PROJECT_DIR$/src/Classes/Risk.java" />
         <option value="$PROJECT_DIR$/src/Main/TestMai.java" />
@@ -147,6 +463,15 @@
         <option value="$PROJECT_DIR$/src/Classes/Task.java" />
         <option value="$PROJECT_DIR$/src/Classes/TeamMember.java" />
         <option value="$PROJECT_DIR$/src/Main/TestMain.java" />
+=======
+        <option value="$PROJECT_DIR$/src/Classes/TeamMember.java" />
+        <option value="$PROJECT_DIR$/src/Classes/Risk.java" />
+        <option value="$PROJECT_DIR$/src/Classes/Task.java" />
+        <option value="$PROJECT_DIR$/src/Classes/TaskMember.java" />
+        <option value="$PROJECT_DIR$/src/Classes/Project.java" />
+        <option value="$PROJECT_DIR$/Project.json" />
+        <option value="$PROJECT_DIR$/src/Main/JSONReader.java" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -161,6 +486,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MiniProject" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MiniProject" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+<<<<<<< HEAD
+=======
+              <item name="MiniProject" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MiniProject" type="616d4139:PackageViewModuleNode" />
+              <item name="Classes" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,6 +512,7 @@
               <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+>>>>>>> master
               <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -190,28 +534,16 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MiniProject" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MiniProject" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="MiniProject" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MiniProject" type="616d4139:PackageViewModuleNode" />
-              <item name="Classes" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543599560414" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543603779413" />
+>>>>>>> master
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -342,10 +674,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543396687138</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Changes to JSON">
+      <created>1543603093706</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1543603093706</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="53401000" />
   </component>
   <component name="ToolWindowManager">
@@ -353,6 +693,15 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7281553" visible="true" weight="0.21781376" />
+=======
+    <option name="totallyTimeSpent" value="50600000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7281553" visible="true" weight="0.1631664" />
+>>>>>>> master
       <window_info id="Structure" order="1" sideWeight="0.27184466" side_tool="true" weight="0.1924307" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -361,7 +710,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28063944" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28200972" />
+>>>>>>> master
       <window_info anchor="bottom" id="Debug" order="3" weight="0.115072936" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -421,7 +774,8 @@
     <MESSAGE value="Changes" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Changes to structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes to structure" />
+    <MESSAGE value="Changes to JSON" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes to JSON" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -445,6 +799,7 @@
     <entry file="jar://$USER_HOME$/json-simple-1.1.1.jar/json-simple-1.1.1.jar!/org/json/simple/JSONObject.class" />
     <entry file="file://$PROJECT_DIR$/resources/teammates.json" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Object.java" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Project.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -516,11 +871,114 @@
             <element signature="method#returnRisk#0;class#Risk#0" />
             <element signature="method#toString#0;class#Risk#0" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/MiniProject.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6165" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/CurrentDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/Risk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="27" />
+          <folding>
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1126#1127#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1227#1228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/TeamMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1613#1614#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
+            <element signature="e#1682#1683#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+            <element signature="e#1824#1825#0" expanded="true" />
+            <element signature="e#1862#1863#0" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
+            <element signature="e#2032#2033#0" expanded="true" />
+            <element signature="e#2070#2071#0" expanded="true" />
+            <element signature="e#2120#2121#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
+            <element signature="e#2223#2224#0" expanded="true" />
+            <element signature="e#2268#2269#0" expanded="true" />
+            <element signature="e#2458#2459#0" expanded="true" />
+            <element signature="e#2500#2501#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2632#2633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classes/TaskMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="765" selection-start-line="765" selection-end-line="765" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classes/Project.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="153">
           <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
           <folding>
@@ -537,10 +995,52 @@
             <element signature="e#1443#1444#0" expanded="true" />
             <element signature="e#1474#1475#0" expanded="true" />
             <element signature="method#setProjectedCompletionDate#0;class#Project#0" />
+=======
+        <state relative-caret-position="135">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1775#1776#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
+            <element signature="e#1907#1908#0" expanded="true" />
+            <element signature="e#1947#1948#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2242#2243#0" expanded="true" />
+            <element signature="e#2299#2300#0" expanded="true" />
+            <element signature="e#2339#2340#0" expanded="true" />
+            <element signature="e#2377#2378#0" expanded="true" />
+            <element signature="e#2411#2412#0" expanded="true" />
+            <element signature="e#2465#2466#0" expanded="true" />
+            <element signature="e#2511#2512#0" expanded="true" />
+            <element signature="e#2553#2554#0" expanded="true" />
+            <element signature="e#2591#2592#0" expanded="true" />
+            <element signature="e#2653#2654#0" expanded="true" />
+            <element signature="e#2707#2708#0" expanded="true" />
+            <element signature="e#2757#2758#0" expanded="true" />
+            <element signature="e#2802#2803#0" expanded="true" />
+            <element signature="e#2994#2995#0" expanded="true" />
+            <element signature="e#3035#3036#0" expanded="true" />
+            <element signature="e#3103#3104#0" expanded="true" />
+            <element signature="e#3163#3164#0" expanded="true" />
+            <element signature="e#3196#3197#0" expanded="true" />
+            <element signature="e#3228#3229#0" expanded="true" />
+            <element signature="e#3275#3276#0" expanded="true" />
+            <element signature="e#3317#3318#0" expanded="true" />
+            <element signature="e#3366#3367#0" expanded="true" />
+            <element signature="e#3411#3412#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Classes/TeamMember.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -554,6 +1054,22 @@
           <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/Project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/JSONReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="55" column="74" selection-start-line="55" selection-start-column="74" selection-end-line="55" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5000#5016#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
