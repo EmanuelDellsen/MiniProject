@@ -5,6 +5,8 @@ import Classes.Risk;
 import Classes.Task;
 import Classes.TeamMember;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,17 +45,22 @@ public class TestMain {
         Map<Integer,Double> taskMember1 = new HashMap<>();
         taskMember1.put(1,10.0);
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String str = "2018-11-01";
+        LocalDate date1 = LocalDate.parse(str,formatter);
+        String str2 = "2018-12-01";
+        LocalDate date2 = LocalDate.parse(str2,formatter);
+        String str3 = "2018-11-11";
+        LocalDate date3 = LocalDate.parse(str3,formatter);
+
         Task task1 = new Task(1,"CreateGitRepository","Github 4-life",
-                "2018-11-01","2018-11-14","2018-11-08",taskMember1);
+                date1,date2,date3);
 
         project1.getTaskList().add(task1);
 
 
         // Printing content of project1
-        System.out.println(taskMember1);
-        System.out.println(project1.getRiskList());
-        System.out.println(project1.getTaskList());
-        System.out.println(project1.getTeamMemberList());
+        System.out.println(task1.getTaskValue());
     }
 
 }
