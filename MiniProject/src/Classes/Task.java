@@ -1,5 +1,7 @@
 package Classes;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Map;
 
 public class Task {
@@ -8,24 +10,18 @@ public class Task {
     private String taskName;
     private String description;
 
-    // private boolean taskIsComplete;
-
     private Map<Integer, Double> taskMembers;
 
-    private String actualStartDate;
-    private String projectedCompletedDate;
-    private String actualCompletedDate;
-
-    //private Map<TaskMember, hoursWorked> taskMatesList; this needs to go to the constructor
+    private LocalDate actualStartDate;
+    private LocalDate projectedCompletedDate;
+    private LocalDate actualCompletedDate;
 
     public Task(int taskId, String taskName, String description,
-                String actualStartDate, String projectedCompletedDate,
-                String actualCompletedDate, Map<Integer, Double> taskMembers) {
+                LocalDate actualStartDate, LocalDate projectedCompletedDate,
+                LocalDate actualCompletedDate, Map<Integer, Double> taskMembers) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
-
-        // this.taskIsComplete = taskIsComplete;
         this.taskMembers = taskMembers;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
@@ -34,13 +30,34 @@ public class Task {
     }
 
     public String toString() {
-        return "id=" + taskId + ", name= " + taskName + '\'' +
-                ", description='" + description + '\'' +
-                ", start date='" + actualStartDate + '\'' +
-                ", project completed date='" + projectedCompletedDate + '\'' +
-                ", actual completed date='" + actualCompletedDate +
+        return  "Name: " + taskName + "\n" +
+                "Description: " + description + "\n" +
+                "Start date: " + actualStartDate + "\n" +
+                "Projected completed date: " + projectedCompletedDate + "\n" +
+                "Description: " + description + "\n" +
+                // should call retrieve taskMembers ", TaskMembers="+taskMembers+
                 '}';
     }
+
+    public long getTaskValue(){
+        return ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
+    }
+
+    public boolean taskIsComplete(LocalDate date){
+        return this.actualCompletedDate.isBefore(date);
+    }
+
+        /*
+    public boolean taskIsComplete(){
+        String actualCompletedDate = this.actualCompletedDate.replace("-","");
+        String currentDate = LocalDate.now().toString().replace("-","");
+
+        int actualCompletedDateAsInteger = Integer.parseInt(actualCompletedDate);
+        int actualCurrentDateAsInteger = Integer.parseInt(currentDate);
+
+        return actualCurrentDateAsInteger >= actualCompletedDateAsInteger;
+    }
+*/
 
     public int getId() {
         return taskId;
@@ -64,30 +81,6 @@ public class Task {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getStartDate() {
-        return actualStartDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.actualStartDate = actualStartDate;
-    }
-
-    public String getProjectedCompletedDate() {
-        return projectedCompletedDate;
-    }
-
-    public void setProjectedCompletedDate(String projectedCompletedDate) {
-        this.projectedCompletedDate = projectedCompletedDate;
-    }
-
-    public String getActualCompletedDate() {
-        return actualCompletedDate;
-    }
-
-    public void setActualCompletedDate(String actualCompletedDate) {
-        this.actualCompletedDate = actualCompletedDate;
     }
 
 }
