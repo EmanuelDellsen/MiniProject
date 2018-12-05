@@ -30,7 +30,7 @@
         {
           "teamMemberName": "Emanuel Dellsen",
           "teamMemberId": "5",
-          "salaryPerHour": "200"
+          "salaryPerHour": "300"
         },
         {
           "teamMemberName": "Niklas Moller",
@@ -50,7 +50,7 @@
           "description": "We need a Trello workspace",
           "actualStartDate": "2018-11-01",
           "projectedCompletedDate": "2018-11-02",
-          "actualCompletedDate": "",
+          "actualCompletedDate": "2018-11-02",
           "taskMembers": [
             {
               "id": "1",
@@ -68,7 +68,7 @@
           "description": "We need a Slack workspace",
           "actualStartDate": "2018-11-02",
           "projectedCompletedDate": "2018-11-03",
-          "actualCompletedDate": "",
+          "actualCompletedDate": "2018-11-03",
           "taskMembers": [
             {
               "id": "1",
