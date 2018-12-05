@@ -55,7 +55,7 @@ public class Risk {
         return  "Name: "+riskName+"\n"+
                 "Probability: "+probability+"\n"+
                 "Impact: "+impact+"\n"+
-                "Risk: "+returnRisk();
+                "Risk: "+returnRisk()+"\n";
     }
 }
 
