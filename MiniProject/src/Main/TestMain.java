@@ -35,8 +35,8 @@ public class TestMain {
 
         //3 - Creating 3 new teamMembers & inserting them into the teamMemberList in project1
 
-        TeamMember teamMember1 = new TeamMember(1,"Nafen",250);
-        TeamMember teamMember2 = new TeamMember(2,"Thiago",250);
+        TeamMember teamMember1 = new TeamMember(1,"Nafen",100);
+        TeamMember teamMember2 = new TeamMember(2,"Thiago",350);
         TeamMember teamMember3 = new TeamMember(3,"Emanuel",300);
 
         project1.getTeamMemberList().add(teamMember1);
@@ -45,16 +45,16 @@ public class TestMain {
 
         //4 - Creating 2 new tasks & inserting it into the taskList in project1
 
-        String str1 = "2018-11-01";
+        String str1 = "2018-11-02";
         LocalDate date1 = LocalDate.parse(str1,formatter);
-        String str2 = "2018-12-01";
+        String str2 = "2019-01-01";
         LocalDate date2 = LocalDate.parse(str2,formatter);
         String str3 = "2018-11-11";
         LocalDate date3 = LocalDate.parse(str3,formatter);
 
         Task task1 = new Task(1,"CreateGitRepository","Github 4-life",
                 date1,date2,date3);
-        task1.getTaskMembers().put(2,10.0);
+        task1.getTaskMembers().put(1,10.0);
         project1.getTaskList().add(task1);
 
         String strb1 = "2018-11-02";
@@ -66,7 +66,7 @@ public class TestMain {
 
         Task task2 = new Task(1,"CreateGittyKitty","Github 4-life",
                 dateb1,dateb2,dateb3);
-        task2.getTaskMembers().put(2,10.0);
+        task2.getTaskMembers().put(1,10.0);
         project1.getTaskList().add(task2);
 
         // 5 - testing calculateEV
@@ -88,11 +88,21 @@ public class TestMain {
 
         //7 - testing workByMember
 
-        System.out.println(project1.assignedTasksByMember(2));
+        System.out.println(project1.assignedTasksByMember(1));
 
         //8 - testing retrieveRisks
 
         System.out.println(project1.retrieveRisks());
+
+        System.out.println(task1.getTaskValue());
+        String tempStr = "2018-11-17";
+        LocalDate tempDate = LocalDate.parse(tempStr,formatter);
+        System.out.println(task1.progressByHour(tempDate,1));
+        System.out.println(project1.calculateAC(tempDate));
+
+        System.out.println(project1.calculateEV(tempDate));
+        System.out.println(project1.calculateAC(tempDate));
+        System.out.println(project1.calculateCV(tempDate));
 
 
     }

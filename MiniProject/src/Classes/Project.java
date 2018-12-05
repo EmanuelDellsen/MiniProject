@@ -41,11 +41,11 @@ public class Project {
     public int calculateSV(LocalDate date){
         return (int)(this.calculateEV(date)-calculatePV(date));
     }
-/*
+
     public double calculateCV(LocalDate date){
         return this.calculateEV(date)-this.calculateAC(date);
     }
-*/
+
     // should be private later on.... - Karl
     public double percentageOfCompletedTasks(LocalDate date){
         double valueOfCompletedTasks = 0.0;
@@ -62,37 +62,38 @@ public class Project {
 
     //should be private later on.... -Karl
     public double calculatePV(LocalDate date){
-        Long timeElapsed = ChronoUnit.DAYS.between(this.actualStartDate,date);
-        Long projectDuration = ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
+        long timeElapsed = ChronoUnit.DAYS.between(this.actualStartDate,date);
+        long projectDuration = ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
 
         double percentageOfProjectCompleted = ((double)timeElapsed/(double)projectDuration);
 
         return (percentageOfProjectCompleted*this.budgetAtCompletion);
     }
-    /*
-    public double calculateAC(LocalDate date){
-        double sumOfHoursWorked;
-        for(TeamMember teamMember : this.teamMemberList){
-            sumOfHoursWorked += task.getTaskValue();
-        }
 
+    //should be private later on.... -Karl
+    public double calculateAC(LocalDate date){
+        double sumOfCostByHours = 0.0;
+
+        for (TeamMember teamMember : this.teamMemberList){
+            for (Task task: this.taskList){
+                sumOfCostByHours += task.progressByHour(date,teamMember.getTeamMemberId())*teamMember.getSalaryPerHour();
+            }
+        }
+        return sumOfCostByHours;
     }
-    */
+
     public List<String> assignedTasksByMember(int teamMemberId){
-        List<String> collect = taskList.stream()
+        return taskList.stream()
                 .filter(task -> task.getTaskMembers().containsKey(teamMemberId))
                 .sorted(Comparator.comparing(Task::getName))
-                //.sorted() - ??
                 .map(Task::getName)
                 .collect(Collectors.toList());
-
-        return collect; //string building here instead and use String as type?
+        //string building here instead and use String as type?
     }
     public List<Risk> retrieveRisks(){
-        List<Risk> collect = riskList.stream()
+        return riskList.stream()
                 .sorted(Comparator.comparing(Risk::getRiskName))
                 .collect(Collectors.toList());
-        return collect;
     }
 
     public void workDoneByAll(){
