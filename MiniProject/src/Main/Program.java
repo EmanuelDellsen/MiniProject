@@ -33,7 +33,7 @@ public class Program {
 
         JSONArray listOfProjects = (JSONArray) myJSONReader.createJSONObject().get("listOfProjects");
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-DD");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
 
         Iterator projectIterator = listOfProjects.iterator();

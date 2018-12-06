@@ -63,7 +63,7 @@ public class JSONReader {
         JSONArray tasks = (JSONArray) createJSONObject().get("taskList");
         Iterator taskIterator = tasks.iterator();
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-DD");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
 
 
