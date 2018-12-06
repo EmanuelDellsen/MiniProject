@@ -5,6 +5,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Task {
 
     private int taskId;
@@ -44,6 +45,21 @@ public class Task {
 
     public boolean taskIsComplete(LocalDate date){
         return this.actualCompletedDate.isBefore(date);
+    }
+
+    public double progressByHour(LocalDate date,int teamMemberId){
+        long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
+        double progressInPercent = (double)daysFromStartToDate/(double)getTaskValue();
+
+        return (sumHoursWorkedByMember(teamMemberId)*progressInPercent);
+    }
+
+    public double sumHoursWorkedByMember(int teamMemberId){
+        return taskMembers.values()
+                .stream()
+                .filter(a->taskMembers.containsKey(teamMemberId))
+                .mapToDouble(i->i)
+                .sum();
     }
 
     public Map<Integer, Double> getTaskMembers() {
