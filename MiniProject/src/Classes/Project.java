@@ -77,7 +77,7 @@ public class Project {
 
         for (TeamMember teamMember : this.teamMemberList){
             for (Task task: this.taskList){
-                sumOfCostByHours += task.progressByHour(date,teamMember.getTeamMemberId())*teamMember.getSalaryPerHour();
+                sumOfCostByHours += task.progressInHours(date,teamMember.getTeamMemberId())*teamMember.getSalaryPerHour();
             }
         }
         return sumOfCostByHours;
@@ -90,7 +90,6 @@ public class Project {
                 .sorted(Comparator.comparing(Task::getName))
                 .map(Task::getName)
                 .collect(Collectors.toList());
-        //string building here instead and use String as type?
     }
     //This returns a list of objects of type Risk with the format as the to.String in Risk
     public List<Risk> retrieveRisks(){
@@ -104,8 +103,10 @@ public class Project {
     }
 */
 
+    //Returns a list of the dates of every 2 weeks skipping first date
     public List<LocalDate> returnProjectIntervalDates(){
         return this.actualStartDate.datesUntil(this.projectedCompletedDate,Period.ofWeeks(2))
+                .skip(1)
                 .collect(Collectors.toList());
     }
 

@@ -47,7 +47,7 @@ public class Task {
         return this.actualCompletedDate.isBefore(date);
     }
 
-    public double progressByHour(LocalDate date,int teamMemberId){
+    public double progressInHours(LocalDate date, int teamMemberId){
         long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
         double progressInPercent = (double)daysFromStartToDate/(double) getTaskLength();
 

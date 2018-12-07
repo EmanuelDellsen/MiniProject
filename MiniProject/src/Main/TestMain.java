@@ -97,7 +97,7 @@ public class TestMain {
         System.out.println(task1.getTaskLength());
         String tempStr = "2018-11-17";
         LocalDate tempDate = LocalDate.parse(tempStr,formatter);
-        System.out.println(task1.progressByHour(tempDate,1));
+        System.out.println(task1.progressInHours(tempDate,1));
         System.out.println(project1.calculateAC(tempDate));
 
         System.out.println(project1.calculateEV(tempDate));
