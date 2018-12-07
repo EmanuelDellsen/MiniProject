@@ -82,6 +82,7 @@ public class Project {
         return sumOfCostByHours;
     }
 
+    //This returns a list of the name of the tasks that a teamMember is assigned to sorted by name
     public List<String> assignedTasksByMember(int teamMemberId){
         return taskList.stream()
                 .filter(task -> task.getTaskMembers().containsKey(teamMemberId))
@@ -90,16 +91,23 @@ public class Project {
                 .collect(Collectors.toList());
         //string building here instead and use String as type?
     }
+    //This returns a list of objects of type Risk with the format as the to.String in Risk
     public List<Risk> retrieveRisks(){
         return riskList.stream()
                 .sorted(Comparator.comparing(Risk::getRiskName))
                 .collect(Collectors.toList());
     }
 
-    public void workDoneByAll(){
+    /*
+    public List<String> workDoneByAll(){
+    }
+*/
+    public String projectSchedule(){
+
     }
 
-    public void projectSchedule(){
+    public Long projectIntervals(){
+        return ChronoUnit.WEEKS.between(this.actualStartDate,this.projectedCompletedDate);
     }
 
     public void retrieveTeamMember(){
