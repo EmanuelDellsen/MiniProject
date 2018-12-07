@@ -1,5 +1,7 @@
 package Classes;
 
+import org.json.simple.JSONArray;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -15,12 +17,12 @@ public class Project {
     private LocalDate projectedCompletedDate;
     private double budgetAtCompletion;
 
-    private ArrayList<TeamMember> teamMemberList;
-    private ArrayList<Task> taskList;
-    private ArrayList<Risk> riskList;
+   private JSONArray teamMemberList;
+   private JSONArray taskList;
+   private JSONArray riskList;
 
     public Project(int projectId, String projectName, LocalDate actualStartDate,
-                   LocalDate projectedCompletedDate, double budgetAtCompletion) {
+                   LocalDate projectedCompletedDate, double budgetAtCompletion, JSONArray teamMemberList, JSONArray taskList, JSONArray riskList) {
 
         this.projectId = projectId;
         this.projectName = projectName;
@@ -28,11 +30,39 @@ public class Project {
         this.projectedCompletedDate = projectedCompletedDate;
         this.budgetAtCompletion = budgetAtCompletion;
 
-        taskList = new ArrayList<>();
-        teamMemberList = new ArrayList<>();
-        riskList = new ArrayList<>();
+       this.taskList = taskList;
+        this.teamMemberList = teamMemberList;
+      this.riskList = riskList;
 
     }
+
+    public JSONArray getTeamMemberList() {
+        return teamMemberList;
+    }
+
+    public void setTeamMemberList(JSONArray teamMemberList) {
+        this.teamMemberList = teamMemberList;
+    }
+
+    public JSONArray getTaskList() {
+        return taskList;
+    }
+
+    public void setTaskList(JSONArray taskList) {
+        this.taskList = taskList;
+    }
+
+    public JSONArray getRiskList() {
+        return riskList;
+    }
+
+    public void setRiskList(JSONArray riskList) {
+        this.riskList = riskList;
+    }
+
+    /*
+
+
 
     public double calculateEV(LocalDate date){
         return (percentageOfCompletedTasks(date)*this.budgetAtCompletion);
@@ -41,13 +71,13 @@ public class Project {
     public int calculateSV(LocalDate date){
         return (int)(this.calculateEV(date)-calculatePV(date));
     }
-/*
+
     public double calculateCV(LocalDate date){
         return this.calculateEV(date)-this.calculateAC(date);
     }
-*/
+
     // should be private later on.... - Karl
-    public double percentageOfCompletedTasks(LocalDate date){
+//   public double percentageOfCompletedTasks(LocalDate date){
         double valueOfCompletedTasks = 0.0;
         double valueOfAllTasks = 0.0;
 
@@ -69,7 +99,7 @@ public class Project {
 
         return (percentageOfProjectCompleted*this.budgetAtCompletion);
     }
-    /*
+
     public double calculateAC(LocalDate date){
         double sumOfHoursWorked;
         for(TeamMember teamMember : this.teamMemberList){
@@ -77,7 +107,7 @@ public class Project {
         }
 
     }
-    */
+
     public List<String> assignedTasksByMember(int teamMemberId){
         List<String> collect = taskList.stream()
                 .filter(task -> task.getTaskMembers().containsKey(teamMemberId))
@@ -154,6 +184,11 @@ public class Project {
     public int getProjectId() {
         return projectId;
     }
+
+    }
+
+
+*/
 
     @Override
     public String toString() {

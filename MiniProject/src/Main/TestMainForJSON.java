@@ -1,5 +1,6 @@
 package Main;
 
+import Classes.Project;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -16,9 +17,6 @@ public class TestMainForJSON {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
-        System.out.println(myProgram.listOfProjects.get(0).getProjectName());
-        System.out.println(myProgram.listOfProjects.get(0).getTeamMemberList());
 
     }
 

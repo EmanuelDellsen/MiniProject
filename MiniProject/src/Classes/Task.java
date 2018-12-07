@@ -11,7 +11,7 @@ public class Task {
     private String taskName;
     private String description;
 
-    private Map<Integer, Double> taskMembers;
+    private Map<Object, Object> taskMembers;
 
     private LocalDate actualStartDate;
     private LocalDate projectedCompletedDate;
@@ -19,14 +19,14 @@ public class Task {
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
-                LocalDate actualCompletedDate) {
+                LocalDate actualCompletedDate, HashMap taskMembers) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
-        this.taskMembers = new HashMap<>();
+        this.taskMembers = taskMembers;
     }
 
     public String toString() {
@@ -35,6 +35,7 @@ public class Task {
                 "Start date: " + actualStartDate + "\n" +
                 "Projected completed date: " + projectedCompletedDate + "\n" +
                 // should call retrieve taskMembers ", TaskMembers="+taskMembers+
+                taskMembers + "\n" +
                 '}';
     }
 
@@ -46,11 +47,11 @@ public class Task {
         return this.actualCompletedDate.isBefore(date);
     }
 
-    public Map<Integer, Double> getTaskMembers() {
+    public Map<Object, Object> getTaskMembers() {
         return taskMembers;
     }
 
-    public void setTaskMembers(Map<Integer, Double> taskMembers) {
+    public void setTaskMembers(Map<Object, Object> taskMembers) {
         this.taskMembers = taskMembers;
     }
 
