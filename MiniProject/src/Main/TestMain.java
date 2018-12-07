@@ -17,7 +17,7 @@ public class TestMain {
 
         String strA1 = "2018-10-01";
         LocalDate dateA1 = LocalDate.parse(strA1,formatter);
-        String strB1 = "2019-02-01";
+        String strB1 = "2018-11-01";
         LocalDate dateA2 = LocalDate.parse(strB1,formatter);
 
         Project project1 = new Project(1,"Duckies",dateA1,dateA2,
@@ -71,8 +71,8 @@ public class TestMain {
 
         // 5 - testing calculateEV
         System.out.println(project1.getTaskList());
-        System.out.println(task1.getTaskValue());
-        System.out.println(task2.getTaskValue());
+        System.out.println(task1.getTaskLength());
+        System.out.println(task2.getTaskLength());
         String str4 = "2018-11-15";
         LocalDate date4 = LocalDate.parse(str4,formatter);
         System.out.println(task1.taskIsComplete(date4));
@@ -94,7 +94,7 @@ public class TestMain {
 
         System.out.println(project1.retrieveRisks());
 
-        System.out.println(task1.getTaskValue());
+        System.out.println(task1.getTaskLength());
         String tempStr = "2018-11-17";
         LocalDate tempDate = LocalDate.parse(tempStr,formatter);
         System.out.println(task1.progressByHour(tempDate,1));
@@ -103,6 +103,8 @@ public class TestMain {
         System.out.println(project1.calculateEV(tempDate));
         System.out.println(project1.calculateAC(tempDate));
         System.out.println(project1.calculateCV(tempDate));
+
+        System.out.println(project1.returnProjectIntervalDates());
 
 
     }

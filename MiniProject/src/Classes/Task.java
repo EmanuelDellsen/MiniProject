@@ -39,7 +39,7 @@ public class Task {
                 '}';
     }
 
-    public long getTaskValue(){
+    public long getTaskLength(){
         return ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
     }
 
@@ -49,7 +49,7 @@ public class Task {
 
     public double progressByHour(LocalDate date,int teamMemberId){
         long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
-        double progressInPercent = (double)daysFromStartToDate/(double)getTaskValue();
+        double progressInPercent = (double)daysFromStartToDate/(double) getTaskLength();
 
         return (sumHoursWorkedByMember(teamMemberId)*progressInPercent);
     }

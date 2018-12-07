@@ -1,6 +1,7 @@
 package Classes;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -52,9 +53,9 @@ public class Project {
         double valueOfAllTasks = 0.0;
 
         for(Task task : this.taskList){
-            valueOfAllTasks += task.getTaskValue();
+            valueOfAllTasks += task.getTaskLength();
             if(task.taskIsComplete(date)){
-                valueOfCompletedTasks += task.getTaskValue();
+                valueOfCompletedTasks += task.getTaskLength();
             }
         }
         return (valueOfCompletedTasks/valueOfAllTasks);
@@ -93,7 +94,7 @@ public class Project {
     }
     //This returns a list of objects of type Risk with the format as the to.String in Risk
     public List<Risk> retrieveRisks(){
-        return riskList.stream()
+        return this.riskList.stream()
                 .sorted(Comparator.comparing(Risk::getRiskName))
                 .collect(Collectors.toList());
     }
@@ -102,12 +103,10 @@ public class Project {
     public List<String> workDoneByAll(){
     }
 */
-    public String projectSchedule(){
 
-    }
-
-    public Long projectIntervals(){
-        return ChronoUnit.WEEKS.between(this.actualStartDate,this.projectedCompletedDate);
+    public List<LocalDate> returnProjectIntervalDates(){
+        return this.actualStartDate.datesUntil(this.projectedCompletedDate,Period.ofWeeks(2))
+                .collect(Collectors.toList());
     }
 
     public void retrieveTeamMember(){
