@@ -2,7 +2,7 @@ package Classes;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -12,7 +12,9 @@ public class Task {
     private String taskName;
     private String description;
 
-    private Map<Object, Object> taskMembers;
+    private Map<Integer, Double> taskMembers;
+
+    private List<TaskMember> correctWayToHandleThis;
 
     private LocalDate actualStartDate;
     private LocalDate projectedCompletedDate;
@@ -20,7 +22,7 @@ public class Task {
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
-                LocalDate actualCompletedDate, HashMap taskMembers) {
+                LocalDate actualCompletedDate, Map taskMembers, List<TaskMember> correctWayToHandleThis) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
@@ -28,6 +30,7 @@ public class Task {
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
         this.taskMembers = taskMembers;
+        this.correctWayToHandleThis = correctWayToHandleThis;
     }
 
     public String toString() {
@@ -48,7 +51,6 @@ public class Task {
         return this.actualCompletedDate.isBefore(date);
     }
 
-<<<<<<< HEAD
     public double progressByHour(LocalDate date,int teamMemberId){
         long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
         double progressInPercent = (double)daysFromStartToDate/(double)getTaskValue();
@@ -60,20 +62,12 @@ public class Task {
         return taskMembers.values()
                 .stream()
                 .filter(a->taskMembers.containsKey(teamMemberId))
-                .mapToDouble(i->i)
+                .mapToDouble(i-> (double) i)
                 .sum();
     }
 
-    public Map<Integer, Double> getTaskMembers() {
-=======
-    public Map<Object, Object> getTaskMembers() {
->>>>>>> f35fc8ef83a6d70a9dd3a0d3e3cd1ea5bf3c6b01
-        return taskMembers;
-    }
 
-    public void setTaskMembers(Map<Object, Object> taskMembers) {
-        this.taskMembers = taskMembers;
-    }
+
 
     public int getId() {
         return taskId;
@@ -99,5 +93,12 @@ public class Task {
         this.description = description;
     }
 
+    public List<TaskMember> getCorrectWayToHandleThis() {
+        return correctWayToHandleThis;
+    }
+
+    public void setCorrectWayToHandleThis(List<TaskMember> correctWayToHandleThis) {
+        this.correctWayToHandleThis = correctWayToHandleThis;
+    }
 }
 

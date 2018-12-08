@@ -17,12 +17,13 @@ public class Project {
     private LocalDate projectedCompletedDate;
     private double budgetAtCompletion;
 
-   private JSONArray teamMemberList;
-   private JSONArray taskList;
-   private JSONArray riskList;
+    private List<TeamMember> teamMemberList = new ArrayList<>();
+    private List<Task> taskList = new ArrayList<>();
+    private List<Risk> riskList = new ArrayList<>();
+
 
     public Project(int projectId, String projectName, LocalDate actualStartDate,
-                   LocalDate projectedCompletedDate, double budgetAtCompletion, JSONArray teamMemberList, JSONArray taskList, JSONArray riskList) {
+                   LocalDate projectedCompletedDate, double budgetAtCompletion) {
 
         this.projectId = projectId;
         this.projectName = projectName;
@@ -30,37 +31,73 @@ public class Project {
         this.projectedCompletedDate = projectedCompletedDate;
         this.budgetAtCompletion = budgetAtCompletion;
 
-       this.taskList = taskList;
-        this.teamMemberList = teamMemberList;
-      this.riskList = riskList;
-
     }
 
-    public JSONArray getTeamMemberList() {
+    public int getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(int projectId) {
+        this.projectId = projectId;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public LocalDate getActualStartDate() {
+        return actualStartDate;
+    }
+
+    public void setActualStartDate(LocalDate actualStartDate) {
+        this.actualStartDate = actualStartDate;
+    }
+
+    public LocalDate getProjectedCompletedDate() {
+        return projectedCompletedDate;
+    }
+
+    public void setProjectedCompletedDate(LocalDate projectedCompletedDate) {
+        this.projectedCompletedDate = projectedCompletedDate;
+    }
+
+    public double getBudgetAtCompletion() {
+        return budgetAtCompletion;
+    }
+
+    public void setBudgetAtCompletion(double budgetAtCompletion) {
+        this.budgetAtCompletion = budgetAtCompletion;
+    }
+
+    public List<TeamMember> getTeamMemberList() {
         return teamMemberList;
     }
 
-    public void setTeamMemberList(JSONArray teamMemberList) {
+    public void setTeamMemberList(List<TeamMember> teamMemberList) {
         this.teamMemberList = teamMemberList;
     }
 
-    public JSONArray getTaskList() {
+    public List<Task> getTaskList() {
         return taskList;
     }
 
-    public void setTaskList(JSONArray taskList) {
+    public void setTaskList(List<Task> taskList) {
         this.taskList = taskList;
     }
 
-    public JSONArray getRiskList() {
+    public List<Risk> getRiskList() {
         return riskList;
     }
 
-    public void setRiskList(JSONArray riskList) {
+    public void setRiskList(List<Risk> riskList) {
         this.riskList = riskList;
     }
 
-    /*
+/*
 
 
 
@@ -100,10 +137,8 @@ public class Project {
         return (percentageOfProjectCompleted*this.budgetAtCompletion);
     }
 
-<<<<<<< HEAD
+
     //should be private later on.... -Karl
-=======
->>>>>>> f35fc8ef83a6d70a9dd3a0d3e3cd1ea5bf3c6b01
     public double calculateAC(LocalDate date){
         double sumOfCostByHours = 0.0;
 
@@ -207,4 +242,6 @@ public class Project {
                 ", riskList=" + riskList +
                 '}';
     }
+
+
 }

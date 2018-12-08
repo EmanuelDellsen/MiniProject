@@ -1,8 +1,6 @@
 package Main;
 
-import Classes.Project;
-import Classes.Task;
-import Classes.TeamMember;
+import Classes.*;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,29 +14,31 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-public class JSONReader {
+    public class JSONReader {
+
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
 
-    public void methodToCallFromProgram() throws IOException, ParseException {
+    protected void methodToCallFromProgram() throws IOException, ParseException {
         System.out.println(createProjects());
+
     }
 
 
-    public JSONObject createJSONObject() throws FileNotFoundException, ParseException, IOException {
+    private JSONObject createJSONObject() throws FileNotFoundException, ParseException, IOException {
         JSONParser parser = new JSONParser();
         Object object = parser.parse(new FileReader("Project.json"));
         JSONObject jsonObject = (JSONObject) object;
+
         return jsonObject;
     }
 
 
-    public JSONArray createProjects() throws IOException, ParseException {
+    protected List<Project> createProjects() throws IOException, ParseException {
 
-        JSONArray arrayListOfProjects = new JSONArray();
+        List<Project> arrayListOfProjects = new ArrayList<>();
 
         JSONArray listOfProjects = (JSONArray) createJSONObject().get("listOfProjects");
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         Iterator projectIterator = listOfProjects.iterator();
 
@@ -52,28 +52,35 @@ public class JSONReader {
             LocalDate projectedCompletedDate = LocalDate.parse((String) projectMap.get("projectedCompletedDate"), formatter);
             Double budgetAtCompletion = Double.valueOf((String) projectMap.get("budgetAtCompletion"));
 
-
             JSONArray teammates = (JSONArray) projectMap.get("teamMemberList");
+            List<TeamMember> tempArrayListOfTeamMember = createTeamMember(teammates);
+
             JSONArray tasks = (JSONArray) projectMap.get("taskList");
+            List<Task> tempArrayListOfTask = createTask(tasks);
+
+            JSONArray risks = (JSONArray) projectMap.get("riskList");
+            List<Risk> tempArrayListOfRisk = createRisk(risks);
 
 
-            JSONArray riskList = new JSONArray(); // This is here to add something as an argument in creation of Project
+            //JSONArray riskList = new JSONArray(); // This is here to add something as an argument in creation of Project
             // that argument will later be replaced with method-call: createRisk(risks);
 
+            Project newProject = new Project(projectId, projectName, actualStartDate, projectedCompletedDate,
+                    budgetAtCompletion);
+            newProject.setTeamMemberList(tempArrayListOfTeamMember);
+            newProject.setTaskList(tempArrayListOfTask);
+            newProject.setRiskList(tempArrayListOfRisk);
 
-                Project newProject = new Project(projectId, projectName, actualStartDate, projectedCompletedDate,
-                        budgetAtCompletion, createTeamMember(teammates), createTask(tasks), riskList);
-                arrayListOfProjects.add(newProject);
+            arrayListOfProjects.add(newProject);
 
-            }
+        }
 
-            return arrayListOfProjects;
+        return arrayListOfProjects;
     }
 
+    private List<TeamMember> createTeamMember(JSONArray teamMemberList) {
 
-    public JSONArray createTeamMember (JSONArray teamMemberList){
-
-        JSONArray arrayListOfTeamMembers = new JSONArray();
+        List<TeamMember> arrayListOfTeamMembers = new ArrayList<>();
 
         Iterator teamMateIterator = teamMemberList.iterator();
 
@@ -87,47 +94,17 @@ public class JSONReader {
             TeamMember newTeamMember = new TeamMember(teamMemberId, teamMemberName, salaryPerHour);
 
             arrayListOfTeamMembers.add(newTeamMember);
-
         }
 
         return arrayListOfTeamMembers;
-
     }
 
+    private List<Task> createTask(JSONArray taskList) throws IOException, ParseException {
 
-
-    public HashMap createTaskMembers (JSONArray taskMembersList){
-        HashMap<Object, Object> HashMapWithTaskMembers = new HashMap<>();
-
-        Iterator taskMateIterator = taskMembersList.iterator();
-
-        while (taskMateIterator.hasNext()) {
-
-            Map member = (Map) taskMateIterator.next();
-
-            Object id = member.get("id");
-            Object hoursWorked = member.get("hoursWorked");
-
-            HashMapWithTaskMembers.put(id,hoursWorked);
-
-        }
-
-        return HashMapWithTaskMembers;
-    }
-
-
-
-<<<<<<< HEAD
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-=======
-    public JSONArray createTask(JSONArray taskList) throws IOException, ParseException {
-
-        JSONArray arrayListOftasks = new JSONArray();
->>>>>>> f35fc8ef83a6d70a9dd3a0d3e3cd1ea5bf3c6b01
+        List<Task> arrayListOfTasks = new ArrayList<>();
 
         Iterator taskIterator = taskList.iterator();
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         while (taskIterator.hasNext()) {
 
@@ -143,18 +120,77 @@ public class JSONReader {
 
             JSONArray taskMemberArray = (JSONArray) taskMap.get("taskMembers");
 
-            Task newTask = new Task(taskId, taskName, description, actualStartDate, projectedCompletedDate, actualCompletedDate, createTaskMembers(taskMemberArray));
+            Task newTask = new Task(taskId, taskName, description, actualStartDate, projectedCompletedDate, actualCompletedDate, createTaskMembers(taskMemberArray), correctWayToCreateTaskMembers(taskMemberArray));
 
-            arrayListOftasks.add(newTask);
-
-          //  newTask.setTaskMembers( new HashMap<>()) ;
+            arrayListOfTasks.add(newTask);
 
         }
-        return arrayListOftasks;
+        return arrayListOfTasks;
 
     }
 
+    private List<Risk> createRisk (JSONArray riskList){
 
+        List<Risk> arrayListOfRisks = new ArrayList<>();
+
+        Iterator riskIterator = riskList.iterator();
+
+        while (riskIterator.hasNext()){
+
+            Map riskMap = (Map) riskIterator.next();
+
+            int riskId = Integer.valueOf((String) riskMap.get("riskId"));
+            String riskName = (String) riskMap.get("riskName");
+            double probability = Double.valueOf((String) riskMap.get("probability"));
+            int impact = Integer.valueOf((String) riskMap.get("impact"));
+
+            Risk newRisk = new Risk(riskId, riskName, probability, impact);
+
+            arrayListOfRisks.add(newRisk);
+        }
+
+        return  arrayListOfRisks;
+    }
+
+    private List<TaskMember> correctWayToCreateTaskMembers(JSONArray taskMembers) {
+        List<TaskMember> HashMapWithTaskMembers = new ArrayList();
+
+        Iterator taskMateIterator = taskMembers.iterator();
+
+        while (taskMateIterator.hasNext()) {
+
+            Map member = (Map) taskMateIterator.next();
+
+            int id = Integer.valueOf((String) member.get("id"));
+            double hoursWorked = Double.valueOf((String) member.get("hoursWorked"));
+
+            TaskMember memberObject = new TaskMember(id, hoursWorked);
+
+            HashMapWithTaskMembers.add(memberObject);
+
+        }
+
+        return HashMapWithTaskMembers;
+    }
+
+    private Map createTaskMembers(JSONArray taskMembersList) {
+        Map<Integer, Double> HashMapWithTaskMembers = new HashMap<>();
+
+        Iterator taskMateIterator = taskMembersList.iterator();
+
+        while (taskMateIterator.hasNext()) {
+
+            Map member = (Map) taskMateIterator.next();
+
+            int id = Integer.valueOf((String) member.get("id"));
+            double hoursWorked = Double.valueOf((String) member.get("hoursWorked"));
+
+            HashMapWithTaskMembers.put(id, hoursWorked);
+
+        }
+
+        return HashMapWithTaskMembers;
+    }
 
 
 
