@@ -12,7 +12,7 @@ public class Task {
     private String taskName;
     private String description;
 
-    private Map<Integer, Double> taskMembers;
+    private Map<Object, Object> taskMembers;
 
     private LocalDate actualStartDate;
     private LocalDate projectedCompletedDate;
@@ -20,14 +20,14 @@ public class Task {
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
-                LocalDate actualCompletedDate) {
+                LocalDate actualCompletedDate, HashMap taskMembers) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
-        this.taskMembers = new HashMap<>();
+        this.taskMembers = taskMembers;
     }
 
     public String toString() {
@@ -36,6 +36,7 @@ public class Task {
                 "Start date: " + actualStartDate + "\n" +
                 "Projected completed date: " + projectedCompletedDate + "\n" +
                 // should call retrieve taskMembers ", TaskMembers="+taskMembers+
+                taskMembers + "\n" +
                 '}';
     }
 
@@ -47,6 +48,7 @@ public class Task {
         return this.actualCompletedDate.isBefore(date);
     }
 
+<<<<<<< HEAD
     public double progressByHour(LocalDate date,int teamMemberId){
         long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
         double progressInPercent = (double)daysFromStartToDate/(double)getTaskValue();
@@ -63,10 +65,13 @@ public class Task {
     }
 
     public Map<Integer, Double> getTaskMembers() {
+=======
+    public Map<Object, Object> getTaskMembers() {
+>>>>>>> f35fc8ef83a6d70a9dd3a0d3e3cd1ea5bf3c6b01
         return taskMembers;
     }
 
-    public void setTaskMembers(Map<Integer, Double> taskMembers) {
+    public void setTaskMembers(Map<Object, Object> taskMembers) {
         this.taskMembers = taskMembers;
     }
 

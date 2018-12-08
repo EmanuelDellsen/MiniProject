@@ -1,943 +1,733 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/.idea/workspace.xml" line="557" />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="e15849ba-4cae-4191-bb26-7aff1142b87c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/JSONReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Program.java" afterDir="false" />
-    </list>
-=======
-  <component name="ChangeListManager">
-    <list default="true" id="e15849ba-4cae-4191-bb26-7aff1142b87c" name="Default Changelist" comment="" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1810092253">
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="29" />
-          <entry key="json" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="29" />
-          <entry key="JSON5" value="3" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-<<<<<<< HEAD
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main/JSONReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="65" column="77" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
-=======
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/TestMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="108" lean-forward="true" selection-end-line="110" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+    <component name="ChangeListManager">
+        <list default="true" id="e15849ba-4cae-4191-bb26-7aff1142b87c" name="Default Changelist" comment="">
+            <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+        </list>
+        <ignored path="$PROJECT_DIR$/out/" />
+        <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+        <option name="SHOW_DIALOG" value="false" />
+        <option name="HIGHLIGHT_CONFLICTS" value="true" />
+        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+        <option name="LAST_RESOLUTION" value="IGNORE" />
+    </component>
+    <component name="FUSProjectUsageTrigger">
+        <session id="-453678006">
+            <usages-collector id="statistics.file.extensions.edit">
+                <counts>
+                    <entry key="java" value="2522" />
+                    <entry key="json" value="21" />
+                </counts>
+            </usages-collector>
+            <usages-collector id="statistics.file.types.edit">
+                <counts>
+                    <entry key="JAVA" value="2522" />
+                    <entry key="JSON" value="21" />
+                </counts>
+            </usages-collector>
+            <usages-collector id="statistics.file.extensions.open">
+                <counts>
+                    <entry key="iml" value="1" />
+                    <entry key="java" value="3" />
+                </counts>
+            </usages-collector>
+            <usages-collector id="statistics.file.types.open">
+                <counts>
+                    <entry key="IDEA_MODULE" value="1" />
+                    <entry key="JAVA" value="3" />
+                </counts>
+            </usages-collector>
+        </session>
+    </component>
+    <component name="FileEditorManager">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Main/JSONReader.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="374">
+                            <caret line="141" column="7" lean-forward="true" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/MiniProject.iml">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="629">
+                            <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Main/TestMainForJSON.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="170">
+                            <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="244">
+                            <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+                            <folding>
+                                <element signature="e#731#732#0" expanded="true" />
+                                <element signature="e#768#769#0" expanded="true" />
+                            </folding>
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Classes/Risk.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="204">
+                            <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="29" />
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Classes/Task.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="170">
+                            <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+                            <folding>
+                                <element signature="e#1715#1716#0" expanded="true" />
+                                <element signature="e#1761#1762#0" expanded="true" />
+                            </folding>
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Classes/TeamMember.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="-181">
+                            <caret line="7" selection-start-line="7" selection-end-line="7" />
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Classes/TaskMember.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="204">
+                            <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Classes/Project.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="612">
+                            <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+                            <folding>
+                                <element signature="imports" expanded="true" />
+                                <element signature="e#1175#1176#0" expanded="true" />
+                                <element signature="e#1212#1213#0" expanded="true" />
+                                <element signature="e#1275#1276#0" expanded="true" />
+                                <element signature="e#1327#1328#0" expanded="true" />
+                                <element signature="e#1365#1366#0" expanded="true" />
+                                <element signature="e#1396#1397#0" expanded="true" />
+                                <element signature="e#1447#1448#0" expanded="true" />
+                                <element signature="e#1487#1488#0" expanded="true" />
+                                <element signature="e#1525#1526#0" expanded="true" />
+                                <element signature="e#1556#1557#0" expanded="true" />
+                                <element signature="e#1607#1608#0" expanded="true" />
+                                <element signature="e#1647#1648#0" expanded="true" />
+                            </folding>
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Project.json">
+                    <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="204">
+                            <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+        </leaf>
+    </component>
+    <component name="FileTemplateManagerImpl">
+        <option name="RECENT_TEMPLATES">
+            <list>
+                <option value="Class" />
+            </list>
+        </option>
+    </component>
+    <component name="FindInProjectRecents">
+        <findStrings>
+            <find>Object</find>
+        </findStrings>
+    </component>
+    <component name="Git.Settings">
+        <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    </component>
+    <component name="IdeDocumentHistory">
+        <option name="CHANGED_PATHS">
+            <list>
+                <option value="$PROJECT_DIR$/resources/suggestion2.json" />
+                <option value="$PROJECT_DIR$/resources/teammates.json" />
+                <option value="$PROJECT_DIR$/src/task.java" />
+                <option value="$PROJECT_DIR$/src/TaskMate.java" />
+                <option value="$PROJECT_DIR$/src/ProjTask.java" />
+                <option value="$PROJECT_DIR$/src/TeamMate.java" />
+                <option value="$PROJECT_DIR$/src/ProjectTask.java" />
+                <option value="$PROJECT_DIR$/src/jsonreading.java" />
+                <option value="$PROJECT_DIR$/src/TaskMember.java" />
+                <option value="$PROJECT_DIR$/src/TeamMember.java" />
+                <option value="$PROJECT_DIR$/src/Task.java" />
+                <option value="$PROJECT_DIR$/src/Project.java" />
+                <option value="$PROJECT_DIR$/src/JSONReader.java" />
+                <option value="$PROJECT_DIR$/resources/Project.json" />
+                <option value="$PROJECT_DIR$/src/Classes/Risk.java" />
+                <option value="$PROJECT_DIR$/src/Main/TestMai.java" />
+                <option value="$PROJECT_DIR$/src/Classes/TeamMember.java" />
+                <option value="$PROJECT_DIR$/src/Classes/TeamMember.java" />
+                <option value="$PROJECT_DIR$/src/Classes/Risk.java" />
+                <option value="$PROJECT_DIR$/src/Main/TestMain.java" />
+                <option value="$PROJECT_DIR$/src/Main/TestMain.java" />
+                <option value="$PROJECT_DIR$/src/Classes/TaskMember.java" />
+                <option value="$PROJECT_DIR$/Project.json" />
+                <option value="$PROJECT_DIR$/Project.json" />
+                <option value="$PROJECT_DIR$/src/Classes/Task.java" />
+                <option value="$PROJECT_DIR$/src/Classes/Task.java" />
+                <option value="$PROJECT_DIR$/src/Classes/Project.java" />
+                <option value="$PROJECT_DIR$/src/Classes/Project.java" />
+                <option value="$PROJECT_DIR$/src/Main/TestMainForJSON.java" />
+                <option value="$PROJECT_DIR$/src/Main/JSONReader.java" />
+                <option value="$PROJECT_DIR$/src/Main/JSONReader.java" />
+                <option value="$PROJECT_DIR$/src/Main/Program.java" />
+            </list>
+        </option>
+    </component>
+    <component name="ProjectFrameBounds" extendedState="6">
+        <option name="x" value="634" />
+        <option name="width" value="1296" />
+        <option name="height" value="1031" />
+    </component>
+    <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+    <component name="ProjectView">
+        <navigator proportions="" version="1">
+            <foldersAlwaysOnTop value="true" />
+        </navigator>
+        <panes>
+            <pane id="ProjectPane">
+                <subPane>
+                    <expand>
+                        <path>
+                            <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
+                            <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
+                        </path>
+                        <path>
+                            <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
+                            <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
+                            <item name="src" type="462c0819:PsiDirectoryNode" />
+                        </path>
+                        <path>
+                            <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
+                            <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
+                            <item name="src" type="462c0819:PsiDirectoryNode" />
+                            <item name="Classes" type="462c0819:PsiDirectoryNode" />
+                        </path>
+                        <path>
+                            <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
+                            <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
+                            <item name="src" type="462c0819:PsiDirectoryNode" />
+                            <item name="Main" type="462c0819:PsiDirectoryNode" />
+                        </path>
+                        <path>
+                            <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
+                            <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+                        </path>
+                    </expand>
+                    <select />
+                </subPane>
+            </pane>
+            <pane id="Scope" />
+            <pane id="PackagesPane">
+                <subPane>
+                    <expand>
+                        <path>
+                            <item name="MiniProject" type="58d84e3e:PackageViewProjectNode" />
+                            <item name="MiniProject" type="616d4139:PackageViewModuleNode" />
+                        </path>
+                        <path>
+                            <item name="MiniProject" type="58d84e3e:PackageViewProjectNode" />
+                            <item name="MiniProject" type="616d4139:PackageViewModuleNode" />
+                            <item name="Classes" type="1f31426a:PackageElementNode" />
+                        </path>
+                    </expand>
+                    <select />
+                </subPane>
+            </pane>
+        </panes>
+    </component>
+    <component name="PropertiesComponent">
+        <property name="WebServerToolWindowFactoryState" value="false" />
+        <property name="aspect.path.notification.shown" value="true" />
+        <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544259199081" />
+        <property name="last_opened_file_path" value="$USER_HOME$/Downloads/json-simple-1.1.1 (1).jar!/" />
+        <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+        <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+        <property name="project.structure.last.edited" value="Modules" />
+        <property name="project.structure.proportion" value="0.15" />
+        <property name="project.structure.side.proportion" value="0.2" />
+        <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    </component>
+    <component name="RecentsManager">
+        <key name="MoveFile.RECENT_KEYS">
+            <recent name="$PROJECT_DIR$" />
+        </key>
+    </component>
+    <component name="RunDashboard">
+        <option name="ruleStates">
+            <list>
+                <RuleState>
+                    <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+                </RuleState>
+                <RuleState>
+                    <option name="name" value="StatusDashboardGroupingRule" />
+                </RuleState>
+            </list>
+        </option>
+    </component>
+    <component name="RunManager" selected="Application.TestMainForJSON">
+        <configuration name="JSONReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+            <option name="MAIN_CLASS_NAME" value="Main.JSONReader" />
+            <module name="MiniProject" />
+            <method v="2">
+                <option name="Make" enabled="true" />
+            </method>
+        </configuration>
+        <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+            <option name="MAIN_CLASS_NAME" value="Main.TestMain" />
+            <module name="MiniProject" />
+            <extension name="coverage">
+                <pattern>
+                    <option name="PATTERN" value="Main.*" />
+                    <option name="ENABLED" value="true" />
+                </pattern>
+            </extension>
+            <method v="2">
+                <option name="Make" enabled="true" />
+            </method>
+        </configuration>
+        <configuration name="TestMainForJSON" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+            <option name="MAIN_CLASS_NAME" value="Main.TestMainForJSON" />
+            <module name="MiniProject" />
+            <extension name="coverage">
+                <pattern>
+                    <option name="PATTERN" value="Main.*" />
+                    <option name="ENABLED" value="true" />
+                </pattern>
+            </extension>
+            <method v="2">
+                <option name="Make" enabled="true" />
+            </method>
+        </configuration>
+        <configuration name="jsonreading" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+            <option name="MAIN_CLASS_NAME" value="jsonreading" />
+            <module name="MiniProject" />
+            <method v="2">
+                <option name="Make" enabled="true" />
+            </method>
+        </configuration>
+        <list>
+            <item itemvalue="Application.jsonreading" />
+            <item itemvalue="Application.JSONReader" />
+            <item itemvalue="Application.TestMain" />
+            <item itemvalue="Application.TestMainForJSON" />
+        </list>
+        <recent_temporary>
+            <list>
+                <item itemvalue="Application.TestMainForJSON" />
+                <item itemvalue="Application.TestMain" />
+                <item itemvalue="Application.JSONReader" />
+                <item itemvalue="Application.jsonreading" />
+            </list>
+        </recent_temporary>
+    </component>
+    <component name="SvnConfiguration">
+        <configuration />
+    </component>
+    <component name="TaskManager">
+        <task active="true" id="Default" summary="Default task">
+            <changelist id="e15849ba-4cae-4191-bb26-7aff1142b87c" name="Default Changelist" comment="" />
+            <created>1543051378375</created>
+            <option name="number" value="Default" />
+            <option name="presentableId" value="Default" />
+            <updated>1543051378375</updated>
+            <workItem from="1543051379786" duration="3573000" />
+            <workItem from="1543056609945" duration="11475000" />
+            <workItem from="1543319000736" duration="18862000" />
+            <workItem from="1543581114602" duration="1765000" />
+        </task>
+        <task id="LOCAL-00001" summary="Changes">
+            <created>1543151400159</created>
+            <option name="number" value="00001" />
+            <option name="presentableId" value="LOCAL-00001" />
+            <option name="project" value="LOCAL" />
+            <updated>1543151400159</updated>
+        </task>
+        <task id="LOCAL-00002" summary="Changes">
+            <created>1543250371535</created>
+            <option name="number" value="00002" />
+            <option name="presentableId" value="LOCAL-00002" />
+            <option name="project" value="LOCAL" />
+            <updated>1543250371535</updated>
+        </task>
+        <task id="LOCAL-00003" summary="Changes">
+            <created>1543317858472</created>
+            <option name="number" value="00003" />
+            <option name="presentableId" value="LOCAL-00003" />
+            <option name="project" value="LOCAL" />
+            <updated>1543317858473</updated>
+        </task>
+        <task id="LOCAL-00004" summary="Refactoring">
+            <created>1543335328934</created>
+            <option name="number" value="00004" />
+            <option name="presentableId" value="LOCAL-00004" />
+            <option name="project" value="LOCAL" />
+            <updated>1543335328934</updated>
+        </task>
+        <task id="LOCAL-00005" summary="Refactoring">
+            <created>1543335409487</created>
+            <option name="number" value="00005" />
+            <option name="presentableId" value="LOCAL-00005" />
+            <option name="project" value="LOCAL" />
+            <updated>1543335409487</updated>
+        </task>
+        <task id="LOCAL-00006" summary="Changes to structure">
+            <created>1543390125289</created>
+            <option name="number" value="00006" />
+            <option name="presentableId" value="LOCAL-00006" />
+            <option name="project" value="LOCAL" />
+            <updated>1543390125289</updated>
+        </task>
+        <task id="LOCAL-00007" summary="Changes to structure">
+            <created>1543396687138</created>
+            <option name="number" value="00007" />
+            <option name="presentableId" value="LOCAL-00007" />
+            <option name="project" value="LOCAL" />
+            <updated>1543396687138</updated>
+        </task>
+        <task id="LOCAL-00008" summary="Changes to JSON">
+            <created>1543603093706</created>
+            <option name="number" value="00008" />
+            <option name="presentableId" value="LOCAL-00008" />
+            <option name="project" value="LOCAL" />
+            <updated>1543603093706</updated>
+        </task>
+        <option name="localTasksCounter" value="9" />
+        <servers />
+    </component>
+    <component name="TimeTrackingManager">
+        <option name="totallyTimeSpent" value="60846000" />
+    </component>
+    <component name="ToolWindowManager">
+        <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+        <editor active="true" />
+        <layout>
+            <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.72644925" visible="true" weight="0.16912752" />
+            <window_info id="Structure" order="1" sideWeight="0.27355072" side_tool="true" visible="true" weight="0.16912752" />
+            <window_info id="Image Layers" order="2" />
+            <window_info id="Designer" order="3" />
+            <window_info id="UI Designer" order="4" />
+            <window_info id="Capture Tool" order="5" />
+            <window_info id="Favorites" order="6" side_tool="true" />
+            <window_info anchor="bottom" id="Message" order="0" />
+            <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+            <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2181303" />
+            <window_info anchor="bottom" id="Debug" order="3" weight="0.115072936" />
+            <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+            <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+            <window_info anchor="bottom" id="TODO" order="6" />
+            <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+            <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+            <window_info anchor="bottom" id="Terminal" order="9" weight="0.3285968" />
+            <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3286119" />
+            <window_info anchor="bottom" id="Messages" order="11" weight="0.32719547" />
+            <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+            <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+            <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+            <window_info anchor="right" id="Palette" order="3" />
+            <window_info anchor="right" id="Capture Analysis" order="4" />
+            <window_info anchor="right" id="Database" order="5" />
+            <window_info anchor="right" id="Theme Preview" order="6" />
+            <window_info anchor="right" id="Json Parser" order="7" />
+            <window_info anchor="right" id="Palette&#9;" order="8" />
+            <window_info anchor="right" id="Maven Projects" order="9" />
+        </layout>
+        <layout-to-restore>
+            <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7281553" visible="true" weight="0.21781376" />
+            <window_info id="Structure" order="1" sideWeight="0.27184466" side_tool="true" weight="0.1924307" />
+            <window_info id="Image Layers" order="2" />
+            <window_info id="Designer" order="3" />
+            <window_info id="UI Designer" order="4" />
+            <window_info id="Capture Tool" order="5" />
+            <window_info id="Favorites" order="6" side_tool="true" />
+            <window_info anchor="bottom" id="Message" order="0" />
+            <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+            <window_info anchor="bottom" id="Run" order="2" weight="0.28200972" />
+            <window_info anchor="bottom" id="Debug" order="3" weight="0.115072936" />
+            <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+            <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+            <window_info anchor="bottom" id="TODO" order="6" />
+            <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+            <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+            <window_info anchor="bottom" id="Terminal" order="9" weight="0.3285968" />
+            <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+            <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32864866" />
+            <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+            <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+            <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+            <window_info anchor="right" id="Palette" order="3" />
+            <window_info anchor="right" id="Capture Analysis" order="4" />
+            <window_info anchor="right" id="Database" order="5" />
+            <window_info anchor="right" id="Theme Preview" order="6" />
+            <window_info anchor="right" id="Json Parser" order="7" />
+            <window_info anchor="right" id="Palette&#9;" order="8" />
+            <window_info anchor="right" id="Maven Projects" order="9" />
+        </layout-to-restore>
+    </component>
+    <component name="TypeScriptGeneratedFilesManager">
+        <option name="version" value="1" />
+    </component>
+    <component name="VcsManagerConfiguration">
+        <MESSAGE value="Changes" />
+        <MESSAGE value="Refactoring" />
+        <MESSAGE value="Changes to structure" />
+        <MESSAGE value="Changes to JSON" />
+        <option name="LAST_COMMIT_MESSAGE" value="Changes to JSON" />
+    </component>
+    <component name="XDebuggerManager">
+        <breakpoint-manager>
+            <breakpoints>
+                <line-breakpoint enabled="true" type="java-line">
+                    <url>file://$PROJECT_DIR$/src/Classes/Risk.java</url>
+                    <line>25</line>
+                    <properties />
+                    <option name="timeStamp" value="1" />
+                </line-breakpoint>
+                <line-breakpoint enabled="true" type="java-line">
+                    <url>file://$PROJECT_DIR$/src/Classes/Risk.java</url>
+                    <line>54</line>
+                    <properties />
+                    <option name="timeStamp" value="6" />
+                </line-breakpoint>
+            </breakpoints>
+        </breakpoint-manager>
+    </component>
+    <component name="editorHistoryManager">
+        <entry file="jar://$USER_HOME$/json-simple-1.1.1.jar/json-simple-1.1.1.jar!/org/json/simple/JSONObject.class" />
+        <entry file="file://$PROJECT_DIR$/resources/teammates.json" />
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Object.java" />
+        <entry file="file://$PROJECT_DIR$/src/Main/CurrentDate.java" />
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Integer.java" />
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="188">
+                    <caret line="388" column="38" selection-start-line="388" selection-start-column="38" selection-end-line="388" selection-end-column="38" />
+                </state>
+            </provider>
         </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/Main/TestMain.java">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="356">
+                    <caret line="104" column="2" selection-start-line="104" selection-start-column="2" selection-end-line="104" selection-end-column="2" />
+                    <folding>
+                        <element signature="imports" expanded="true" />
+                    </folding>
+                </state>
+            </provider>
+        </entry>
+        <entry file="file://$PROJECT_DIR$/src/Classes/Risk.java">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                    <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="29" />
+                </state>
+            </provider>
+        </entry>
+        <entry file="file://$PROJECT_DIR$/src/Classes/Task.java">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="170">
+                    <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+                    <folding>
+                        <element signature="e#1715#1716#0" expanded="true" />
+                        <element signature="e#1761#1762#0" expanded="true" />
+                    </folding>
+                </state>
+            </provider>
+        </entry>
+        <entry file="file://$PROJECT_DIR$/src/Classes/TeamMember.java">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-181">
+                    <caret line="7" selection-start-line="7" selection-end-line="7" />
+                </state>
+            </provider>
+        </entry>
+        <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="244">
+                    <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+                    <folding>
+                        <element signature="e#731#732#0" expanded="true" />
+                        <element signature="e#768#769#0" expanded="true" />
+                    </folding>
+                </state>
+            </provider>
+        </entry>
+        <entry file="file://$PROJECT_DIR$/src/Classes/Project.java">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="612">
+                    <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+                    <folding>
+                        <element signature="imports" expanded="true" />
+                        <element signature="e#1175#1176#0" expanded="true" />
+                        <element signature="e#1212#1213#0" expanded="true" />
+                        <element signature="e#1275#1276#0" expanded="true" />
+                        <element signature="e#1327#1328#0" expanded="true" />
+                        <element signature="e#1365#1366#0" expanded="true" />
+                        <element signature="e#1396#1397#0" expanded="true" />
+                        <element signature="e#1447#1448#0" expanded="true" />
+                        <element signature="e#1487#1488#0" expanded="true" />
+                        <element signature="e#1525#1526#0" expanded="true" />
+                        <element signature="e#1556#1557#0" expanded="true" />
+                        <element signature="e#1607#1608#0" expanded="true" />
+                        <element signature="e#1647#1648#0" expanded="true" />
+                    </folding>
+                </state>
+            </provider>
+        </entry>
+        <entry file="file://$PROJECT_DIR$/src/Classes/TaskMember.java">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                    <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+                </state>
+            </provider>
+        </entry>
         <entry file="file://$PROJECT_DIR$/src/Main/TestMainForJSON.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="170">
+                    <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+                </state>
+            </provider>
         </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1895#1896#0" expanded="true" />
-                <element signature="e#1932#1933#0" expanded="true" />
-                <element signature="e#2004#2005#0" expanded="true" />
-                <element signature="e#2056#2057#0" expanded="true" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/Main/JSONReader.java">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                    <caret line="141" column="7" lean-forward="true" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
+                </state>
+            </provider>
         </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project.json">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="-625">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-=======
-            <state relative-caret-position="36">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#317#318#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#375#376#0" expanded="true" />
-                <element signature="e#403#404#0" expanded="true" />
-              </folding>
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-            </state>
-          </provider>
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                    <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+                </state>
+            </provider>
         </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Classes/Project.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="-419">
-              <caret line="85" column="26" selection-start-line="85" selection-end-line="86" />
-              <folding>
-                <element signature="imports" expanded="true" />
-=======
-            <state>
-              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#toString#0;class#Task#0" />
-                <element signature="method#progressByHour#0;class#Task#0" />
-                <element signature="method#sumHoursWorked#0;class#Task#0" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/MiniProject.iml">
+            <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="629">
+                    <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+                </state>
+            </provider>
         </entry>
-      </file>
-<<<<<<< HEAD
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/TestMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-=======
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Classes/Project.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="171" column="1" lean-forward="true" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1358#1359#0" expanded="true" />
-                <element signature="e#1426#1427#0" expanded="true" />
-                <element signature="e#3472#3473#0" expanded="true" />
-                <element signature="e#3513#3514#0" expanded="true" />
-                <element signature="e#3575#3576#0" expanded="true" />
-                <element signature="e#3635#3636#0" expanded="true" />
-                <element signature="e#3679#3680#0" expanded="true" />
-                <element signature="e#3710#3711#0" expanded="true" />
-                <element signature="e#3767#3768#0" expanded="true" />
-                <element signature="e#3807#3808#0" expanded="true" />
-                <element signature="e#3863#3864#0" expanded="true" />
-                <element signature="e#3900#3901#0" expanded="true" />
-                <element signature="e#3975#3976#0" expanded="true" />
-                <element signature="e#4027#4028#0" expanded="true" />
-                <element signature="e#4071#4072#0" expanded="true" />
-                <element signature="e#4102#4103#0" expanded="true" />
-                <element signature="e#4159#4160#0" expanded="true" />
-                <element signature="e#4199#4200#0" expanded="true" />
-                <element signature="e#4237#4238#0" expanded="true" />
-                <element signature="e#4271#4272#0" expanded="true" />
-                <element signature="e#4325#4326#0" expanded="true" />
-                <element signature="e#4371#4372#0" expanded="true" />
-                <element signature="e#4415#4416#0" expanded="true" />
-                <element signature="e#4456#4457#0" expanded="true" />
-                <element signature="e#4524#4525#0" expanded="true" />
-                <element signature="e#4584#4585#0" expanded="true" />
-                <element signature="e#4617#4618#0" expanded="true" />
-                <element signature="e#4649#4650#0" expanded="true" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-              </folding>
+    </component>
+    <component name="masterDetails">
+        <states>
+            <state key="ArtifactsStructureConfigurable.UI">
+                <settings>
+                    <artifact-editor />
+                    <splitter-proportions>
+                        <option name="proportions">
+                            <list>
+                                <option value="0.2" />
+                            </list>
+                        </option>
+                    </splitter-proportions>
+                </settings>
             </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Object</find>
-    </findStrings>
-  </component>
-  <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="MERGE" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/resources/suggestion2.json" />
-        <option value="$PROJECT_DIR$/resources/teammates.json" />
-        <option value="$PROJECT_DIR$/src/task.java" />
-        <option value="$PROJECT_DIR$/src/TaskMate.java" />
-        <option value="$PROJECT_DIR$/src/ProjTask.java" />
-        <option value="$PROJECT_DIR$/src/TeamMate.java" />
-        <option value="$PROJECT_DIR$/src/ProjectTask.java" />
-        <option value="$PROJECT_DIR$/src/jsonreading.java" />
-        <option value="$PROJECT_DIR$/src/TaskMember.java" />
-        <option value="$PROJECT_DIR$/src/TeamMember.java" />
-        <option value="$PROJECT_DIR$/src/Task.java" />
-        <option value="$PROJECT_DIR$/src/Project.java" />
-        <option value="$PROJECT_DIR$/src/JSONReader.java" />
-        <option value="$PROJECT_DIR$/resources/Project.json" />
-        <option value="$PROJECT_DIR$/src/Classes/Risk.java" />
-        <option value="$PROJECT_DIR$/src/Main/TestMai.java" />
-        <option value="$PROJECT_DIR$/src/Classes/TeamMember.java" />
-        <option value="$PROJECT_DIR$/src/Classes/TeamMember.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Risk.java" />
-        <option value="$PROJECT_DIR$/src/Classes/TaskMember.java" />
-<<<<<<< HEAD
-=======
-        <option value="$PROJECT_DIR$/Project.json" />
-        <option value="$PROJECT_DIR$/Project.json" />
-        <option value="$PROJECT_DIR$/src/Main/Program.java" />
-        <option value="$PROJECT_DIR$/src/Main/JSONReader.java" />
-        <option value="$PROJECT_DIR$/src/Main/JSONReader.java" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-        <option value="$PROJECT_DIR$/src/Classes/Task.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Task.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Project.java" />
-        <option value="$PROJECT_DIR$/src/Classes/Project.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/Project.json" />
-        <option value="$PROJECT_DIR$/Project.json" />
-        <option value="$PROJECT_DIR$/src/Main/TestMain.java" />
-        <option value="$PROJECT_DIR$/src/Main/TestMain.java" />
-        <option value="$PROJECT_DIR$/src/Main/JSONReader.java" />
-        <option value="$PROJECT_DIR$/src/Main/JSONReader.java" />
-        <option value="$PROJECT_DIR$/src/Main/Program.java" />
-=======
-        <option value="$PROJECT_DIR$/src/Main/TestMain.java" />
-        <option value="$PROJECT_DIR$/src/Main/TestMain.java" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="709" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MiniProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MiniProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MiniProject" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MiniProject" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="MiniProject" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MiniProject" type="616d4139:PackageViewModuleNode" />
-              <item name="Classes" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544026216889" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544089365038" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/json-simple-1.1.1 (1).jar!/" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.TestMain">
-    <configuration name="JSONReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main.JSONReader" />
-      <module name="MiniProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main.TestMain" />
-      <module name="MiniProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMainForJSON" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main.TestMainForJSON" />
-      <module name="MiniProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="jsonreading" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jsonreading" />
-      <module name="MiniProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.jsonreading" />
-      <item itemvalue="Application.JSONReader" />
-      <item itemvalue="Application.TestMain" />
-      <item itemvalue="Application.TestMainForJSON" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.TestMain" />
-        <item itemvalue="Application.TestMainForJSON" />
-        <item itemvalue="Application.JSONReader" />
-        <item itemvalue="Application.jsonreading" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="e15849ba-4cae-4191-bb26-7aff1142b87c" name="Default Changelist" comment="" />
-      <created>1543051378375</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1543051378375</updated>
-      <workItem from="1543051379786" duration="3573000" />
-      <workItem from="1543056609945" duration="11475000" />
-      <workItem from="1543319000736" duration="18862000" />
-      <workItem from="1543581114602" duration="1765000" />
-    </task>
-    <task id="LOCAL-00001" summary="Changes">
-      <created>1543151400159</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1543151400159</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Changes">
-      <created>1543250371535</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1543250371535</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Changes">
-      <created>1543317858472</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1543317858473</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Refactoring">
-      <created>1543335328934</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1543335328934</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Refactoring">
-      <created>1543335409487</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1543335409487</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Changes to structure">
-      <created>1543390125289</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1543390125289</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Changes to structure">
-      <created>1543396687138</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1543396687138</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Changes to JSON">
-      <created>1543603093706</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1543603093706</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
-    <servers />
-  </component>
-  <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="63780000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7281553" visible="true" weight="0.1898223" />
-=======
-    <option name="totallyTimeSpent" value="68993000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7281553" visible="true" weight="0.17894737" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-      <window_info id="Structure" order="1" sideWeight="0.27184466" side_tool="true" weight="0.1924307" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2771475" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.115072936" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32741934" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32972974" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32719547" />
-=======
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3285968" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3285968" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3268206" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Json Parser" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7281553" visible="true" weight="0.17894737" />
-      <window_info id="Structure" order="1" sideWeight="0.27184466" side_tool="true" weight="0.1924307" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27708703" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.115072936" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3285968" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3285968" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3268206" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Json Parser" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-    </layout-to-restore>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes" />
-    <MESSAGE value="Refactoring" />
-    <MESSAGE value="Changes to structure" />
-    <MESSAGE value="Changes to JSON" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes to JSON" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Classes/Risk.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Classes/Risk.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/json-simple-1.1.1.jar/json-simple-1.1.1.jar!/org/json/simple/JSONObject.class" />
-    <entry file="file://$PROJECT_DIR$/resources/teammates.json" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Object.java" />
-    <entry file="file://$PROJECT_DIR$/MiniProject.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/CurrentDate.java" />
-    <entry file="file://$PROJECT_DIR$/src/Classes/Risk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="27" />
-          <folding>
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1227#1228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Integer.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="388" column="38" selection-start-line="388" selection-start-column="38" selection-end-line="388" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/TeamMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/JSONReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-            <element signature="e#1539#1540#0" expanded="true" />
-            <element signature="e#1601#1602#0" expanded="true" />
-            <element signature="e#2094#2095#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2196#2197#0" expanded="true" />
-            <element signature="e#2242#2243#0" expanded="true" />
-            <element signature="e#2112#2113#0" expanded="true" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#2174#2175#0" expanded="true" />
-            <element signature="e#2210#2211#0" expanded="true" />
-            <element signature="e#2241#2242#0" expanded="true" />
-            <element signature="e#2272#2273#0" expanded="true" />
-            <element signature="e#2312#2313#0" expanded="true" />
-            <element signature="e#2352#2353#0" expanded="true" />
-            <element signature="e#2390#2391#0" expanded="true" />
-            <element signature="e#2424#2425#0" expanded="true" />
-            <element signature="e#2478#2479#0" expanded="true" />
-            <element signature="e#2524#2525#0" expanded="true" />
-=======
-        <state relative-caret-position="748">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/function/ToDoubleFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classes/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#toString#0;class#Task#0" />
-            <element signature="method#progressByHour#0;class#Task#0" />
-            <element signature="method#sumHoursWorked#0;class#Task#0" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/Project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/TestMainForJSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1895#1896#0" expanded="true" />
-            <element signature="e#1932#1933#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#2056#2057#0" expanded="true" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/Classes/TaskMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/TestMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="237">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-=======
-        <state relative-caret-position="223">
-          <caret line="108" lean-forward="true" selection-end-line="110" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Classes/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-419">
-          <caret line="85" column="26" selection-start-line="85" selection-end-line="86" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/JSONReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="146">
-          <caret line="65" column="77" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-=======
-        <state relative-caret-position="1564">
-          <caret line="171" column="1" lean-forward="true" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1358#1359#0" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
-            <element signature="e#3472#3473#0" expanded="true" />
-            <element signature="e#3513#3514#0" expanded="true" />
-            <element signature="e#3575#3576#0" expanded="true" />
-            <element signature="e#3635#3636#0" expanded="true" />
-            <element signature="e#3679#3680#0" expanded="true" />
-            <element signature="e#3710#3711#0" expanded="true" />
-            <element signature="e#3767#3768#0" expanded="true" />
-            <element signature="e#3807#3808#0" expanded="true" />
-            <element signature="e#3863#3864#0" expanded="true" />
-            <element signature="e#3900#3901#0" expanded="true" />
-            <element signature="e#3975#3976#0" expanded="true" />
-            <element signature="e#4027#4028#0" expanded="true" />
-            <element signature="e#4071#4072#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4159#4160#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-            <element signature="e#4237#4238#0" expanded="true" />
-            <element signature="e#4271#4272#0" expanded="true" />
-            <element signature="e#4325#4326#0" expanded="true" />
-            <element signature="e#4371#4372#0" expanded="true" />
-            <element signature="e#4415#4416#0" expanded="true" />
-            <element signature="e#4456#4457#0" expanded="true" />
-            <element signature="e#4524#4525#0" expanded="true" />
-            <element signature="e#4584#4585#0" expanded="true" />
-            <element signature="e#4617#4618#0" expanded="true" />
-            <element signature="e#4649#4650#0" expanded="true" />
->>>>>>> d1f0fe6060270f139b3aefa39809e67a6a521859
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>MiniProject</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
-  </component>
+            <state key="FacetStructureConfigurable.UI">
+                <settings>
+                    <last-edited>No facets are configured</last-edited>
+                    <splitter-proportions>
+                        <option name="proportions">
+                            <list>
+                                <option value="0.2" />
+                            </list>
+                        </option>
+                    </splitter-proportions>
+                </settings>
+            </state>
+            <state key="GlobalLibrariesConfigurable.UI">
+                <settings>
+                    <splitter-proportions>
+                        <option name="proportions">
+                            <list>
+                                <option value="0.2" />
+                            </list>
+                        </option>
+                    </splitter-proportions>
+                </settings>
+            </state>
+            <state key="JdkListConfigurable.UI">
+                <settings>
+                    <last-edited>11</last-edited>
+                    <splitter-proportions>
+                        <option name="proportions">
+                            <list>
+                                <option value="0.2" />
+                            </list>
+                        </option>
+                    </splitter-proportions>
+                </settings>
+            </state>
+            <state key="ModuleStructureConfigurable.UI">
+                <settings>
+                    <last-edited>MiniProject</last-edited>
+                    <splitter-proportions>
+                        <option name="proportions">
+                            <list>
+                                <option value="0.2" />
+                            </list>
+                        </option>
+                    </splitter-proportions>
+                </settings>
+            </state>
+            <state key="ProjectJDKs.UI">
+                <settings>
+                    <last-edited>11</last-edited>
+                    <splitter-proportions>
+                        <option name="proportions">
+                            <list>
+                                <option value="0.2" />
+                            </list>
+                        </option>
+                    </splitter-proportions>
+                </settings>
+            </state>
+            <state key="ProjectLibrariesConfigurable.UI">
+                <settings>
+                    <splitter-proportions>
+                        <option name="proportions">
+                            <list>
+                                <option value="0.2" />
+                            </list>
+                        </option>
+                    </splitter-proportions>
+                </settings>
+            </state>
+        </states>
+    </component>
 </project>

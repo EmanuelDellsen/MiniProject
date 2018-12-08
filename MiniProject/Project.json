@@ -50,7 +50,11 @@
           "description": "We need a Trello workspace",
           "actualStartDate": "2018-11-01",
           "projectedCompletedDate": "2018-11-02",
+<<<<<<< HEAD
           "actualCompletedDate": "2018-11-02",
+=======
+          "actualCompletedDate": "2018-01-01",
+>>>>>>> f35fc8ef83a6d70a9dd3a0d3e3cd1ea5bf3c6b01
           "taskMembers": [
             {
               "id": "1",
@@ -68,7 +72,11 @@
           "description": "We need a Slack workspace",
           "actualStartDate": "2018-11-02",
           "projectedCompletedDate": "2018-11-03",
+<<<<<<< HEAD
           "actualCompletedDate": "2018-11-03",
+=======
+          "actualCompletedDate": "2019-01-01",
+>>>>>>> f35fc8ef83a6d70a9dd3a0d3e3cd1ea5bf3c6b01
           "taskMembers": [
             {
               "id": "1",
@@ -94,7 +102,7 @@
           "probability": "0.9",
           "impact": "4"
         }
-      ],
+      ]
     }
   ]
 }

@@ -1,5 +1,7 @@
 package Classes;
 
+import org.json.simple.JSONArray;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -15,12 +17,12 @@ public class Project {
     private LocalDate projectedCompletedDate;
     private double budgetAtCompletion;
 
-    private ArrayList<TeamMember> teamMemberList;
-    private ArrayList<Task> taskList;
-    private ArrayList<Risk> riskList;
+   private JSONArray teamMemberList;
+   private JSONArray taskList;
+   private JSONArray riskList;
 
     public Project(int projectId, String projectName, LocalDate actualStartDate,
-                   LocalDate projectedCompletedDate, double budgetAtCompletion) {
+                   LocalDate projectedCompletedDate, double budgetAtCompletion, JSONArray teamMemberList, JSONArray taskList, JSONArray riskList) {
 
         this.projectId = projectId;
         this.projectName = projectName;
@@ -28,11 +30,39 @@ public class Project {
         this.projectedCompletedDate = projectedCompletedDate;
         this.budgetAtCompletion = budgetAtCompletion;
 
-        taskList = new ArrayList<>();
-        teamMemberList = new ArrayList<>();
-        riskList = new ArrayList<>();
+       this.taskList = taskList;
+        this.teamMemberList = teamMemberList;
+      this.riskList = riskList;
 
     }
+
+    public JSONArray getTeamMemberList() {
+        return teamMemberList;
+    }
+
+    public void setTeamMemberList(JSONArray teamMemberList) {
+        this.teamMemberList = teamMemberList;
+    }
+
+    public JSONArray getTaskList() {
+        return taskList;
+    }
+
+    public void setTaskList(JSONArray taskList) {
+        this.taskList = taskList;
+    }
+
+    public JSONArray getRiskList() {
+        return riskList;
+    }
+
+    public void setRiskList(JSONArray riskList) {
+        this.riskList = riskList;
+    }
+
+    /*
+
+
 
     public double calculateEV(LocalDate date){
         return (percentageOfCompletedTasks(date)*this.budgetAtCompletion);
@@ -47,7 +77,7 @@ public class Project {
     }
 
     // should be private later on.... - Karl
-    public double percentageOfCompletedTasks(LocalDate date){
+//   public double percentageOfCompletedTasks(LocalDate date){
         double valueOfCompletedTasks = 0.0;
         double valueOfAllTasks = 0.0;
 
@@ -70,7 +100,10 @@ public class Project {
         return (percentageOfProjectCompleted*this.budgetAtCompletion);
     }
 
+<<<<<<< HEAD
     //should be private later on.... -Karl
+=======
+>>>>>>> f35fc8ef83a6d70a9dd3a0d3e3cd1ea5bf3c6b01
     public double calculateAC(LocalDate date){
         double sumOfCostByHours = 0.0;
 
@@ -155,6 +188,11 @@ public class Project {
     public int getProjectId() {
         return projectId;
     }
+
+    }
+
+
+*/
 
     @Override
     public String toString() {

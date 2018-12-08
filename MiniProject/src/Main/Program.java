@@ -1,19 +1,13 @@
 package Main;
 
-import Classes.Project;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
 
 public class Program {
 
-    ArrayList<Project> listOfProjects = new ArrayList<>();
+    JSONArray listOfProjects;
 
     JSONReader myJSONReader = new JSONReader();
 
@@ -24,9 +18,10 @@ public class Program {
     }
 
     public void setUpProgram() throws IOException, ParseException {
-        createProject();
 
+        myJSONReader.methodToCallFromProgram();
 
+<<<<<<< HEAD
     }
 
     public JSONArray createProject() throws IOException, ParseException {
@@ -54,23 +49,18 @@ public class Program {
             getListOfProjects().add(newProject);
         }
         return listOfProjects;
+=======
+        listOfProjects = myJSONReader.createProjects();
+>>>>>>> f35fc8ef83a6d70a9dd3a0d3e3cd1ea5bf3c6b01
 
     }
-
-
-
 
 
     public void startProgram(){
 
     }
 
-
-    public ArrayList<Project> getListOfProjects() {
+    public JSONArray getListOfProjects() {
         return listOfProjects;
-    }
-
-    public void setListOfProjects(ArrayList<Project> listOfProjects) {
-        this.listOfProjects = listOfProjects;
     }
 }

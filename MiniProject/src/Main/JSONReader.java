@@ -2,7 +2,6 @@ package Main;
 
 import Classes.Project;
 import Classes.Task;
-import Classes.TaskMember;
 import Classes.TeamMember;
 
 import org.json.simple.JSONArray;
@@ -19,10 +18,9 @@ import java.util.*;
 
 public class JSONReader {
 
+
     public void methodToCallFromProgram() throws IOException, ParseException {
-        createJSONObject();
-
-
+        System.out.println(createProjects());
     }
 
 
@@ -34,12 +32,50 @@ public class JSONReader {
     }
 
 
+    public JSONArray createProjects() throws IOException, ParseException {
 
-    public JSONArray createTeamMembers() throws IOException, ParseException {
+        JSONArray arrayListOfProjects = new JSONArray();
 
-        JSONArray teammates = (JSONArray) createJSONObject().get("teamMemberList");
+        JSONArray listOfProjects = (JSONArray) createJSONObject().get("listOfProjects");
 
-        Iterator teamMateIterator = teammates.iterator();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+        Iterator projectIterator = listOfProjects.iterator();
+
+        while (projectIterator.hasNext()) {
+
+            Map projectMap = (Map) projectIterator.next();
+
+            int projectId = Integer.valueOf((String) projectMap.get("projectId"));
+            String projectName = (String) projectMap.get("projectName");
+            LocalDate actualStartDate = LocalDate.parse((String) projectMap.get("actualStartDate"), formatter);
+            LocalDate projectedCompletedDate = LocalDate.parse((String) projectMap.get("projectedCompletedDate"), formatter);
+            Double budgetAtCompletion = Double.valueOf((String) projectMap.get("budgetAtCompletion"));
+
+
+            JSONArray teammates = (JSONArray) projectMap.get("teamMemberList");
+            JSONArray tasks = (JSONArray) projectMap.get("taskList");
+
+
+            JSONArray riskList = new JSONArray(); // This is here to add something as an argument in creation of Project
+            // that argument will later be replaced with method-call: createRisk(risks);
+
+
+                Project newProject = new Project(projectId, projectName, actualStartDate, projectedCompletedDate,
+                        budgetAtCompletion, createTeamMember(teammates), createTask(tasks), riskList);
+                arrayListOfProjects.add(newProject);
+
+            }
+
+            return arrayListOfProjects;
+    }
+
+
+    public JSONArray createTeamMember (JSONArray teamMemberList){
+
+        JSONArray arrayListOfTeamMembers = new JSONArray();
+
+        Iterator teamMateIterator = teamMemberList.iterator();
 
         while (teamMateIterator.hasNext()) {
 
@@ -49,23 +85,49 @@ public class JSONReader {
             double salaryPerHour = Double.valueOf((String) member.get("salaryPerHour"));
 
             TeamMember newTeamMember = new TeamMember(teamMemberId, teamMemberName, salaryPerHour);
-            // Project.getTeamMemberList().add(newTeamMember);
+
+            arrayListOfTeamMembers.add(newTeamMember);
 
         }
 
-        return teammates;
-
+        return arrayListOfTeamMembers;
 
     }
 
-    public JSONArray createTask() throws IOException, ParseException {
 
-        JSONArray tasks = (JSONArray) createJSONObject().get("taskList");
-        Iterator taskIterator = tasks.iterator();
+
+    public HashMap createTaskMembers (JSONArray taskMembersList){
+        HashMap<Object, Object> HashMapWithTaskMembers = new HashMap<>();
+
+        Iterator taskMateIterator = taskMembersList.iterator();
+
+        while (taskMateIterator.hasNext()) {
+
+            Map member = (Map) taskMateIterator.next();
+
+            Object id = member.get("id");
+            Object hoursWorked = member.get("hoursWorked");
+
+            HashMapWithTaskMembers.put(id,hoursWorked);
+
+        }
+
+        return HashMapWithTaskMembers;
+    }
+
+
+
+<<<<<<< HEAD
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+=======
+    public JSONArray createTask(JSONArray taskList) throws IOException, ParseException {
+
+        JSONArray arrayListOftasks = new JSONArray();
+>>>>>>> f35fc8ef83a6d70a9dd3a0d3e3cd1ea5bf3c6b01
+
+        Iterator taskIterator = taskList.iterator();
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-
 
         while (taskIterator.hasNext()) {
 
@@ -79,15 +141,57 @@ public class JSONReader {
             LocalDate actualCompletedDate = LocalDate.parse((String) taskMap.get("actualCompletedDate"), formatter);
             // boolean completedTask = Boolean.valueOf((String) taskMap.get("completedTask"));
 
-            Task newTask = new Task(taskId, taskName, description, actualStartDate, projectedCompletedDate, actualCompletedDate);
+            JSONArray taskMemberArray = (JSONArray) taskMap.get("taskMembers");
 
-            // Project.getTaskList().add(newTask);
-            newTask.setTaskMembers( new HashMap<>()) ;
+            Task newTask = new Task(taskId, taskName, description, actualStartDate, projectedCompletedDate, actualCompletedDate, createTaskMembers(taskMemberArray));
+
+            arrayListOftasks.add(newTask);
+
+          //  newTask.setTaskMembers( new HashMap<>()) ;
 
         }
-        return tasks;
+        return arrayListOftasks;
 
     }
+
+
+
+
+
+
+}
+    /*
+
+    public JSONArray createTeamMembers() throws IOException, ParseException {
+
+        JSONArray arrayListOfTeamMembers = new JSONArray();
+
+        JSONArray teammates = (JSONArray) createJSONObject().get("teamMemberList");
+
+        System.out.println(teammates); // DENNA ÄR TOM! Därav NULL POINTER
+
+        Iterator teamMateIterator = teammates.iterator();
+
+        while (teamMateIterator.hasNext()) {
+
+            Map member = (Map) teamMateIterator.next();
+            int teamMemberId = Integer.valueOf((String) member.get("teamMemberId"));
+            String teamMemberName = (String) member.get("teamMemberName");
+            double salaryPerHour = Double.valueOf((String) member.get("salaryPerHour"));
+
+            TeamMember newTeamMember = new TeamMember(teamMemberId, teamMemberName, salaryPerHour);
+
+            arrayListOfTeamMembers.add(newTeamMember);
+
+
+        }
+
+        return arrayListOfTeamMembers;
+
+
+    }
+
+
 
     public JSONArray createTaskMembers() throws IOException, ParseException {
 
