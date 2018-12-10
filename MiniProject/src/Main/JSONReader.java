@@ -22,6 +22,7 @@ import java.util.*;
     protected void methodToCallFromProgram() throws IOException, ParseException {
         System.out.println(createProjects());
 
+
     }
 
 
@@ -118,9 +119,10 @@ import java.util.*;
             LocalDate actualCompletedDate = LocalDate.parse((String) taskMap.get("actualCompletedDate"), formatter);
             // boolean completedTask = Boolean.valueOf((String) taskMap.get("completedTask"));
 
-            JSONArray taskMemberArray = (JSONArray) taskMap.get("taskMembers");
+            JSONObject taskMemberArray = (JSONObject) taskMap.get("hoursWorkedPerTeamMembers");
 
-            Task newTask = new Task(taskId, taskName, description, actualStartDate, projectedCompletedDate, actualCompletedDate, createTaskMembers(taskMemberArray), correctWayToCreateTaskMembers(taskMemberArray));
+            Task newTask = new Task(taskId, taskName, description, actualStartDate, projectedCompletedDate,
+                    actualCompletedDate, createTaskMembers(taskMemberArray)); //createTaskMemberAndList(taskMemberArray));
 
             arrayListOfTasks.add(newTask);
 
@@ -152,8 +154,8 @@ import java.util.*;
         return  arrayListOfRisks;
     }
 
-    private List<TaskMember> correctWayToCreateTaskMembers(JSONArray taskMembers) {
-        List<TaskMember> HashMapWithTaskMembers = new ArrayList();
+  /*  private List<TaskMember> createTaskMemberAndList(JSONArray taskMembers) {
+        List<TaskMember> listOfTaskMembers = new ArrayList();
 
         Iterator taskMateIterator = taskMembers.iterator();
 
@@ -166,30 +168,32 @@ import java.util.*;
 
             TaskMember memberObject = new TaskMember(id, hoursWorked);
 
-            HashMapWithTaskMembers.add(memberObject);
+            listOfTaskMembers.add(memberObject);
 
         }
 
-        return HashMapWithTaskMembers;
+        return listOfTaskMembers;
     }
+*/
 
-    private Map createTaskMembers(JSONArray taskMembersList) {
-        Map<Integer, Double> HashMapWithTaskMembers = new HashMap<>();
 
-        Iterator taskMateIterator = taskMembersList.iterator();
+    private Map<Integer, Double> createTaskMembers(JSONObject taskMembersList) {
+        Map<Integer, Double> hashMapWithTaskMembers = new HashMap<Integer, Double>();
+
+        Iterator<String> taskMateIterator = taskMembersList.keySet().iterator();
 
         while (taskMateIterator.hasNext()) {
 
-            Map member = (Map) taskMateIterator.next();
+            String member = taskMateIterator.next();
 
-            int id = Integer.valueOf((String) member.get("id"));
-            double hoursWorked = Double.valueOf((String) member.get("hoursWorked"));
+            int id = Integer.parseInt("id");
+            double hoursWorked = Double.parseDouble("hoursWorked");
 
-            HashMapWithTaskMembers.put(id, hoursWorked);
+            hashMapWithTaskMembers.put(id, hoursWorked);
 
         }
 
-        return HashMapWithTaskMembers;
+        return hashMapWithTaskMembers;
     }
 
 

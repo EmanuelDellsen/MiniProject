@@ -4,13 +4,11 @@ import Classes.Project;
 import Classes.Task;
 import Classes.TaskMember;
 import Classes.TeamMember;
-import org.json.simple.JSONArray;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Program {
 
@@ -31,30 +29,32 @@ public class Program {
 
         listOfProjects = myJSONReader.createProjects();
 
-        giveMemberInformation(listOfProjects);
-        giveTaskInformation(listOfProjects);
+        System.out.println(listOfProjects.get(0).getTaskList().get(0).sumHoursWorkedByMember(1));
+
+        /*giveMemberInformation(listOfProjects);
+        giveTaskInformation(listOfProjects);*/
     }
 
-    public void giveMemberInformation(List<Project> projects) {
+ /*   public void workDoneOnAllTasks(List<Project> projects) {
         for (Project p : projects) {
             for (TeamMember m : p.getTeamMemberList()) {
                 double hoursWorkedOnAllTasks = 0;
                 for (Task t : p.getTaskList()) {
-                    for (TaskMember tm : t.getCorrectWayToHandleThis()) {
+                    for (TaskMember tm : t.getListOfTaskMembers()) {
                         if (tm.getId() == (m.getTeamMemberId())) {
                             hoursWorkedOnAllTasks = hoursWorkedOnAllTasks + tm.getHoursWorked();
                         }
                     }
                 }
-                System.out.println("Team Member - " + m.getTeamMemberName() + " has worked " + hoursWorkedOnAllTasks + " hours on all taks");
+                System.out.println("Team Member - " + m.getTeamMemberName() + " has worked " + hoursWorkedOnAllTasks + " hours on all task");
             }
         }
     }
 
-    public void giveTaskInformation(List<Project> projects) {
+    public void hoursOnEachTask(List<Project> projects) {
         for (Project p : projects) {
             for (Task t : p.getTaskList()) {
-                for (TaskMember tm : t.getCorrectWayToHandleThis()) {
+                for (TaskMember tm : t.getListOfTaskMembers()) {
                     for (TeamMember m : p.getTeamMemberList()) {
                         if (tm.getId() == m.getTeamMemberId()) {
                             System.out.println("Team Member - " + m.getTeamMemberName() + " has worked " + tm.getHoursWorked() + " on task" + t.getName());
@@ -63,7 +63,7 @@ public class Program {
                 }
             }
         }
-    }
+    }*/
 
 
     public void startProgram(){

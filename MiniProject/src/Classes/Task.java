@@ -14,7 +14,7 @@ public class Task {
 
     private Map<Integer, Double> taskMembers;
 
-    private List<TaskMember> correctWayToHandleThis;
+    private List<TaskMember> listOfTaskMembers;
 
     private LocalDate actualStartDate;
     private LocalDate projectedCompletedDate;
@@ -22,7 +22,7 @@ public class Task {
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
-                LocalDate actualCompletedDate, Map taskMembers, List<TaskMember> correctWayToHandleThis) {
+                LocalDate actualCompletedDate, Map taskMembers){// List<TaskMember> listOfTaskMembers) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
@@ -30,7 +30,7 @@ public class Task {
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
         this.taskMembers = taskMembers;
-        this.correctWayToHandleThis = correctWayToHandleThis;
+        this.listOfTaskMembers = listOfTaskMembers;
     }
 
     public String toString() {
@@ -67,7 +67,13 @@ public class Task {
     }
 
 
+    public Map<Integer, Double> getTaskMembers() {
+        return taskMembers;
+    }
 
+    public void setTaskMembers(Map<Integer, Double> taskMembers) {
+        this.taskMembers = taskMembers;
+    }
 
     public int getId() {
         return taskId;
@@ -93,12 +99,12 @@ public class Task {
         this.description = description;
     }
 
-    public List<TaskMember> getCorrectWayToHandleThis() {
-        return correctWayToHandleThis;
+    public List<TaskMember> getListOfTaskMembers() {
+        return listOfTaskMembers;
     }
 
-    public void setCorrectWayToHandleThis(List<TaskMember> correctWayToHandleThis) {
-        this.correctWayToHandleThis = correctWayToHandleThis;
+    public void setListOfTaskMembers(List<TaskMember> listOfTaskMembers) {
+        this.listOfTaskMembers = listOfTaskMembers;
     }
 }
 
