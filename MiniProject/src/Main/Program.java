@@ -1,9 +1,7 @@
 package Main;
 
 import Classes.Project;
-import Classes.Task;
-import Classes.TaskMember;
-import Classes.TeamMember;
+
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -31,40 +29,8 @@ public class Program {
 
         System.out.println(listOfProjects.get(0).getTaskList().get(0).sumHoursWorkedByMember(1));
 
-        /*giveMemberInformation(listOfProjects);
-        giveTaskInformation(listOfProjects);*/
+
     }
-
- /*   public void workDoneOnAllTasks(List<Project> projects) {
-        for (Project p : projects) {
-            for (TeamMember m : p.getTeamMemberList()) {
-                double hoursWorkedOnAllTasks = 0;
-                for (Task t : p.getTaskList()) {
-                    for (TaskMember tm : t.getListOfTaskMembers()) {
-                        if (tm.getId() == (m.getTeamMemberId())) {
-                            hoursWorkedOnAllTasks = hoursWorkedOnAllTasks + tm.getHoursWorked();
-                        }
-                    }
-                }
-                System.out.println("Team Member - " + m.getTeamMemberName() + " has worked " + hoursWorkedOnAllTasks + " hours on all task");
-            }
-        }
-    }
-
-    public void hoursOnEachTask(List<Project> projects) {
-        for (Project p : projects) {
-            for (Task t : p.getTaskList()) {
-                for (TaskMember tm : t.getListOfTaskMembers()) {
-                    for (TeamMember m : p.getTeamMemberList()) {
-                        if (tm.getId() == m.getTeamMemberId()) {
-                            System.out.println("Team Member - " + m.getTeamMemberName() + " has worked " + tm.getHoursWorked() + " on task" + t.getName());
-                        }
-                    }
-                }
-            }
-        }
-    }*/
-
 
     public void startProgram(){
 

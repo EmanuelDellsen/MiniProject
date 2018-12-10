@@ -154,46 +154,29 @@ import java.util.*;
         return  arrayListOfRisks;
     }
 
-  /*  private List<TaskMember> createTaskMemberAndList(JSONArray taskMembers) {
-        List<TaskMember> listOfTaskMembers = new ArrayList();
-
-        Iterator taskMateIterator = taskMembers.iterator();
-
-        while (taskMateIterator.hasNext()) {
-
-            Map member = (Map) taskMateIterator.next();
-
-            int id = Integer.valueOf((String) member.get("id"));
-            double hoursWorked = Double.valueOf((String) member.get("hoursWorked"));
-
-            TaskMember memberObject = new TaskMember(id, hoursWorked);
-
-            listOfTaskMembers.add(memberObject);
-
-        }
-
-        return listOfTaskMembers;
-    }
-*/
 
 
-    private Map<Integer, Double> createTaskMembers(JSONObject taskMembersList) {
-        Map<Integer, Double> hashMapWithTaskMembers = new HashMap<Integer, Double>();
 
-        Iterator<String> taskMateIterator = taskMembersList.keySet().iterator();
+    private Map<Integer, Double> createTaskMembers(JSONObject taskList) {
+
+        Map<Integer, Double> mapOfTaskMembers = new HashMap<>();
+
+
+        Iterator taskMateIterator = taskList.keySet().iterator();
 
         while (taskMateIterator.hasNext()) {
 
-            String member = taskMateIterator.next();
+           // String member = (String) taskMateIterator.next();
 
-            int id = Integer.parseInt("id");
-            double hoursWorked = Double.parseDouble("hoursWorked");
+            Integer key = Integer.valueOf((String) taskMateIterator.next());
+            double value = Double.valueOf((String) taskList.get(key.toString()));
 
-            hashMapWithTaskMembers.put(id, hoursWorked);
+
+            mapOfTaskMembers.put(key, value);
 
         }
 
-        return hashMapWithTaskMembers;
+        return mapOfTaskMembers;
     }
 
 
