@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e15849ba-4cae-4191-bb26-7aff1142b87c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiniProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Classes/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Classes/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Main/JSONReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MiniProject/Main/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniProject/Main/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/JSONReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Program.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,7 +101,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/JSONReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
@@ -189,11 +181,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+            <state relative-caret-position="169">
+              <caret line="53" column="58" lean-forward="true" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -285,12 +277,12 @@
         <option value="$PROJECT_DIR$/src/Classes/Project.java" />
         <option value="$PROJECT_DIR$/src/Main/TestMainForJSON.java" />
         <option value="$PROJECT_DIR$/src/Main/Program.java" />
-        <option value="$PROJECT_DIR$/Project.json" />
-        <option value="$PROJECT_DIR$/Project.json" />
         <option value="$PROJECT_DIR$/src/Classes/Task.java" />
         <option value="$PROJECT_DIR$/src/Classes/Task.java" />
         <option value="$PROJECT_DIR$/src/Main/JSONReader.java" />
         <option value="$PROJECT_DIR$/src/Main/JSONReader.java" />
+        <option value="$PROJECT_DIR$/Project.json" />
+        <option value="$PROJECT_DIR$/Project.json" />
       </list>
     </option>
   </component>
@@ -462,7 +454,7 @@
       <workItem from="1543319000736" duration="18862000" />
       <workItem from="1543581114602" duration="1765000" />
       <workItem from="1544424382607" duration="274000" />
-      <workItem from="1544434953703" duration="4487000" />
+      <workItem from="1544434953703" duration="4925000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1543151400159</created>
@@ -524,7 +516,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74600000" />
+    <option name="totallyTimeSpent" value="75038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -761,13 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/TestMainForJSON.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -786,6 +771,13 @@
             <element signature="imports" expanded="true" />
             <element signature="e#6602#6619#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="53" column="58" lean-forward="true" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
         </state>
       </provider>
     </entry>
