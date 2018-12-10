@@ -12,9 +12,9 @@ public class Task {
     private String taskName;
     private String description;
 
-    private Map<Integer, Double> taskMembers;
 
-    private List<TaskMember> listOfTaskMembers;
+
+    private Map<Integer, Double> taskMembers;
 
     private LocalDate actualStartDate;
     private LocalDate projectedCompletedDate;
@@ -22,7 +22,7 @@ public class Task {
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
-                LocalDate actualCompletedDate, Map taskMembers){// List<TaskMember> listOfTaskMembers) {
+                LocalDate actualCompletedDate, Map<Integer, Double> taskMembers){// List<TaskMember> listOfTaskMembers) {
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
@@ -30,7 +30,7 @@ public class Task {
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
         this.taskMembers = taskMembers;
-        this.listOfTaskMembers = listOfTaskMembers;
+
     }
 
     public String toString() {
@@ -62,7 +62,7 @@ public class Task {
         return taskMembers.values()
                 .stream()
                 .filter(a->taskMembers.containsKey(teamMemberId))
-                .mapToDouble(i-> (double) i)
+                .mapToDouble(i-> i)
                 .sum();
     }
 
@@ -99,12 +99,6 @@ public class Task {
         this.description = description;
     }
 
-    public List<TaskMember> getListOfTaskMembers() {
-        return listOfTaskMembers;
-    }
 
-    public void setListOfTaskMembers(List<TaskMember> listOfTaskMembers) {
-        this.listOfTaskMembers = listOfTaskMembers;
-    }
 }
 
