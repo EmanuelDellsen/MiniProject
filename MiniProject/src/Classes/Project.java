@@ -16,9 +16,9 @@ public class Project {
     private LocalDate projectedCompletedDate;
     private double budgetAtCompletion;
 
-    private ArrayList<TeamMember> teamMemberList;
-    private ArrayList<Task> taskList;
-    private ArrayList<Risk> riskList;
+    private List<TeamMember> teamMemberList = new ArrayList<>();
+    private List<Task> taskList = new ArrayList<>();
+    private List<Risk> riskList = new ArrayList<>();
 
     public Project(int projectId, String projectName, LocalDate actualStartDate,
                    LocalDate projectedCompletedDate, double budgetAtCompletion) {
@@ -29,11 +29,8 @@ public class Project {
         this.projectedCompletedDate = projectedCompletedDate;
         this.budgetAtCompletion = budgetAtCompletion;
 
-        taskList = new ArrayList<>();
-        teamMemberList = new ArrayList<>();
-        riskList = new ArrayList<>();
-
     }
+
 
     public double calculateEV(LocalDate date){
         return (this.percentageOfCompletedTasks(date)*this.budgetAtCompletion);
@@ -48,7 +45,7 @@ public class Project {
     }
 
     // should be private later on.... - Karl
-    public double percentageOfCompletedTasks(LocalDate date){
+      public double percentageOfCompletedTasks(LocalDate date){
         double valueOfCompletedTasks = 0.0;
         double valueOfAllTasks = 0.0;
 
@@ -71,7 +68,8 @@ public class Project {
         return (percentageOfProjectCompleted*this.budgetAtCompletion);
     }
 
-    //should be private later on.... -Karl **** CURRENTLY GIVES NULL POINTER EXCEPTION IF IT SEARCHES
+
+    //should be private later on.... -Karl
     public double calculateAC(LocalDate date){
         double sumOfCostByHours = 0.0;
 
@@ -115,27 +113,27 @@ public class Project {
         this.budgetAtCompletion = budgetAtCompletion;
     }
 
-    public ArrayList<Task> getTaskList() {
+    public List<Task> getTaskList() {
         return taskList;
     }
 
-    public void setTaskList(ArrayList<Task> taskList) {
+    public void setTaskList(List<Task> taskList) {
         this.taskList = taskList;
     }
 
-    public ArrayList<TeamMember> getTeamMemberList() {
+    public List<TeamMember> getTeamMemberList() {
         return teamMemberList;
     }
 
-    public void setTeamMemberList(ArrayList<TeamMember> teamMemberList) {
+    public void setTeamMemberList(List<TeamMember> teamMemberList) {
         this.teamMemberList = teamMemberList;
     }
 
-    public ArrayList<Risk> getRiskList() {
+    public List<Risk> getRiskList() {
         return riskList;
     }
 
-    public void setRiskList(ArrayList<Risk> riskList) {
+    public void setRiskList(List<Risk> riskList) {
         this.riskList = riskList;
     }
 
@@ -158,6 +156,7 @@ public class Project {
         return projectId;
     }
 
+
     @Override
     public String toString() {
         return "Project{" +
@@ -171,4 +170,6 @@ public class Project {
                 ", riskList=" + riskList +
                 '}';
     }
+
+
 }

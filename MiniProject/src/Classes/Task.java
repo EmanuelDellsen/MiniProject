@@ -2,7 +2,6 @@ package Classes;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.util.HashMap;
 import java.util.Map;
 
 
@@ -20,14 +19,15 @@ public class Task {
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
-                LocalDate actualCompletedDate) {
+                LocalDate actualCompletedDate, Map<Integer, Double> taskMembers){
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;
         this.actualStartDate = actualStartDate;
         this.projectedCompletedDate = projectedCompletedDate;
         this.actualCompletedDate = actualCompletedDate;
-        this.taskMembers = new HashMap<>();
+        this.taskMembers = taskMembers;
+
     }
 
     public String toString() {
@@ -37,6 +37,7 @@ public class Task {
                 "Projected completed date: " + projectedCompletedDate + "\n" +
                 "Task members"+taskMembers+
                 // should call retrieve taskMembers ", TaskMembers="+taskMembers+
+                taskMembers + "\n" +
                 '}';
     }
 
@@ -98,6 +99,7 @@ public class Task {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
 }
 
