@@ -60,10 +60,15 @@ public class TestOutput {
 
     public void displayTaskByMember(Project project, int teamMemberId){
 
+        System.out.println(project.retrieveTeamMember(teamMemberId).getTeamMemberName());
 
-        for(Task task: project.getTaskList()){
-            System.out.print(String.format("%-25s",task.returnHoursByMember(teamMemberId)));
+
+        for(Task task: project.assignedTasksByMember(1)){
+            System.out.print(String.format("%-25s", task.getName()));
+            System.out.println(String.format("%10s",task.returnHoursByMember(teamMemberId)));
         }
+
+        System.out.println(String.format("%35s",project.allHoursByMember(teamMemberId)));
 
 
     }
