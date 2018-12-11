@@ -88,6 +88,17 @@ public class Project {
                 .filter(task -> task.getTaskMembers().containsKey(teamMemberId))
                 .collect(Collectors.toList());
     }
+    public double allHoursByMember(int teamMemberId){
+        double sum = 0.0;
+
+        for(Task task: taskList){
+            sum += task.returnHoursByMember(teamMemberId);
+        }
+
+        return sum;
+    }
+
+
     //This returns a list of objects of type Risk with the format as the to.String in Risk
     public List<Risk> retrieveRisks(){
         return this.riskList.stream()
