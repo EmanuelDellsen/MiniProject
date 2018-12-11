@@ -36,11 +36,11 @@ public class Project {
     }
 
     public double calculateEV(LocalDate date){
-        return (percentageOfCompletedTasks(date)*this.budgetAtCompletion);
+        return (this.percentageOfCompletedTasks(date)*this.budgetAtCompletion);
     }
 
-    public int calculateSV(LocalDate date){
-        return (int)(this.calculateEV(date)-calculatePV(date));
+    public double calculateSV(LocalDate date){
+        return (this.calculateEV(date)-this.calculatePV(date));
     }
 
     public double calculateCV(LocalDate date){
@@ -71,37 +71,31 @@ public class Project {
         return (percentageOfProjectCompleted*this.budgetAtCompletion);
     }
 
-    //should be private later on.... -Karl
+    //should be private later on.... -Karl **** CURRENTLY GIVES NULL POINTER EXCEPTION IF IT SEARCHES
     public double calculateAC(LocalDate date){
         double sumOfCostByHours = 0.0;
 
         for (TeamMember teamMember : this.teamMemberList){
             for (Task task: this.taskList){
-                sumOfCostByHours += task.progressInHours(date,teamMember.getTeamMemberId())*teamMember.getSalaryPerHour();
+                sumOfCostByHours += task.progressInHours(date)*
+                        (task.returnHoursByMember(teamMember.getTeamMemberId())*teamMember.getSalaryPerHour());
             }
         }
         return sumOfCostByHours;
     }
 
-    //This returns a list of the name of the tasks that a teamMember is assigned to sorted by name
-    public List<String> assignedTasksByMember(int teamMemberId){
+    //This returns a list of the name ofM the tasks that a teamMember is assigned to sorted by name
+    public List<Task> assignedTasksByMember(int teamMemberId){
         return taskList.stream()
                 .filter(task -> task.getTaskMembers().containsKey(teamMemberId))
-                .sorted(Comparator.comparing(Task::getName))
-                .map(Task::getName)
                 .collect(Collectors.toList());
     }
     //This returns a list of objects of type Risk with the format as the to.String in Risk
     public List<Risk> retrieveRisks(){
         return this.riskList.stream()
-                .sorted(Comparator.comparing(Risk::getRiskName))
+                .sorted(Comparator.comparing(Risk::getProbability))
                 .collect(Collectors.toList());
     }
-
-    /*
-    public List<String> workDoneByAll(){
-    }
-*/
 
     //Returns a list of the dates of every 2 weeks skipping first date
     public List<LocalDate> returnProjectIntervalDates(){

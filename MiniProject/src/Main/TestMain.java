@@ -1,9 +1,6 @@
 package Main;
 
-import Classes.Project;
-import Classes.Risk;
-import Classes.Task;
-import Classes.TeamMember;
+import Classes.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -27,7 +24,7 @@ public class TestMain {
 
         Risk risk1 = new Risk(1,"GitHubFrenzy",0.5,3);
         Risk risk2 = new Risk(2,"SlackOverload",0.3,5);
-        Risk risk3 = new Risk(3,"TrelloConfusion",0.7,5);
+        Risk risk3 = new Risk(3,"TrelloConfusion",0.8,5);
 
         project1.getRiskList().add(risk1);
         project1.getRiskList().add(risk2);
@@ -55,6 +52,7 @@ public class TestMain {
         Task task1 = new Task(1,"CreateGitRepository","Github 4-life",
                 date1,date2,date3);
         task1.getTaskMembers().put(1,10.0);
+        task1.getTaskMembers().put(2,10.0);
         project1.getTaskList().add(task1);
 
         String strb1 = "2018-11-02";
@@ -66,7 +64,8 @@ public class TestMain {
 
         Task task2 = new Task(1,"CreateGittyKitty","Github 4-life",
                 dateb1,dateb2,dateb3);
-        task2.getTaskMembers().put(1,10.0);
+        task2.getTaskMembers().put(2,9.0);
+        task2.getTaskMembers().put(1,15.0);
         project1.getTaskList().add(task2);
 
         // 5 - testing calculateEV
@@ -97,7 +96,8 @@ public class TestMain {
         System.out.println(task1.getTaskLength());
         String tempStr = "2018-11-17";
         LocalDate tempDate = LocalDate.parse(tempStr,formatter);
-        System.out.println(task1.progressInHours(tempDate,1));
+        System.out.println(task1.progressInHours(tempDate));
+
         System.out.println(project1.calculateAC(tempDate));
 
         System.out.println(project1.calculateEV(tempDate));
@@ -106,6 +106,22 @@ public class TestMain {
 
         System.out.println(project1.returnProjectIntervalDates());
 
+        System.out.println(project1.getTaskList());
+
+        // 9 - testing outputs
+
+        TestOutput output1 = new TestOutput();
+
+        output1.displayRiskMatrix(project1.getRiskList());
+        System.out.println(("***********************"));
+        output1.displayProjectVariance(project1);
+        System.out.println();
+
+
+        //10 - testing result of displayTaskByMember
+
+        System.out.println(("***********************"));
+        output1.displayTaskByMember(project1,1);
 
     }
 
