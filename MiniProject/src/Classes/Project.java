@@ -106,7 +106,11 @@ public class Project {
         return ChronoUnit.WEEKS.between(this.actualStartDate,this.projectedCompletedDate);
     }
 
-    public void retrieveTeamMember(){
+    public TeamMember retrieveTeamMember(int teamMemberId){
+        return this.teamMemberList.stream()
+                .filter(teamMember -> teamMemberId == teamMember.getTeamMemberId())
+                .findAny()
+                .orElse(null);
     }
 
     public double getBudgetedCost() {
