@@ -77,6 +77,23 @@
           "actualCompletedDate": "2018-11-13",
           "hoursWorkedPerTeamMembers": {
             "1": "1",
+            "2": "1",
+            "3": "1",
+            "4": "1",
+            "5": "1",
+            "6": "1",
+            "7": "1"
+          }
+        },
+         {
+          "taskId": "4",
+          "taskName": "TeamMeeting",
+          "description": "Our second team meeting",
+          "actualStartDate": "2018-11-20",
+          "projectedCompletedDate": "2018-11-20",
+          "actualCompletedDate": "2018-11-20",
+          "hoursWorkedPerTeamMembers": {
+            "1": "1",
             "2": "1"
             "3": "1",
             "4": "1"
