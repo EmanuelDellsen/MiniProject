@@ -1,4 +1,8 @@
-package Classes;
+package Main;
+
+import Classes.Project;
+import Classes.Risk;
+import Classes.Task;
 
 import java.time.LocalDate;
 import java.util.List;
