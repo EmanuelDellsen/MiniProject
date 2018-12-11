@@ -5,6 +5,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Task {
 
     private int taskId;
@@ -34,16 +35,36 @@ public class Task {
                 "Description: " + description + "\n" +
                 "Start date: " + actualStartDate + "\n" +
                 "Projected completed date: " + projectedCompletedDate + "\n" +
+                "Task members"+taskMembers+
                 // should call retrieve taskMembers ", TaskMembers="+taskMembers+
                 '}';
     }
 
-    public long getTaskValue(){
+    public long getTaskLength(){
         return ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
     }
 
     public boolean taskIsComplete(LocalDate date){
         return this.actualCompletedDate.isBefore(date);
+    }
+
+    public double progressInHours(LocalDate date){
+        long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
+        double progressInPercent = (double)daysFromStartToDate/(double) getTaskLength();
+
+        return (returnHoursInTask()*progressInPercent);
+    }
+
+    public double returnHoursInTask(){
+        return this.taskMembers.values()
+                .stream()
+                .mapToDouble(i->i)
+                .sum();
+    }
+
+    public double returnHoursByMember(int teamMemberId){
+        return this.taskMembers.getOrDefault(teamMemberId,0.0);
+
     }
 
     public Map<Integer, Double> getTaskMembers() {

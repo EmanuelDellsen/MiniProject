@@ -1,6 +1,7 @@
 package Classes;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -35,26 +36,26 @@ public class Project {
     }
 
     public double calculateEV(LocalDate date){
-        return (percentageOfCompletedTasks(date)*this.budgetAtCompletion);
+        return (this.percentageOfCompletedTasks(date)*this.budgetAtCompletion);
     }
 
-    public int calculateSV(LocalDate date){
-        return (int)(this.calculateEV(date)-calculatePV(date));
+    public double calculateSV(LocalDate date){
+        return (this.calculateEV(date)-this.calculatePV(date));
     }
-/*
+
     public double calculateCV(LocalDate date){
         return this.calculateEV(date)-this.calculateAC(date);
     }
-*/
+
     // should be private later on.... - Karl
     public double percentageOfCompletedTasks(LocalDate date){
         double valueOfCompletedTasks = 0.0;
         double valueOfAllTasks = 0.0;
 
         for(Task task : this.taskList){
-            valueOfAllTasks += task.getTaskValue();
+            valueOfAllTasks += task.getTaskLength();
             if(task.taskIsComplete(date)){
-                valueOfCompletedTasks += task.getTaskValue();
+                valueOfCompletedTasks += task.getTaskLength();
             }
         }
         return (valueOfCompletedTasks/valueOfAllTasks);
@@ -62,43 +63,45 @@ public class Project {
 
     //should be private later on.... -Karl
     public double calculatePV(LocalDate date){
-        Long timeElapsed = ChronoUnit.DAYS.between(this.actualStartDate,date);
-        Long projectDuration = ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
+        long timeElapsed = ChronoUnit.DAYS.between(this.actualStartDate,date);
+        long projectDuration = ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
 
         double percentageOfProjectCompleted = ((double)timeElapsed/(double)projectDuration);
 
         return (percentageOfProjectCompleted*this.budgetAtCompletion);
     }
-    /*
+
+    //should be private later on.... -Karl **** CURRENTLY GIVES NULL POINTER EXCEPTION IF IT SEARCHES
     public double calculateAC(LocalDate date){
-        double sumOfHoursWorked;
-        for(TeamMember teamMember : this.teamMemberList){
-            sumOfHoursWorked += task.getTaskValue();
+        double sumOfCostByHours = 0.0;
+
+        for (TeamMember teamMember : this.teamMemberList){
+            for (Task task: this.taskList){
+                sumOfCostByHours += task.progressInHours(date)*
+                        (task.returnHoursByMember(teamMember.getTeamMemberId())*teamMember.getSalaryPerHour());
+            }
         }
-
+        return sumOfCostByHours;
     }
-    */
-    public List<String> assignedTasksByMember(int teamMemberId){
-        List<String> collect = taskList.stream()
+
+    //This returns a list of the name ofM the tasks that a teamMember is assigned to sorted by name
+    public List<Task> assignedTasksByMember(int teamMemberId){
+        return taskList.stream()
                 .filter(task -> task.getTaskMembers().containsKey(teamMemberId))
-                .sorted(Comparator.comparing(Task::getName))
-                //.sorted() - ??
-                .map(Task::getName)
                 .collect(Collectors.toList());
-
-        return collect; //string building here instead and use String as type?
     }
+    //This returns a list of objects of type Risk with the format as the to.String in Risk
     public List<Risk> retrieveRisks(){
-        List<Risk> collect = riskList.stream()
-                .sorted(Comparator.comparing(Risk::getRiskName))
+        return this.riskList.stream()
+                .sorted(Comparator.comparing(Risk::getProbability))
                 .collect(Collectors.toList());
-        return collect;
     }
 
-    public void workDoneByAll(){
-    }
-
-    public void projectSchedule(){
+    //Returns a list of the dates of every 2 weeks skipping first date
+    public List<LocalDate> returnProjectIntervalDates(){
+        return this.actualStartDate.datesUntil(this.projectedCompletedDate,Period.ofWeeks(2))
+                .skip(1)
+                .collect(Collectors.toList());
     }
 
     public void retrieveTeamMember(){
