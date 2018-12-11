@@ -102,6 +102,10 @@ public class Project {
                 .collect(Collectors.toList());
     }
 
+    public Long returnNumberOfWeeksInProject(){
+        return ChronoUnit.WEEKS.between(this.actualStartDate,this.projectedCompletedDate);
+    }
+
     public void retrieveTeamMember(){
     }
 
