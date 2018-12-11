@@ -19,13 +19,6 @@ import java.util.*;
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
 
-    protected void methodToCallFromProgram() throws IOException, ParseException {
-        System.out.println(createProjects());
-
-
-    }
-
-
     private JSONObject createJSONObject() throws FileNotFoundException, ParseException, IOException {
         JSONParser parser = new JSONParser();
         Object object = parser.parse(new FileReader("Project.json"));
@@ -61,7 +54,6 @@ import java.util.*;
 
             JSONArray risks = (JSONArray) projectMap.get("riskList");
             List<Risk> tempArrayListOfRisk = createRisk(risks);
-
 
             //JSONArray riskList = new JSONArray(); // This is here to add something as an argument in creation of Project
             // that argument will later be replaced with method-call: createRisk(risks);
