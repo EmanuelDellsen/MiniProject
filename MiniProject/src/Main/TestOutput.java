@@ -3,6 +3,7 @@ package Main;
 import Classes.Project;
 import Classes.Risk;
 import Classes.Task;
+import Classes.TeamMember;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -77,7 +78,12 @@ public class TestOutput {
 
     }
 
-    public void displayTasksByAllMembers(){
+    public void displayHoursPerTeamMember(Project project){
+
+        for(TeamMember teamMember: project.getTeamMemberList()){
+            System.out.print(String.format("%-20s", teamMember.getTeamMemberName()));
+            System.out.println(project.allHoursByMember(teamMember.getTeamMemberId()));
+        }
 
     }
 }

@@ -129,6 +129,8 @@ public class TestMain {
         System.out.println(("***********************"));
         output1.displayTaskByMember(project1,1);
 
+        output1.displayHoursPerTeamMember(project1);
+
     }
 
 }
