@@ -38,12 +38,13 @@ public class Task {
                 "Description: " + description + "\n" +
                 "Start date: " + actualStartDate + "\n" +
                 "Projected completed date: " + projectedCompletedDate + "\n" +
+                "Task members"+taskMembers+
                 // should call retrieve taskMembers ", TaskMembers="+taskMembers+
                 taskMembers + "\n" +
                 '}';
     }
 
-    public long getTaskValue(){
+    public long getTaskLength(){
         return ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
     }
 
@@ -51,21 +52,24 @@ public class Task {
         return this.actualCompletedDate.isBefore(date);
     }
 
-    public double progressByHour(LocalDate date,int teamMemberId){
+    public double progressInHours(LocalDate date){
         long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
-        double progressInPercent = (double)daysFromStartToDate/(double)getTaskValue();
+        double progressInPercent = (double)daysFromStartToDate/(double) getTaskLength();
 
-        return (sumHoursWorkedByMember(teamMemberId)*progressInPercent);
+        return (returnHoursInTask()*progressInPercent);
     }
 
-    public double sumHoursWorkedByMember(int teamMemberId){
-        return taskMembers.values()
+    public double returnHoursInTask(){
+        return this.taskMembers.values()
                 .stream()
-                .filter(a->taskMembers.containsKey(teamMemberId))
-                .mapToDouble(i-> i)
+                .mapToDouble(i->i)
                 .sum();
     }
 
+    public double returnHoursByMember(int teamMemberId){
+        return this.taskMembers.getOrDefault(teamMemberId,0.0);
+
+    }
 
     public Map<Integer, Double> getTaskMembers() {
         return taskMembers;
