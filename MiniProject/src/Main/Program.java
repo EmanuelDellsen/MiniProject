@@ -10,29 +10,29 @@ import java.util.List;
 
 public class Program {
 
-    private List<Project> listOfProjects = new ArrayList<>();
+    private List<Project> listOfProjects;
 
     JSONReader myJSONReader = new JSONReader();
 
 
     public void run() throws IOException, ParseException {
         setUpProgram();
-        startProgram();
+        startProgram(this.listOfProjects);
     }
 
     public void setUpProgram() throws IOException, ParseException {
+        setListOfProjects(myJSONReader.createProjects());
+    }
 
-        myJSONReader.methodToCallFromProgram();
+    public void startProgram(List<Project> listOfProjects){
 
-
-        listOfProjects = myJSONReader.createProjects();
+        //This is only for this current setup
+        Project foundProject = listOfProjects.get(0);
 
 
     }
 
-    public void startProgram(){
 
-    }
 
     public List<Project> getListOfProjects() {
         return listOfProjects;
