@@ -1,7 +1,5 @@
 package Classes;
 
-import org.json.simple.JSONArray;
-
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
@@ -22,7 +20,6 @@ public class Project {
     private List<Task> taskList = new ArrayList<>();
     private List<Risk> riskList = new ArrayList<>();
 
-
     public Project(int projectId, String projectName, LocalDate actualStartDate,
                    LocalDate projectedCompletedDate, double budgetAtCompletion) {
 
@@ -33,49 +30,6 @@ public class Project {
         this.budgetAtCompletion = budgetAtCompletion;
 
     }
-
-    public int getProjectId() {
-        return projectId;
-    }
-
-    public void setProjectId(int projectId) {
-        this.projectId = projectId;
-    }
-
-
-    public LocalDate getActualStartDate() {
-        return actualStartDate;
-    }
-
-    public void setActualStartDate(LocalDate actualStartDate) {
-        this.actualStartDate = actualStartDate;
-    }
-
-    public LocalDate getProjectedCompletedDate() {
-        return projectedCompletedDate;
-    }
-
-    public void setProjectedCompletedDate(LocalDate projectedCompletedDate) {
-        this.projectedCompletedDate = projectedCompletedDate;
-    }
-
-
-
-    public void setTeamMemberList(List<TeamMember> teamMemberList) {
-        this.teamMemberList = teamMemberList;
-    }
-
-
-    public void setTaskList(List<Task> taskList) {
-        this.taskList = taskList;
-    }
-
-
-
-    public void setRiskList(List<Risk> riskList) {
-        this.riskList = riskList;
-    }
-
 
 
     public double calculateEV(LocalDate date){
@@ -91,7 +45,7 @@ public class Project {
     }
 
     // should be private later on.... - Karl
-//   public double percentageOfCompletedTasks(LocalDate date){
+      public double percentageOfCompletedTasks(LocalDate date){
         double valueOfCompletedTasks = 0.0;
         double valueOfAllTasks = 0.0;
 
@@ -115,7 +69,7 @@ public class Project {
     }
 
 
-    //should be private later on.... -Karl **** CURRENTLY GIVES NULL POINTER EXCEPTION IF IT SEARCHES
+    //should be private later on.... -Karl
     public double calculateAC(LocalDate date){
         double sumOfCostByHours = 0.0;
 
@@ -159,27 +113,27 @@ public class Project {
         this.budgetAtCompletion = budgetAtCompletion;
     }
 
-    public ArrayList<Task> getTaskList() {
+    public List<Task> getTaskList() {
         return taskList;
     }
 
-    public void setTaskList(ArrayList<Task> taskList) {
+    public void setTaskList(List<Task> taskList) {
         this.taskList = taskList;
     }
 
-    public ArrayList<TeamMember> getTeamMemberList() {
+    public List<TeamMember> getTeamMemberList() {
         return teamMemberList;
     }
 
-    public void setTeamMemberList(ArrayList<TeamMember> teamMemberList) {
+    public void setTeamMemberList(List<TeamMember> teamMemberList) {
         this.teamMemberList = teamMemberList;
     }
 
-    public ArrayList<Risk> getRiskList() {
+    public List<Risk> getRiskList() {
         return riskList;
     }
 
-    public void setRiskList(ArrayList<Risk> riskList) {
+    public void setRiskList(List<Risk> riskList) {
         this.riskList = riskList;
     }
 
@@ -201,10 +155,6 @@ public class Project {
     public int getProjectId() {
         return projectId;
     }
-
-    }
-
-
 
 
     @Override

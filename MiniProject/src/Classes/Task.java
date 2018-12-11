@@ -2,7 +2,6 @@ package Classes;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.util.List;
 import java.util.Map;
 
 
@@ -12,8 +11,6 @@ public class Task {
     private String taskName;
     private String description;
 
-
-
     private Map<Integer, Double> taskMembers;
 
     private LocalDate actualStartDate;
@@ -22,7 +19,7 @@ public class Task {
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
-                LocalDate actualCompletedDate, Map<Integer, Double> taskMembers){// List<TaskMember> listOfTaskMembers) {
+                LocalDate actualCompletedDate, Map<Integer, Double> taskMembers){
         this.taskId = taskId;
         this.taskName = taskName;
         this.description = description;

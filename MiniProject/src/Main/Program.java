@@ -27,8 +27,6 @@ public class Program {
 
         listOfProjects = myJSONReader.createProjects();
 
-        System.out.println(listOfProjects.get(0).getTaskList().get(0).sumHoursWorkedByMember(1));
-
 
     }
 

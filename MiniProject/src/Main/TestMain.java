@@ -4,8 +4,8 @@ import Classes.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 
-/*
 
 public class TestMain {
 
@@ -51,10 +51,12 @@ public class TestMain {
         String str3 = "2018-11-11";
         LocalDate date3 = LocalDate.parse(str3,formatter);
 
+        HashMap<Integer,Double> map1 = new HashMap<Integer,Double>();
+        map1.put(1,10.0);
+        map1.put(2,10.0);
+
         Task task1 = new Task(1,"CreateGitRepository","Github 4-life",
-                date1,date2,date3);
-        task1.getTaskMembers().put(1,10.0);
-        task1.getTaskMembers().put(2,10.0);
+                date1,date2,date3,map1);
         project1.getTaskList().add(task1);
 
         String strb1 = "2018-11-02";
@@ -64,10 +66,12 @@ public class TestMain {
         String strb3 = "2018-11-30";
         LocalDate dateb3 = LocalDate.parse(strb3,formatter);
 
+        HashMap<Integer,Double> map2 = new HashMap<Integer,Double>();
+        map2.put(1,15.0);
+        map2.put(2,10.0);
+
         Task task2 = new Task(1,"CreateGittyKitty","Github 4-life",
-                dateb1,dateb2,dateb3);
-        task2.getTaskMembers().put(2,9.0);
-        task2.getTaskMembers().put(1,15.0);
+                dateb1,dateb2,dateb3,map2);
         project1.getTaskList().add(task2);
 
         // 5 - testing calculateEV
@@ -130,4 +134,3 @@ public class TestMain {
 }
 
 
-*/
