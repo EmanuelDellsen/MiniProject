@@ -1,4 +1,4 @@
-package output;
+package Output;
 
 
     public class ascii {
