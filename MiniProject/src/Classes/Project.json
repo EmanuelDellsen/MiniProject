@@ -1,0 +1,100 @@
+{
+  "listOfProjects": [
+    {
+      "projectId": "1",
+      "projectName": "Duckies",
+      "actualStartDate": "2018-11-12",
+      "projectedCompletedDate": "2019-01-12",
+      "budgetAtCompletion": "10000",
+      "teamMemberList": [
+        {
+          "teamMemberName": "Nafen Haj Ahmad",
+          "teamMemberId": "1",
+          "salaryPerHour": "200"
+        },
+        {
+          "teamMemberName": "Simon Johansson",
+          "teamMemberId": "2",
+          "salaryPerHour": "200"
+        },
+        {
+          "teamMemberName": "Karl Westgardh",
+          "teamMemberId": "3",
+          "salaryPerHour": "200"
+        },
+        {
+          "teamMemberName": "Clemens Lans",
+          "teamMemberId": "4",
+          "salaryPerHour": "200"
+        },
+        {
+          "teamMemberName": "Emanuel Dellsen",
+          "teamMemberId": "5",
+          "salaryPerHour": "200"
+        },
+        {
+          "teamMemberName": "Niklas Moller",
+          "teamMemberId": "6",
+          "salaryPerHour": "200"
+        },
+        {
+          "teamMemberName": "Thiago Hlebanja Oliva",
+          "teamMemberId": "7",
+          "salaryPerHour": "200"
+        }
+      ],
+      "taskList": [
+        {
+          "taskId": "1",
+          "taskName": "CreateTrelloWorkSpace",
+          "description": "We need a Trello workspace",
+          "actualStartDate": "2018-11-01",
+          "projectedCompletedDate": "2018-11-02",
+          "actualCompletedDate": "",
+          "taskMembers": [
+            {
+              "id": "1",
+              "hoursWorked": "2"
+            },
+            {
+              "id": "2",
+              "hoursWorked": "4"
+            }
+          ]
+        },
+        {
+          "taskId": "2",
+          "taskName": "CreateSlackWorkspace",
+          "description": "We need a Slack workspace",
+          "actualStartDate": "2018-11-02",
+          "projectedCompletedDate": "2018-11-03",
+          "actualCompletedDate": "",
+          "taskMembers": [
+            {
+              "id": "1",
+              "hoursWorked": "3"
+            },
+            {
+              "id": "2",
+              "hoursWorked": "10"
+            }
+          ]
+        }
+      ],
+      "riskList": [
+        {
+          "riskId": "1",
+          "riskName": "BadCommunication",
+          "probability": "0.2",
+          "impact": "2"
+        },
+        {
+          "riskId": "2",
+          "riskName": "LateForMeeting",
+          "probability": "0.9",
+          "impact": "4"
+        }
+      ]
+    }
+  ]
+}
