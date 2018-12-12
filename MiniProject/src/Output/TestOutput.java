@@ -1,4 +1,4 @@
-package Main;
+package Output;
 
 import Classes.Project;
 import Classes.Risk;

@@ -33,7 +33,7 @@
         .append("svg")
         .attr("width", diameter)
         .attr("height", diameter)
-        .attr("class", "bubble");
+        .attr("class", "Output.bubble");
 
     var nodes = d3.hierarchy(dataset)
         .sum(function(d) { return d.Count; });
