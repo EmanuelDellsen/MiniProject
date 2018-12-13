@@ -51,12 +51,6 @@ public class Output {
 
     }
 
-    public void displaySearchByMember(){
-
-
-
-    }
-
     public void displayTaskByMember(Project project, int teamMemberId){
 
         System.out.println(project.retrieveTeamMember(teamMemberId).getTeamMemberName());
@@ -84,4 +78,5 @@ public class Output {
         }
 
     }
+
 }
