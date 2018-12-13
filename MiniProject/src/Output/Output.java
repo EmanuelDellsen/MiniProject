@@ -8,7 +8,7 @@ import Classes.TeamMember;
 import java.time.LocalDate;
 import java.util.List;
 
-public class TestOutput {
+public class Output {
 
     public void displayRiskMatrix(List<Risk> riskList){
 

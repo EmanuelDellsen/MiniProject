@@ -2,10 +2,10 @@ package Main;
 
 import Classes.Project;
 
+import Output.Output;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Program {
@@ -27,7 +27,14 @@ public class Program {
     public void startProgram(List<Project> listOfProjects){
 
         //This is only for this current setup
-        Project foundProject = listOfProjects.get(0);
+        Project currentProject = listOfProjects.get(0);
+        //This is only for this current setup
+
+        Output currentOutput = new Output();
+        Menu currentMenu = new Menu();
+        currentMenu.runMenu(currentProject,currentOutput);
+
+
 
 
     }

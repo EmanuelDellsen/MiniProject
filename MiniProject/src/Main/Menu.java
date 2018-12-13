@@ -1,10 +1,13 @@
+package Main;
 
+import Classes.Project;
+import Output.Output;
 
 import java.util.Scanner;
 
 public class Menu {
 
-    public void runMenu() {
+    public void runMenu(Project currentProject, Output currentOutput) {
 
         Scanner sc = new Scanner(System.in);
         int option;
@@ -17,7 +20,7 @@ public class Menu {
 
             switch (option) {
                 case 1:
-                    // code
+                    currentOutput.displayRiskMatrix(currentProject.getRiskList());
                     break;
                 case 2:
                     // code
@@ -51,7 +54,7 @@ public class Menu {
         System.out.println("|   MENU SELECTION          |");
         System.out.println("============================");
         System.out.println("| Options:                |");
-        System.out.println("|        1. Option        |");
+        System.out.println("|        1. Display Risk Matrix        |");
         System.out.println("|        2. Option        |");
         System.out.println("|        3. Option        |");
         System.out.println("|        4. Option        |");
@@ -61,11 +64,5 @@ public class Menu {
         System.out.println("|        8. Option        |");
         System.out.println("|        9. Exit          |");
         System.out.println("============================");
-    }
-
-    public static void main(String[] args) {
-    Menu menu = new Menu();
-    menu.runMenu();
-
     }
 }
