@@ -1,7 +1,7 @@
 package Main;
 
 import Classes.*;
-import Output.TestOutput;
+import Output.Output;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -117,7 +117,7 @@ public class TestMain {
 
         // 9 - testing outputs
 
-        TestOutput output1 = new TestOutput();
+        Output output1 = new Output();
 
         output1.displayRiskMatrix(project1.getRiskList());
         System.out.println(("***********************"));
