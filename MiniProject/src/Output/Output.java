@@ -6,17 +6,16 @@ import Classes.Task;
 import Classes.TeamMember;
 
 import java.time.LocalDate;
-import java.util.List;
 
 public class Output {
 
-    public void displayRiskMatrix(List<Risk> riskList){
+    public void displayRiskMatrix(Project project){
 
         System.out.println(String.format("%15s", "Risk Matrix"));
 
         System.out.println(String.format("%-20s %-15s %-15s %s", "Risk name", "Probability", "Impact", "Risk"));
 
-        for(Risk risk: riskList){
+        for(Risk risk: project.getRiskList()){
             System.out.println(String.format("%-20s %-15s %-15s %s", risk.getRiskName(), risk.getProbability(), risk.getImpact(), risk.returnRisk()));
         }
     }
@@ -25,9 +24,8 @@ public class Output {
 
         System.out.print(String.format("%-25s","Project: "+project.getProjectName()));
 
-        int index = 2;
         for(LocalDate date: project.returnProjectIntervalDates()){
-            System.out.print(String.format("%-25s", "Week "+(index++)));
+            System.out.print(String.format("%-25s", "Week "));// this should add the weeks of the project somehow, week2 week4 week6 and so forth
         }
         System.out.print("\n");
 
@@ -74,7 +72,7 @@ public class Output {
 
     }
 
-    public void displayProjectSchedule(){
+    public void displayProjectSchedule(Project project){
 
     }
 
