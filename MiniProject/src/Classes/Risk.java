@@ -11,7 +11,7 @@ public class Risk {
     private final double SEVERE_THRESHOLD= 4.0;
 
     private final double MODERATE_THRESHOLD= 2.0;
-    
+
 
 
 
