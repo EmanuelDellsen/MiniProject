@@ -20,32 +20,26 @@ public class Menu {
 
             switch (option) {
                 case 1:
-                    currentOutput.displayRiskMatrix(currentProject.getRiskList());
+                    currentOutput.displayProjectSchedule(currentProject);
                     break;
                 case 2:
-                    // code
+                    currentOutput.displayProjectVariance(currentProject);
                     break;
                 case 3:
-                    // code
+                    currentOutput.displayRiskMatrix(currentProject);
                     break;
                 case 4:
-                    // code
+                    int teamMemberId = sc.nextInt();
+                    currentOutput.displayTaskByMember(currentProject,teamMemberId);
                     break;
                 case 5:
-                    // code
+                    currentOutput.displayHoursPerTeamMember(currentProject);
                     break;
-                case 6:
-                    // code
-                    break;
-                case 7:
-                    // code
-                    break;
-
 
                 default:
                     // The user input an unexpected choice.
             }
-        } while (option!=9);
+        } while (option!=6);
     }
 
     private void showMenu() {
@@ -54,15 +48,12 @@ public class Menu {
         System.out.println("|   MENU SELECTION          |");
         System.out.println("============================");
         System.out.println("| Options:                |");
-        System.out.println("|        1. Display Risk Matrix        |");
-        System.out.println("|        2. Option        |");
-        System.out.println("|        3. Option        |");
-        System.out.println("|        4. Option        |");
-        System.out.println("|        5. Option        |");
-        System.out.println("|        6. Option        |");
-        System.out.println("|        7. Option        |");
-        System.out.println("|        8. Option        |");
-        System.out.println("|        9. Exit          |");
+        System.out.println("|        1. Project schedule        |");
+        System.out.println("|        2. Project variances        |");
+        System.out.println("|        3. Project risk matrix        |");
+        System.out.println("|        4. Search by team member for show tasks        |");
+        System.out.println("|        5. Time spent on the project by team member         |");
+        System.out.println("|        6. Exit          |");
         System.out.println("============================");
     }
 }

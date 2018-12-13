@@ -11,7 +11,6 @@ import java.util.List;
 public class Program {
 
     private List<Project> listOfProjects;
-
     JSONReader myJSONReader = new JSONReader();
 
 
@@ -33,9 +32,6 @@ public class Program {
         Output currentOutput = new Output();
         Menu currentMenu = new Menu();
         currentMenu.runMenu(currentProject,currentOutput);
-
-
-
 
     }
 
