@@ -7,12 +7,12 @@ public class Risk {
     private double probability;
     private int impact;
     private final double CATASTROPHIC_Threshold = 6.0;
-    private final double CATASTROPHIC = 7.0;
+
     private final double SEVERE_THRESHOLD= 4.0;
-    private final double SEVERE=5.0 ;
+
     private final double MODERATE_THRESHOLD= 2.0;
-    private final double MODERATE=3.0;
-    private final double LOW=1.0;
+
+
 
 
 
@@ -32,14 +32,14 @@ public class Risk {
 
     public String riskDescription(){
         String description;
-        if(returnRisk() == CATASTROPHIC) {
+        if(returnRisk() >= CATASTROPHIC_Threshold) {
             description = "Catastrophic";
         }
-        else if(returnRisk()== SEVERE){
+        else if(returnRisk() >= SEVERE_THRESHOLD){
             description= "Severe";
 
         }
-        else if(returnRisk()== MODERATE){
+        else if(returnRisk()>= MODERATE_THRESHOLD){
             description= "Moderate";
 
         }
