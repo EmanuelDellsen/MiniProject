@@ -98,46 +98,46 @@ public class TestMain {
 
         //5 - testing calculateEV
 
-        //testing submethod of calculateEV -> percentageOfCompletedTasks
-        String str10 = "2018-10-16";
-        LocalDate date10 = LocalDate.parse(str10,formatter);
-        System.out.println(project1.percentageOfCompletedTasks(date10)); // should return 0.66666666 since two tasks are completed before 2018-10-16 -> 0.6666666
+            //testing submethod of calculateEV -> percentageOfCompletedTasks
+            String str10 = "2018-10-16";
+            LocalDate date10 = LocalDate.parse(str10,formatter);
+            System.out.println(project1.percentageOfCompletedTasks(date10)); // should return 0.66666666 since two tasks are completed before 2018-10-16 -> 0.6666666
 
-        //testing submethod of calculateEV -> getBudgetAtCompletion
-        System.out.println(project1.getBudgetAtCompletion()); // should return 100.000 since the project budget is set to 100.000 -> 100000.0
+            //testing submethod of calculateEV -> getBudgetAtCompletion
+            System.out.println(project1.getBudgetAtCompletion()); // should return 100.000 since the project budget is set to 100.000 -> 100000.0
 
-        //testing main method
+            //testing main method
 
-        System.out.println(project1.calculateEV(date10)); // should return 66.666 since 0.666666 * 100.000 as above -> 66666.66
+            System.out.println(project1.calculateEV(date10)); // should return 66.666 since 0.666666 * 100.000 as above -> 66666.66
 
         //6 - testing calculateSV
 
-        //testing submethod of calculateSV -> calculateEV
-        System.out.println(project1.calculateEV(date10)); //should return 66.666 as in test above -> 66666.66
+            //testing submethod of calculateSV -> calculateEV
+            System.out.println(project1.calculateEV(date10)); //should return 66.666 as in test above -> 66666.66
 
-        //testing submethod of calculateSV -> calculatePV
-        //method will print timeelapsed which is the number of days between startDateOfProject to (checkedDate) -> 15
-        //method will print projectDuration which is the number of days between startDateOfProject to date of completion of project -> 60
-        //method will do calculation -> timeElapsed / projectDuration * budgetAtCompletion which is currently 0.25*100.000 -> 25.000
+            //testing submethod of calculateSV -> calculatePV
+            //method will print timeelapsed which is the number of days between startDateOfProject to (checkedDate) -> 15
+            //method will print projectDuration which is the number of days between startDateOfProject to date of completion of project -> 60
+            //method will do calculation -> timeElapsed / projectDuration * budgetAtCompletion which is currently 0.25*100.000 -> 25.000
 
-        System.out.println(project1.calculatePV(date10));
+            System.out.println(project1.calculatePV(date10));
 
-        //testing main method
+            //testing main method
 
-        System.out.println(project1.calculateSV(date10)); // should return 66666.66666 - 25000.0 -> 41666.66
+            System.out.println(project1.calculateSV(date10)); // should return 66666.66666 - 25000.0 -> 41666.66
 
 
         //7 - testing calculateCV
 
-        //testing submethod of calculateCV -> calculateEV
-        System.out.println(project1.calculateEV(date10)); // should return calculateEV as above -> 66666.66
+            //testing submethod of calculateCV -> calculateEV
+            System.out.println(project1.calculateEV(date10)); // should return calculateEV as above -> 66666.66
 
-        //testing submethod of calculateCV -> calculateAC
-        //method will print 20000, 60000, 160000 which is the sum per each teamMember
-        System.out.println(project1.calculateAC(date10)); // should return 240000
+            //testing submethod of calculateCV -> calculateAC
+            //method will print 20000, 60000, 160000 which is the sum per each teamMember
+            System.out.println(project1.calculateAC(date10)); // should return 9142
 
-        //testing main method
-        System.out.println(project1.calculateCV(date10));
+            //testing main method
+            System.out.println(project1.calculateCV(date10)); // should print 66666.66-9142 = 57000 ca
 
     }
 

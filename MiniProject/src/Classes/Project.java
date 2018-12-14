@@ -74,14 +74,22 @@ public class Project {
     public double calculateAC(LocalDate date){
         double sumOfProgress = 0.0;
 
-        for (TeamMember teamMember : this.teamMemberList){
-            for (Task task: this.taskList){
-                sumOfProgress +=
-                        task.taskProgress(date)*
-                                (task.returnHoursByMember(teamMember.getTeamMemberId())
-                                        *teamMember.getSalaryPerHour());
+        for (TeamMember teamMember: this.teamMemberList){
+            for (Task task: assignedTasksByMember(teamMember.getTeamMemberId())){
+                //System.out.println("*********");
+                //System.out.println(task.taskProgress(date));
+                //System.out.println(task.returnHoursByMember(teamMember.getTeamMemberId()));
+                //System.out.println(teamMember.getSalaryPerHour());
+
+                sumOfProgress += task.taskProgress(date)*
+                        (task.returnHoursByMember(teamMember.getTeamMemberId())*teamMember.getSalaryPerHour());
+
+                //System.out.println(sumOfProgress);
+                //System.out.println("*********");
+
             }
         }
+
         return sumOfProgress;
     }
 
@@ -91,6 +99,7 @@ public class Project {
                 .filter(task -> task.getTaskMembers().containsKey(teamMemberId))
                 .collect(Collectors.toList());
     }
+
     public double allHoursByMember(int teamMemberId){
         double sum = 0.0;
 
