@@ -45,14 +45,14 @@ public class Project {
     }
 
     // should be private later on.... - Karl
-      public double percentageOfCompletedTasks(LocalDate date){
+    public double percentageOfCompletedTasks(LocalDate date){
         double valueOfCompletedTasks = 0.0;
         double valueOfAllTasks = 0.0;
 
         for(Task task : this.taskList){
-            valueOfAllTasks += task.getTaskLength();
+            valueOfAllTasks += task.getTaskDuration();
             if(task.taskIsComplete(date)){
-                valueOfCompletedTasks += task.getTaskLength();
+                valueOfCompletedTasks += task.getTaskDuration();
             }
         }
         return (valueOfCompletedTasks/valueOfAllTasks);
@@ -61,25 +61,28 @@ public class Project {
     //should be private later on.... -Karl
     public double calculatePV(LocalDate date){
         long timeElapsed = ChronoUnit.DAYS.between(this.actualStartDate,date);
+        System.out.println(timeElapsed);
         long projectDuration = ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
+        System.out.println(projectDuration);
 
         double percentageOfProjectCompleted = ((double)timeElapsed/(double)projectDuration);
 
         return (percentageOfProjectCompleted*this.budgetAtCompletion);
     }
 
-
     //should be private later on.... -Karl
     public double calculateAC(LocalDate date){
-        double sumOfCostByHours = 0.0;
+        double sumOfProgress = 0.0;
 
         for (TeamMember teamMember : this.teamMemberList){
             for (Task task: this.taskList){
-                sumOfCostByHours += task.progressInHours(date)*
-                        (task.returnHoursByMember(teamMember.getTeamMemberId())*teamMember.getSalaryPerHour());
+                sumOfProgress +=
+                        task.taskProgress(date)*
+                                (task.returnHoursByMember(teamMember.getTeamMemberId())
+                                        *teamMember.getSalaryPerHour());
             }
         }
-        return sumOfCostByHours;
+        return sumOfProgress;
     }
 
     //This returns a list of the name ofM the tasks that a teamMember is assigned to sorted by name
@@ -94,7 +97,6 @@ public class Project {
         for(Task task: taskList){
             sum += task.returnHoursByMember(teamMemberId);
         }
-
         return sum;
     }
 
@@ -124,12 +126,8 @@ public class Project {
                 .orElse(null);
     }
 
-    public double getBudgetedCost() {
-        return budgetAtCompletion;
-    }
-
-    public void setBudgetedCost(double budgetAtCompletion) {
-        this.budgetAtCompletion = budgetAtCompletion;
+    public Long distanceBetweenTask(Task task){
+        return ChronoUnit.DAYS.between(this.actualStartDate,task.getActualStartDate());
     }
 
     public List<Task> getTaskList() {
@@ -163,6 +161,7 @@ public class Project {
     public void setProjectName(String projectName) {
         this.projectName = projectName;
     }
+
     public double getBudgetAtCompletion() {
         return budgetAtCompletion;
     }
