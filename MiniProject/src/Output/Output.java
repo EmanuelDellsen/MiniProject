@@ -106,7 +106,7 @@ public class Output {
         System.out.println(String.format("%-20s", "Tasks"));
 
         for(Task task: project.getTaskList()){
-            System.out.println(String.format("%-10s %30s", task.getName(),printScheduleAsterix(i,task.getTaskLength(),asterisk)));
+            System.out.println(String.format("%-10s %30s", task.getName(),printScheduleAsterix(i,task.getTaskDuration(),asterisk)));
         }
     }
 

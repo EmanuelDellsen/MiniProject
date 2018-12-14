@@ -2,13 +2,11 @@ package Main;
 
 import Classes.*;
 
-import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -41,9 +39,9 @@ public class JSONReader {
 
 
             //Checks if the projectId is a String
-            if (!StringUtils.isNumeric((CharSequence) projectMap.get("projectId"))) {
-                throw new JSONException("Ooops... Looks like your Project ID contains letters. Please enter a number instead");
-            }
+            //if (!StringUtils.isNumeric((CharSequence) projectMap.get("projectId"))) {
+              //  throw new JSONException("Ooops... Looks like your Project ID contains letters. Please enter a number instead");
+            //}
 
             int projectId = Integer.valueOf((String) projectMap.get("projectId"));
             String projectName = (String) projectMap.get("projectName");
@@ -94,9 +92,9 @@ public class JSONReader {
 
 
             //Checks if the teamMemberID is a String
-            if (!StringUtils.isNumeric((CharSequence) member.get("teamMemberId"))) {
-                throw new JSONException("Ooops... Looks like one teamMemberID ID contains letters. Please enter a number instead");
-            }
+            //if (!StringUtils.isNumeric((CharSequence) member.get("teamMemberId"))) {
+              //  throw new JSONException("Ooops... Looks like one teamMemberID ID contains letters. Please enter a number instead");
+            //}
 
             int teamMemberId = Integer.valueOf((String) member.get("teamMemberId"));
             String teamMemberName = (String) member.get("teamMemberName");
@@ -128,9 +126,9 @@ public class JSONReader {
 
 
             //Checks if the taskID is a String
-            if (!StringUtils.isNumeric((CharSequence) taskMap.get("taskId"))) {
-                throw new JSONException("Ooops... Looks like one taskID contains letters. Please enter a number instead");
-            }
+            //if (!StringUtils.isNumeric((CharSequence) taskMap.get("taskId"))) {
+              //  throw new JSONException("Ooops... Looks like one taskID contains letters. Please enter a number instead");
+            //}
 
             int taskId = Integer.valueOf((String) taskMap.get("taskId"));
 
@@ -173,9 +171,9 @@ public class JSONReader {
             Map riskMap = (Map) riskIterator.next();
 
             //Checks if the riskID is a String
-            if (!StringUtils.isNumeric((CharSequence) riskMap.get("riskId"))) {
-                throw new JSONException("Ooops... Looks like one riskID contains letters. Please enter a number instead");
-            }
+            //if (!StringUtils.isNumeric((CharSequence) riskMap.get("riskId"))) {
+             //   throw new JSONException("Ooops... Looks like one riskID contains letters. Please enter a number instead");
+            //}
 
             int riskId = Integer.valueOf((String) riskMap.get("riskId"));
             String riskName = (String) riskMap.get("riskName");
