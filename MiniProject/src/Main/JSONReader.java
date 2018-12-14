@@ -47,20 +47,7 @@ public class JSONReader {
 
             int projectId = Integer.valueOf((String) projectMap.get("projectId"));
             String projectName = (String) projectMap.get("projectName");
-
-
-            //      if(projectMap.get("actualStartDate").toString().chars().)
-
-            //    if (!projectMap.get("actualStartDate").equals(formatter.ofPattern("yyyy-MM-dd")))
-            //    throw new JSONException("0. Your date must be in the following format: yyyy-MM-dd. Please check the JSON-file and try again");
-            // }
-
             LocalDate actualStartDate = LocalDate.parse((String) projectMap.get("actualStartDate"), formatter);
-
-            //if (!projectMap.get("projectedCompletedDate").equals(formatter)) {
-            //    throw new JSONException("1. Your date must be in the following format: yyyy-MM-dd. Please check the JSON-file and try again");
-            //}
-
             LocalDate projectedCompletedDate = LocalDate.parse((String) projectMap.get("projectedCompletedDate"), formatter);
 
             if (projectedCompletedDate.compareTo(actualStartDate) < 0) {
