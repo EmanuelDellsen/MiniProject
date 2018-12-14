@@ -11,13 +11,9 @@ public class Main {
         Program newProgram = new Program();
 
         try{
-
             newProgram.run();
-            
-        } catch (IOException | ParseException exception){
-
-            System.out.println("Some exception");
-
+        } catch (Exception e){
+            System.out.println(e.getMessage());
         }
     }
 }
