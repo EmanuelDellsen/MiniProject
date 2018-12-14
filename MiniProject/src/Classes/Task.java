@@ -17,6 +17,8 @@ public class Task {
     private LocalDate projectedCompletedDate;
     private LocalDate actualCompletedDate;
 
+    private final static long COMPLETE = 1;
+
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
                 LocalDate actualCompletedDate, Map<Integer, Double> taskMembers){
@@ -50,10 +52,12 @@ public class Task {
     }
 
     public double taskProgress(LocalDate date){
-        long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
-        double progressInPercent = (double)daysFromStartToDate/(double) getTaskDuration();
-
-        return (returnHoursInTask()*progressInPercent);
+        if (taskIsComplete(date)){
+            return COMPLETE;
+        } else {
+            long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
+            return (double)daysFromStartToDate /(double)getTaskDuration();
+        }
     }
 
     public double returnHoursInTask(){
