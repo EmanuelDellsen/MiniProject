@@ -41,7 +41,7 @@ public class Task {
                 '}';
     }
 
-    public long getTaskLength(){
+    public long getTaskDuration(){
         return ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
     }
 
@@ -49,9 +49,9 @@ public class Task {
         return this.actualCompletedDate.isBefore(date);
     }
 
-    public double progressInHours(LocalDate date){
+    public double taskProgress(LocalDate date){
         long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
-        double progressInPercent = (double)daysFromStartToDate/(double) getTaskLength();
+        double progressInPercent = (double)daysFromStartToDate/(double) getTaskDuration();
 
         return (returnHoursInTask()*progressInPercent);
     }
@@ -61,6 +61,11 @@ public class Task {
                 .stream()
                 .mapToDouble(i->i)
                 .sum();
+    }
+
+
+    public LocalDate getActualStartDate() {
+        return actualStartDate;
     }
 
     public double returnHoursByMember(int teamMemberId){
