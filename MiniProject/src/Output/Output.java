@@ -9,14 +9,42 @@ import java.time.LocalDate;
 
 public class Output {
 
+    public String printRiskAsterix(double i, double returnRisk, String asterisk) {
+        StringBuilder asteriskBuilder = new StringBuilder("*");
+
+        for(i = 1.0; i < returnRisk; i += 0.5) {
+            asteriskBuilder.append("*");
+        }
+
+        asterisk = asteriskBuilder.toString();
+        return asterisk;
+    }
+
+    public String printScheduleAsterix(double i, long taskLength, String asterisk) {
+        StringBuilder asteriskBuilder = new StringBuilder("*");
+
+        for(i = 0.; i < taskLength; i += 0.25) {
+            asteriskBuilder.append("*");
+        }
+
+        asterisk = asteriskBuilder.toString();
+        return asterisk;
+    }
+
+
+
+
+
     public void displayRiskMatrix(Project project){
+        String asterisk = "*";
+        int i = 1;
 
         System.out.println(String.format("%15s", "Risk Matrix"));
 
-        System.out.println(String.format("%-20s %-15s %-15s %s", "Risk name", "Probability", "Impact", "Risk"));
+        System.out.println(String.format("%-20s", "Risk"));
 
         for(Risk risk: project.getRiskList()){
-            System.out.println(String.format("%-20s %-15s %-15s %s", risk.getRiskName(), risk.getProbability(), risk.getImpact(), risk.returnRisk()));
+            System.out.println(String.format("%-20s %s", risk.getRiskName(), printRiskAsterix(i,risk.returnRisk(),asterisk)));
         }
     }
 
@@ -68,7 +96,23 @@ public class Output {
 
     public void displayProjectSchedule(Project project){
 
+        String asterisk = "*";
+        int i = 0;
+
+        System.out.println(String.format("%15s", "Project Schedule"));
+        System.out.println( String.format("%-10s %30s,%10S,%10S,%10S,%10S,%10S,%10S,%10S, %10S ", "Weeks",
+                "w2", "w4","w6","w8","w10","w12", "w14", "w16", "w18"));
+
+        System.out.println(String.format("%-20s", "Tasks"));
+
+        for(Task task: project.getTaskList()){
+            System.out.println(String.format("%-10s %30s", task.getName(),printScheduleAsterix(i,task.getTaskLength(),asterisk)));
+        }
     }
+
+
+
+
 
     public void displayHoursPerTeamMember(Project project){
 
