@@ -90,7 +90,7 @@ public class Task {
     }
 
     public void setId(int id) {
-        this.taskId = taskId;
+        this.taskId = id;
     }
 
     public String getName(){
@@ -98,7 +98,7 @@ public class Task {
     }
 
     public void setName(String name) {
-        this.taskName = taskName;
+        this.taskName = name;
     }
 
     public String getDescription() {
