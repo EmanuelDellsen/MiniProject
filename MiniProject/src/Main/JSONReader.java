@@ -2,6 +2,7 @@ package Main;
 
 import Classes.*;
 
+import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -39,9 +40,10 @@ public class JSONReader {
 
 
             //Checks if the projectId is a String
-            //if (!StringUtils.isNumeric((CharSequence) projectMap.get("projectId"))) {
-            //  throw new JSONException("Ooops... Looks like your Project ID contains letters. Please enter a number instead");
-            //}
+
+            if (!StringUtils.isNumeric((CharSequence) projectMap.get("projectId"))) {
+              throw new JSONException("Ooops... Looks like your Project ID contains letters. Please enter a number instead");
+            }
 
 //          String regex = "(1[0-2]|0[1-9])/[0-9]{4}$/^(3[01]|[12][0-9]|0[1-9])";
 //          Pattern pattern = Pattern.compile(regex);
@@ -139,15 +141,27 @@ public class JSONReader {
 
 
             //Checks if the taskID is a String
-            //if (!StringUtils.isNumeric((CharSequence) taskMap.get("taskId"))) {
-            //  throw new JSONException("Ooops... Looks like one taskID contains letters. Please enter a number instead");
-            //}
+
+            if (!StringUtils.isNumeric((CharSequence) taskMap.get("taskId"))) {
+              throw new JSONException("Ooops... Looks like one taskID contains letters. Please enter a number instead");
+            }
 
             int taskId = Integer.valueOf((String) taskMap.get("taskId"));
 
             String taskName = (String) taskMap.get("taskName");
             String description = (String) taskMap.get("description");
 
+            if (!((String) taskMap.get("actualStartDate")).matches("\\d{4}-\\d{2}-\\d{2}")) {
+                throw new JSONException("Oj oj oj... Looks like you have input an invalid data format");
+            }
+
+            if (!((String) taskMap.get("projectedCompletedDate")).matches("\\d{4}-\\d{2}-\\d{2}")) {
+                throw new JSONException("Oj oj oj... Looks like you have input an invalid data format");
+            }
+
+            if (!((String) taskMap.get("actualCompletedDate")).matches("\\d{4}-\\d{2}-\\d{2}")) {
+                throw new JSONException("Oj oj oj... Looks like you have input an invalid data format");
+            }
 
             LocalDate actualStartDate = LocalDate.parse((String) taskMap.get("actualStartDate"), formatter);
             LocalDate projectedCompletedDate = LocalDate.parse((String) taskMap.get("projectedCompletedDate"), formatter);
