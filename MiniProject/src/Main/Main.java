@@ -13,7 +13,7 @@ public class Main {
         try{
             newProgram.run();
         } catch (Exception e){
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }
