@@ -2,6 +2,7 @@
   <library name="commons-lang3-3.8.1">
     <CLASSES>
       <root url="jar://$USER_HOME$/Downloads/commons-lang3-3.8.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/commons-lang3-3.8.1 (1).jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -51,6 +51,8 @@ public class JSONReader {
 
 
             //Checks if the projectId is a String
+
+
             if (!StringUtils.isNumeric((CharSequence) projectMap.get("projectId"))) {
               throw new JSONException("Ooops... Looks like your Project ID contains letters. Please enter a number instead");
             }
@@ -163,6 +165,8 @@ public class JSONReader {
 
 
             //Checks if the taskID is a String
+
+
             if (!StringUtils.isNumeric((CharSequence) taskMap.get("taskId"))) {
               throw new JSONException("Ooops... Looks like one taskID contains letters. Please enter a number instead");
             }
@@ -173,8 +177,19 @@ public class JSONReader {
             String taskName = (String) taskMap.get("taskName");
             String description = (String) taskMap.get("description");
 
-            //Using the taskMap (iterator) created to find keys and retrieve their values,
-            // in this case format the dates using the formatter created in the beginning of this class
+
+            if (!((String) taskMap.get("actualStartDate")).matches("\\d{4}-\\d{2}-\\d{2}")) {
+                throw new JSONException("Oj oj oj... Looks like you have input an invalid data format");
+            }
+
+            if (!((String) taskMap.get("projectedCompletedDate")).matches("\\d{4}-\\d{2}-\\d{2}")) {
+                throw new JSONException("Oj oj oj... Looks like you have input an invalid data format");
+            }
+
+            if (!((String) taskMap.get("actualCompletedDate")).matches("\\d{4}-\\d{2}-\\d{2}")) {
+                throw new JSONException("Oj oj oj... Looks like you have input an invalid data format");
+            }
+
             LocalDate actualStartDate = LocalDate.parse((String) taskMap.get("actualStartDate"), formatter);
             LocalDate projectedCompletedDate = LocalDate.parse((String) taskMap.get("projectedCompletedDate"), formatter);
             LocalDate actualCompletedDate = LocalDate.parse((String) taskMap.get("actualCompletedDate"), formatter);
