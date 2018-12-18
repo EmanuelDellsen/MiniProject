@@ -52,28 +52,28 @@ public class Output {
 
         System.out.print(String.format("%-25s","Project: "+project.getProjectName()));
 
-        for(LocalDate date: project.returnProjectIntervalDates()){
-            System.out.print(String.format("%-25s", "Week "));// this should add the weeks of the project somehow, week2 week4 week6 and so forth
+        for(LocalDate date: project.returnDatesPerInterval()){
+            System.out.print(String.format("%-25s", "Week"+date.plusWeeks(2)));// this should add the weeks of the project somehow, week2 week4 week6 and so forth
         }
 
 
         System.out.print(String.format("%-25s","Earned Value"));
 
-        for(LocalDate date: project.returnProjectIntervalDates()){
+        for(LocalDate date: project.returnDatesPerInterval()){
             System.out.print(String.format("%-25.2f",project.calculateCV(date)));
         }
 
 
         System.out.print(String.format("%-25s","Schedule Variance"));
 
-        for(LocalDate date: project.returnProjectIntervalDates()){
+        for(LocalDate date: project.returnDatesPerInterval()){
             System.out.print(String.format("%-25.2f",project.calculateSV(date)));
         }
 
 
         System.out.print(String.format("%-25s","Cost Variance"));
 
-        for(LocalDate date: project.returnProjectIntervalDates()){
+        for(LocalDate date: project.returnDatesPerInterval()){
             System.out.print(String.format("%-25.2f",project.calculateCV(date)));
         }
 
@@ -81,15 +81,15 @@ public class Output {
 
     public void displayTaskByMember(Project project, int teamMemberId){
 
-        System.out.println(project.retrieveTeamMember(teamMemberId).getTeamMemberName());
+        System.out.println(project.returnTeamMember(teamMemberId).getTeamMemberName());
 
 
-        for(Task task: project.assignedTasksByMember(1)){
+        for(Task task: project.returnTasksByTeamMember(1)){
             System.out.print(String.format("%-25s", task.getName()));
             System.out.println(String.format("%10s",task.returnHoursByMember(teamMemberId)));
         }
 
-        System.out.println(String.format("%35s",project.allHoursByMember(teamMemberId)));
+        System.out.println(String.format("%35s",project.returnHoursByTeamMember(teamMemberId)));
 
 
     }
@@ -107,7 +107,7 @@ public class Output {
 
         for(Task task: project.getTaskList()){
             System.out.print(String.format("%-31s",task.getName()));
-            for(int k = 0; k < project.distanceBetweenTask(task); k++){
+            for(int k = 0; k < project.returnWeeksBetweenTasks(task); k++){
                 System.out.print("          ");
             }
             System.out.print(printScheduleAsterix(i,task.getTaskDuration(),asterisk));
@@ -123,7 +123,7 @@ public class Output {
 
         for(TeamMember teamMember: project.getTeamMemberList()){
             System.out.print(String.format("%-20s", teamMember.getTeamMemberName()));
-            System.out.println(project.allHoursByMember(teamMember.getTeamMemberId()));
+            System.out.println(project.returnHoursByTeamMember(teamMember.getTeamMemberId()));
         }
 
     }
