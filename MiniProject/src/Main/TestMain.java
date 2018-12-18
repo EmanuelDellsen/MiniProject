@@ -101,7 +101,7 @@ public class TestMain {
             //testing submethod of calculateEV -> percentageOfCompletedTasks
             String str10 = "2018-10-16";
             LocalDate date10 = LocalDate.parse(str10,formatter);
-            System.out.println(project1.percentageOfCompletedTasks(date10)); // should return 0.66666666 since two tasks are completed before 2018-10-16 -> 0.6666666
+            //System.out.println(project1.percentageOfCompletedTasks(date10)); // should return 0.66666666 since two tasks are completed before 2018-10-16 -> 0.6666666
 
             //testing submethod of calculateEV -> getBudgetAtCompletion
             System.out.println(project1.getBudgetAtCompletion()); // should return 100.000 since the project budget is set to 100.000 -> 100000.0
@@ -120,7 +120,7 @@ public class TestMain {
             //method will print projectDuration which is the number of days between startDateOfProject to date of completion of project -> 60
             //method will do calculation -> timeElapsed / projectDuration * budgetAtCompletion which is currently 0.25*100.000 -> 25.000
 
-            System.out.println(project1.calculatePV(date10));
+            //System.out.println(project1.calculatePV(date10));
 
             //testing main method
 
@@ -134,7 +134,7 @@ public class TestMain {
 
             //testing submethod of calculateCV -> calculateAC
             //method will print 20000, 60000, 160000 which is the sum per each teamMember
-            System.out.println(project1.calculateAC(date10)); // should return 9142
+            //System.out.println(project1.calculateAC(date10)); // should return 9142
 
             //testing main method
             System.out.println(project1.calculateCV(date10)); // should print 66666.66-9142 = 57000 ca
