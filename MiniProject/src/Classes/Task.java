@@ -43,8 +43,12 @@ public class Task {
                 '}';
     }
 
-    public long getTaskDuration(){
+    public long returnTaskDurationInDays(){
         return ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
+    }
+
+    public long returnTaskDurationInWeeks(){
+        return ChronoUnit.WEEKS.between(this.actualStartDate,this.projectedCompletedDate);
     }
 
     public boolean taskIsComplete(LocalDate date){
@@ -56,7 +60,7 @@ public class Task {
             return COMPLETE;
         } else {
             long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
-            return (double)daysFromStartToDate /(double)getTaskDuration();
+            return (double)daysFromStartToDate /(double) returnTaskDurationInDays();
         }
     }
 

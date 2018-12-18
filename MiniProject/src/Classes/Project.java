@@ -90,9 +90,9 @@ public class Project {
         double valueOfAllTasks = 0.0;
 
         for(Task task : this.taskList){
-            valueOfAllTasks += task.getTaskDuration();
+            valueOfAllTasks += task.returnTaskDurationInDays();
             if(task.taskIsComplete(date)){
-                valueOfCompletedTasks += task.getTaskDuration();
+                valueOfCompletedTasks += task.returnTaskDurationInDays();
             }
         }
         return (valueOfCompletedTasks/valueOfAllTasks);
@@ -100,9 +100,7 @@ public class Project {
 
     private double calculatePV(LocalDate date){
         long timeElapsed = ChronoUnit.DAYS.between(this.actualStartDate,date);
-        System.out.println(timeElapsed);
         long projectDuration = ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
-        System.out.println(projectDuration);
 
         double percentageOfProjectCompleted = ((double)timeElapsed/(double)projectDuration);
 

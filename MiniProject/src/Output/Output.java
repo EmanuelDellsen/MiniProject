@@ -31,10 +31,6 @@ public class Output {
         return asterisk;
     }
 
-
-
-
-
     public void displayRiskMatrix(Project project){
         String asterisk = "*";
         int i = 1;
@@ -53,24 +49,24 @@ public class Output {
         System.out.print(String.format("%-25s","Project: "+project.getProjectName()));
 
         for(LocalDate date: project.returnDatesPerInterval()){
-            System.out.print(String.format("%-25s", "Week"+date.plusWeeks(2)));// this should add the weeks of the project somehow, week2 week4 week6 and so forth
+            System.out.print(String.format("%-25s", "Week"));// this should add the weeks of the project somehow, week2 week4 week6 and so forth
         }
 
-
+        System.out.println();
         System.out.print(String.format("%-25s","Earned Value"));
 
         for(LocalDate date: project.returnDatesPerInterval()){
             System.out.print(String.format("%-25.2f",project.calculateCV(date)));
         }
 
-
+        System.out.println();
         System.out.print(String.format("%-25s","Schedule Variance"));
 
         for(LocalDate date: project.returnDatesPerInterval()){
             System.out.print(String.format("%-25.2f",project.calculateSV(date)));
         }
 
-
+        System.out.println();
         System.out.print(String.format("%-25s","Cost Variance"));
 
         for(LocalDate date: project.returnDatesPerInterval()){
@@ -110,14 +106,10 @@ public class Output {
             for(int k = 0; k < project.returnWeeksBetweenTasks(task); k++){
                 System.out.print("          ");
             }
-            System.out.print(printScheduleAsterix(i,task.getTaskDuration(),asterisk));
+            System.out.print(printScheduleAsterix(i,task.returnTaskDurationInDays(),asterisk));
             System.out.println();
         }
     }
-
-
-
-
 
     public void displayHoursPerTeamMember(Project project){
 
@@ -125,7 +117,6 @@ public class Output {
             System.out.print(String.format("%-20s", teamMember.getTeamMemberName()));
             System.out.println(project.returnHoursByTeamMember(teamMember.getTeamMemberId()));
         }
-
     }
 
 }
