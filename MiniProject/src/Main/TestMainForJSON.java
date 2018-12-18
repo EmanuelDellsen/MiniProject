@@ -17,7 +17,5 @@ public class TestMainForJSON {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
     }
-
 }
