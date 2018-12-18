@@ -133,7 +133,7 @@ public class JSONReader {
             //this checks if projectedCompletedDate and actualCompletedDate are after actualStartDate of tasks
             exceptionsClass.checkTaskEndDatesAfterStart(actualStartDate, projectedCompletedDate, actualCompletedDate);
 
-            JSONObject taskMemberArray = (JSONObject) taskMap.get("hoursWorkedPerTeamMembers");
+            JSONObject taskMemberArray = (JSONObject) taskMap.get("hoursWorkedPerTeamMember");
             Task newTask = new Task(taskId, taskName, description, actualStartDate, projectedCompletedDate,
                     actualCompletedDate, createTaskMembers(taskMemberArray));
 
