@@ -48,8 +48,8 @@
           "taskId": "1",
           "taskName": "CreateTrelloWorkSpace",
           "description": "We need a Trello workspace",
-          "actualStartDate": "2018-11-01",
-          "projectedCompletedDate": "2018-11-02",
+          "actualStartDate": "2018-11-19",
+          "projectedCompletedDate": "2018-12-02",
           "actualCompletedDate": "2018-12-01",
           "hoursWorkedPerTeamMembers": {
             "1": "2",
