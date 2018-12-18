@@ -1,8 +1,10 @@
 package Main;
 
 import Classes.Project;
+import Classes.TeamMember;
 import Output.Output;
 
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Menu {
@@ -38,6 +40,7 @@ public class Menu {
                     currentOutput.displayRiskMatrix(currentProject);
                     break;
                 case 4:
+                    showTeamMembers(currentProject);
                     System.out.println("Enter team member ID");
                     int teamMemberId = sc.nextInt();
                     currentOutput.displayTaskByMember(currentProject,teamMemberId);
@@ -73,4 +76,19 @@ public class Menu {
             System.out.print(symbol);
         }
     }
-}
+    private void showTeamMembers(Project project){
+        System.out.println();
+        System.out.println();
+        printSymbol("=",32);
+        System.out.println();
+        System.out.println(String.format("|%-30s|", "choose team Member"));
+
+        for (TeamMember teamMember: project.getTeamMemberList()){
+            System.out.println(String.format("|%30s| %s", teamMember.getTeamMemberName(), teamMember.getTeamMemberId()));
+        }
+
+        printSymbol("=",32);
+        System.out.println();
+    }
+    }
+

@@ -24,7 +24,7 @@ public class Output {
     public String printScheduleAsterix(double i, long taskLength, String asterisk) {
         StringBuilder asteriskBuilder = new StringBuilder("*");
 
-        for(i = 0; i < taskLength; i += 0.2) {
+        for(i = 0; i < taskLength; i += 1) {
             asteriskBuilder.append("*");
         }
 
@@ -58,7 +58,7 @@ public class Output {
         System.out.print(String.format("%-25s","Earned Value"));
 
         for(LocalDate date: project.returnDatesPerInterval()){
-            System.out.print(String.format("%-25.2f",project.calculateCV(date)));
+            System.out.print(String.format("%-25.2f",project.calculateEV(date)));
         }
 
         System.out.println();
@@ -88,7 +88,7 @@ public class Output {
             System.out.println(String.format("%10s",task.returnHoursByMember(teamMemberId)));
         }
 
-        System.out.println(String.format("%-30s %s","Total Hours", project.returnHoursByTeamMember(teamMemberId)));
+        System.out.println(String.format("%-31s %s","Total Hours", project.returnHoursByTeamMember(teamMemberId)));
 
 
     }
@@ -99,7 +99,7 @@ public class Output {
         int i = 0;
 
         System.out.println(String.format("%15s", "Project Schedule"));
-        System.out.println( String.format("%25s %7s,%9S,%10S,%10S,%10S,%10S,%10S,%10S, %10S ", "Weeks",
+        System.out.println( String.format("%25s %7s,%13S,%13S,%13S,%13S,%13S,%13S,%13S, %13S ", "Weeks",
                 "w2", "w4","w6","w8","w10","w12", "w14", "w16", "w18"));
 
         System.out.println(String.format("%-40s", "Tasks"));
@@ -107,9 +107,9 @@ public class Output {
         for(Task task: project.getTaskList()){
             System.out.print(String.format("%-31s",task.getName()));
             for(int k = 0; k < project.returnWeeksBetweenTasks(task); k++){
-                System.out.print("          ");
+                System.out.print("              ");
             }
-            System.out.print(printScheduleAsterix(i,task.returnTaskDurationInWeeks(),asterisk));
+            System.out.print(printScheduleAsterix(i,task.returnTaskDurationInDays(),asterisk));
             System.out.println();
         }
     }
