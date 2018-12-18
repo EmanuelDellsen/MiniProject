@@ -6,6 +6,7 @@ import Classes.Task;
 import Classes.TeamMember;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Output {
 
@@ -40,7 +41,8 @@ public class Output {
         System.out.println(String.format("%-20s", "Risk"));
 
         for(Risk risk: project.getRiskList()){
-            System.out.println(String.format("%-20s %s", risk.getRiskName(), printRiskAsterix(i,risk.returnRisk(),asterisk)));
+            System.out.println(String.format("%-20s %-20s %s", risk.getRiskName(), printRiskAsterix(i,risk.returnRisk(),asterisk), risk.riskDescription()));
+
         }
     }
 
@@ -77,6 +79,7 @@ public class Output {
 
     public void displayTaskByMember(Project project, int teamMemberId){
 
+
         System.out.println(project.returnTeamMember(teamMemberId).getTeamMemberName());
 
 
@@ -85,7 +88,7 @@ public class Output {
             System.out.println(String.format("%10s",task.returnHoursByMember(teamMemberId)));
         }
 
-        System.out.println(String.format("%35s",project.returnHoursByTeamMember(teamMemberId)));
+        System.out.println(String.format("%-30s %s","Total Hours", project.returnHoursByTeamMember(teamMemberId)));
 
 
     }
@@ -106,7 +109,7 @@ public class Output {
             for(int k = 0; k < project.returnWeeksBetweenTasks(task); k++){
                 System.out.print("          ");
             }
-            System.out.print(printScheduleAsterix(i,task.returnTaskDurationInDays(),asterisk));
+            System.out.print(printScheduleAsterix(i,task.returnTaskDurationInWeeks(),asterisk));
             System.out.println();
         }
     }
@@ -114,9 +117,11 @@ public class Output {
     public void displayHoursPerTeamMember(Project project){
 
         for(TeamMember teamMember: project.getTeamMemberList()){
-            System.out.print(String.format("%-20s", teamMember.getTeamMemberName()));
-            System.out.println(project.returnHoursByTeamMember(teamMember.getTeamMemberId()));
+            System.out.println(String.format("%-30s %s", teamMember.getTeamMemberName(),project.returnHoursByTeamMember(teamMember.getTeamMemberId())));
+
         }
+        System.out.println("==============================");
+        System.out.println(String.format("%-30s", "Total Hours"));
     }
 
 }
