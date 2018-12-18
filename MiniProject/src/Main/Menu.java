@@ -38,6 +38,7 @@ public class Menu {
                     currentOutput.displayRiskMatrix(currentProject);
                     break;
                 case 4:
+                    System.out.println("Enter team member ID");
                     int teamMemberId = sc.nextInt();
                     currentOutput.displayTaskByMember(currentProject,teamMemberId);
                     break;
