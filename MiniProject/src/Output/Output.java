@@ -6,9 +6,14 @@ import Classes.Task;
 import Classes.TeamMember;
 
 import java.time.LocalDate;
+import java.time.temporal.TemporalField;
+import java.time.temporal.WeekFields;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Output {
+
+    private TemporalField woy = WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear();
 
     public String printRiskAsterix(double i, double returnRisk, String asterisk) {
         StringBuilder asteriskBuilder = new StringBuilder("*");
@@ -51,7 +56,7 @@ public class Output {
         System.out.print(String.format("%-25s","Project: "+project.getProjectName()));
 
         for(LocalDate date: project.returnDatesPerInterval()){
-            System.out.print(String.format("%-25s", "Week"));// this should add the weeks of the project somehow, week2 week4 week6 and so forth
+            System.out.print(String.format("%-25s", "Week "+date.get(woy)));// this should add the weeks of the project somehow, week2 week4 week6 and so forth
         }
 
         System.out.println();
@@ -79,9 +84,7 @@ public class Output {
 
     public void displayTaskByMember(Project project, int teamMemberId){
 
-
         System.out.println(project.returnTeamMember(teamMemberId).getTeamMemberName());
-
 
         for(Task task: project.returnTasksByTeamMember(1)){
             System.out.print(String.format("%-25s", task.getName()));
@@ -89,7 +92,6 @@ public class Output {
         }
 
         System.out.println(String.format("%-31s %s","Total Hours", project.returnHoursByTeamMember(teamMemberId)));
-
 
     }
 
