@@ -41,9 +41,14 @@ public class Menu {
                     break;
                 case 4:
                     showTeamMembers(currentProject);
-                    System.out.println("Enter team member ID");
+                    System.out.println("Enter Team Member ID");
                     int teamMemberId = sc.nextInt();
-                    currentOutput.displayTaskByMember(currentProject,teamMemberId);
+                    TeamMember foundTeamMember = currentProject.retrieveTeamMember(teamMemberId);
+                    if (foundTeamMember==null){
+                        System.out.println(teamMemberId + " is not a valid Team Member ID");
+                    }else{
+                        currentOutput.displayTaskByMember(currentProject, teamMemberId);
+                    }
                     break;
                 case 5:
                     currentOutput.displayHoursPerTeamMember(currentProject);

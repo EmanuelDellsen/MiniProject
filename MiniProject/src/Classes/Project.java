@@ -72,6 +72,14 @@ public class Project {
                 .findAny()
                 .orElse(null);
     }
+    public TeamMember retrieveTeamMember(int Id){
+        for(TeamMember chosenTeamMember : teamMemberList){
+            if(chosenTeamMember.getTeamMemberId()==(Id)){
+                return chosenTeamMember;
+            }
+        }return null;
+    }
+
 
     public List<Risk> returnRisks(){
         return this.riskList.stream()
