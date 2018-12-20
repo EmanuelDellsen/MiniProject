@@ -3,8 +3,8 @@
     {
       "projectId": "1",
       "projectName": "Duckies",
-      "actualStartDate": "2018-11-12",
-      "projectedCompletedDate": "2019-01-12",
+      "actualStartDate": "2018-11-01",
+      "projectedCompletedDate": "2019-01-01",
       "budgetAtCompletion": "10000",
       "teamMemberList": [
         {
@@ -18,7 +18,7 @@
           "salaryPerHour": "200"
         },
         {
-          "teamMemberName": "Karl Westgardh",
+          "teamMemberName": "Karl Westgårdh",
           "teamMemberId": "3",
           "salaryPerHour": "200"
         },
@@ -33,7 +33,7 @@
           "salaryPerHour": "300"
         },
         {
-          "teamMemberName": "Niklas Moller",
+          "teamMemberName": "Niklas Möller",
           "teamMemberId": "6",
           "salaryPerHour": "200"
         },
@@ -48,8 +48,8 @@
           "taskId": "1",
           "taskName": "CreateTrelloWorkSpace",
           "description": "We need a Trello workspace",
-          "actualStartDate": "2018-11-19",
-          "projectedCompletedDate": "2018-12-02",
+          "actualStartDate": "2018-11-01",
+          "projectedCompletedDate": "2018-11-08",
           "actualCompletedDate": "2018-12-01",
           "hoursWorkedPerTeamMember": {
             "1": "2",
@@ -60,11 +60,23 @@
           "taskId": "2",
           "taskName": "CreateSlackWorkspace",
           "description": "We need a Slack workspace",
-          "actualStartDate": "2018-11-02",
-          "projectedCompletedDate": "2018-11-03",
-          "actualCompletedDate": "2019-01-01",
+          "actualStartDate": "2018-11-15",
+          "projectedCompletedDate": "2018-12-15",
+          "actualCompletedDate": "2018-12-08",
           "hoursWorkedPerTeamMember": {
-            "1": "3",
+            "3": "3",
+            "2": "10"
+          }
+        },
+        {
+          "taskId": "3",
+          "taskName": "BuyDuckies",
+          "description": "We need Ducks",
+          "actualStartDate": "2018-11-04",
+          "projectedCompletedDate": "2018-11-19",
+          "actualCompletedDate": "2018-11-18",
+          "hoursWorkedPerTeamMember": {
+            "4": "15",
             "2": "10"
           }
         }

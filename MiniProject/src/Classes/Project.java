@@ -3,9 +3,7 @@ package Classes;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Project {
@@ -58,11 +56,17 @@ public class Project {
         return sum;
     }
 
-    public Long returnWeeksBetweenTasks(Task task){
-        return ChronoUnit.WEEKS.between(this.actualStartDate,task.getActualStartDate());
+    public double returnAllHoursWorked(){
+        return this.taskList.stream()
+                .mapToDouble(Task::returnHoursInTask)
+                .sum();
     }
 
-    public Long returnNumberOfWeeksInProject(){
+    public long returnDaysBetweenProjectAndTask(Task task){
+        return ChronoUnit.DAYS.between(this.actualStartDate,task.getActualStartDate());
+    }
+
+    public long returnNumberOfWeeksInProject(){
         return ChronoUnit.WEEKS.between(this.actualStartDate,this.projectedCompletedDate);
     }
 
@@ -75,13 +79,23 @@ public class Project {
 
     public List<Risk> returnRisks(){
         return this.riskList.stream()
-                .sorted(Comparator.comparing(Risk::getProbability))
+                .sorted(Comparator.comparing(Risk::returnRisk))
                 .collect(Collectors.toList());
     }
 
-    public List<LocalDate> returnDatesPerInterval(){
+    public List<TeamMember> returnTeamMembersSortedByHours(){
+
+        List<TeamMember> tempList = this.teamMemberList.stream()
+                .sorted(Comparator.comparing(teamMember -> returnHoursByTeamMember(teamMember.getTeamMemberId())))
+                .collect(Collectors.toList());
+
+        Collections.reverse(tempList);
+        return tempList;
+    }
+
+    public List<LocalDate> returnDatesPerInterval(int skipNumOfWeeks){
         return this.actualStartDate.datesUntil(this.projectedCompletedDate,Period.ofWeeks(2))
-                .skip(1)
+                .skip(skipNumOfWeeks)
                 .collect(Collectors.toList());
     }
 
@@ -120,8 +134,14 @@ public class Project {
         return sumOfProgress;
     }
 
+    public List<Task> returnTasksSortedByStartDate(){
+        return this.taskList.stream()
+                .sorted(Comparator.comparing(Task::getActualStartDate))
+                .collect(Collectors.toList());
+    }
+
     public List<Task> getTaskList() {
-        return taskList;
+        return this.taskList;
     }
 
     public void setTaskList(List<Task> taskList) {
