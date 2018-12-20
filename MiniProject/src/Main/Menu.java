@@ -1,10 +1,8 @@
 package Main;
 
 import Classes.Project;
-import Classes.TeamMember;
 import Output.Output;
 
-import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Menu {
@@ -18,35 +16,35 @@ public class Menu {
             "6. Exit program"
     };
 
-    public void runMenu(Project currentProject, Output currentOutput) {
+    public void runMenu(Project project, Output output) {
 
         Scanner sc = new Scanner(System.in);
         int option;
 
         do {
-            showMenu();
-            System.out.println("Select an option...");
+            output.displayMenu(menuOptions);
+            output.displayMessage("Select an option...");
             option = sc.nextInt();
             sc.nextLine();
 
             switch (option) {
                 case 1:
-                    currentOutput.displayProjectSchedule(currentProject);
+                    output.displayProjectSchedule(project);
                     break;
                 case 2:
-                    currentOutput.displayProjectVariance(currentProject);
+                    output.displayProjectVariance(project);
                     break;
                 case 3:
-                    currentOutput.displayRiskMatrix(currentProject);
+                    output.displayRiskMatrix(project);
                     break;
                 case 4:
-                    showTeamMembers(currentProject);
-                    System.out.println("Enter team member ID");
+                    output.displayTeamMembers(project);
+                    output.displayMessage("Enter team member ID:");
                     int teamMemberId = sc.nextInt();
-                    currentOutput.displayTaskByMember(currentProject,teamMemberId);
+                    output.displayTaskByMember(project,teamMemberId);
                     break;
                 case 5:
-                    currentOutput.displayHoursPerTeamMember(currentProject);
+                    output.displayHoursPerTeamMember(project);
                     break;
 
                 default:
@@ -54,41 +52,5 @@ public class Menu {
             }
         } while (option!=6);
     }
-
-    private void showMenu() {
-
-        System.out.println();
-        System.out.println();
-        printSymbol("=",32);
-        System.out.println();
-        System.out.println(String.format("|%-30s|", "Option"));
-
-        for (String menuOption: menuOptions){
-            System.out.println(String.format("|%30s|", menuOption));
-        }
-
-        printSymbol("=",32);
-        System.out.println();
-    }
-
-    private void printSymbol(String symbol, int printLength){
-        for (int i = 0; i < printLength; i++){
-            System.out.print(symbol);
-        }
-    }
-    private void showTeamMembers(Project project){
-        System.out.println();
-        System.out.println();
-        printSymbol("=",32);
-        System.out.println();
-        System.out.println(String.format("|%-30s|", "choose team Member"));
-
-        for (TeamMember teamMember: project.getTeamMemberList()){
-            System.out.println(String.format("|%30s| %s", teamMember.getTeamMemberName(), teamMember.getTeamMemberId()));
-        }
-
-        printSymbol("=",32);
-        System.out.println();
-    }
-    }
+}
 
