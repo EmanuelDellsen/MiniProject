@@ -3,6 +3,7 @@ package Main;
 import Classes.Project;
 import Output.Output;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -12,6 +13,10 @@ public class Menu {
     private final static int RISK_MATRIX = 3;
     private final static int TASKS_BY_MEMBER = 4;
     private final static int HOURS_BY_MEMBER = 5;
+    private final static int CHANGE_PROJECT = 6;
+    private final static int EXIT_PROGRAM = 7;
+
+    private final Scanner sc = new Scanner(System.in);
 
     private static final String[] menuOptions = {
             "1. Project Schedule",
@@ -19,24 +24,23 @@ public class Menu {
             "3. Risk Matrix",
             "4. Tasks by team member",
             "5. Time spent on project",
-            "6. Exit program"
+            "6. Change project",
+            "7. Exit program"
     };
 
     public void runMenu(Project project, Output output) {
 
-        Scanner sc = new Scanner(System.in);
         int option;
 
         do {
             output.displayMenu(menuOptions);
+            output.displayMessage("Select an option...");
             while (!sc.hasNextInt()){
-                output.displayMessage("Select an option...");
                 String input = sc.next();
                 output.displayMessage(String.format("\"%s\" is not a valid option.\n",input));
                 output.displayMenu(menuOptions);
             }
             option = sc.nextInt();
-            sc.nextLine();
 
             switch (option) {
                 case PROJECT_SCHEDULE:
@@ -57,11 +61,12 @@ public class Menu {
                 case HOURS_BY_MEMBER:
                     output.displayHoursPerTeamMember(project);
                     break;
-
+                case EXIT_PROGRAM:
+                    System.exit(0);
                 default:
                     // The user input an unexpected choice.
             }
-        } while (option!=6);
+        } while (option!=CHANGE_PROJECT);
     }
 }
 

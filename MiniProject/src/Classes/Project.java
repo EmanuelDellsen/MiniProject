@@ -29,6 +29,10 @@ public class Project {
 
     }
 
+    public int getProjectId() {
+        return projectId;
+    }
+
     public double calculateEV(LocalDate date){
         return (this.percentageOfCompletedTasks(date)*this.budgetAtCompletion);
     }
@@ -174,15 +178,6 @@ public class Project {
 
     @Override
     public String toString() {
-        return "Project{" +
-                "projectId=" + projectId +
-                ", projectName='" + projectName + '\'' +
-                ", actualStartDate=" + actualStartDate +
-                ", projectedCompletedDate=" + projectedCompletedDate +
-                ", budgetAtCompletion=" + budgetAtCompletion +
-                ", teamMemberList=" + teamMemberList +
-                ", taskList=" + taskList +
-                ", riskList=" + riskList +
-                '}';
+        return this.getProjectId()+": "+this.getProjectName();
     }
 }
