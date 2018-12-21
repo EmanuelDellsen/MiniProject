@@ -3,8 +3,8 @@
     {
       "projectId": "1",
       "projectName": "Duckies",
-      "actualStartDate": "2018-11-01",
-      "projectedCompletedDate": "2019-01-01",
+      "actualStartDate": "2018-11-12",
+      "projectedCompletedDate": "2019-01-12",
       "budgetAtCompletion": "10000",
       "teamMemberList": [
         {
@@ -18,7 +18,7 @@
           "salaryPerHour": "200"
         },
         {
-          "teamMemberName": "Karl Westgårdh",
+          "teamMemberName": "Karl Westgardh",
           "teamMemberId": "3",
           "salaryPerHour": "200"
         },
@@ -33,7 +33,7 @@
           "salaryPerHour": "300"
         },
         {
-          "teamMemberName": "Niklas Möller",
+          "teamMemberName": "Niklas Moller",
           "teamMemberId": "6",
           "salaryPerHour": "200"
         },
@@ -46,53 +46,191 @@
       "taskList": [
         {
           "taskId": "1",
-          "taskName": "CreateTrelloWorkSpace",
+          "taskName": "Create Trello Workspace",
           "description": "We need a Trello workspace",
-          "actualStartDate": "2018-11-01",
-          "projectedCompletedDate": "2018-11-08",
-          "actualCompletedDate": "2018-12-01",
+          "actualStartDate": "2018-11-12",
+          "projectedCompletedDate": "2018-11-12",
+          "actualCompletedDate": "2018-11-12",
           "hoursWorkedPerTeamMember": {
-            "1": "2",
-            "2": "4"
+            "3": "0.5"
           }
         },
         {
           "taskId": "2",
-          "taskName": "CreateSlackWorkspace",
+          "taskName": "Create Slack Workspace",
           "description": "We need a Slack workspace",
-          "actualStartDate": "2018-11-15",
-          "projectedCompletedDate": "2018-12-15",
-          "actualCompletedDate": "2018-12-08",
+          "actualStartDate": "2018-11-12",
+          "projectedCompletedDate": "2018-11-12",
+          "actualCompletedDate": "2018-11-12",
           "hoursWorkedPerTeamMember": {
-            "3": "3",
-            "2": "10"
+            "3": "0.5"
           }
         },
         {
           "taskId": "3",
-          "taskName": "BuyDuckies",
+          "taskName": "Team Meeting 1",
+          "description": "Our first team meeting",
+          "actualStartDate": "2018-11-13",
+          "projectedCompletedDate": "2018-11-13",
+          "actualCompletedDate": "2018-11-13",
+          "hoursWorkedPerTeamMember": {
+            "1": "1",
+            "2": "1",
+            "3": "1",
+            "4": "1",
+            "5": "1",
+            "6": "1",
+            "7": "1"
+          }
+        },
+        {
+          "taskId": "4",
+          "taskName": "Team Meeting 2",
+          "description": "Our second team meeting",
+          "actualStartDate": "2018-11-20",
+          "projectedCompletedDate": "2018-11-20",
+          "actualCompletedDate": "2018-11-20",
+          "hoursWorkedPerTeamMember": {
+            "1": "1",
+            "2": "1",
+            "3": "1",
+            "4": "1",
+            "5": "1",
+            "7": "1"
+          }
+        },
+        {
+          "taskId": "5",
+          "taskName": "Buy Duckies",
           "description": "We need Ducks",
           "actualStartDate": "2018-11-04",
           "projectedCompletedDate": "2018-11-19",
           "actualCompletedDate": "2018-11-18",
           "hoursWorkedPerTeamMember": {
-            "4": "15",
-            "2": "10"
+            "3": "1"
+          }
+        },
+        {
+          "taskId": "6",
+          "taskName": "Team Meeting 3",
+          "description": "Our third team meeting",
+          "actualStartDate": "2018-11-27",
+          "projectedCompletedDate": "2018-11-27",
+          "actualCompletedDate": "2018-11-27",
+          "hoursWorkedPerTeamMember": {
+            "1": "1.5",
+            "2": "1.5",
+            "3": "1.5",
+            "4": "1.5",
+            "5": "1.5",
+            "6": "1.5",
+            "7": "1.5"
+          }
+        },
+        {
+          "taskId": "7",
+          "taskName": "Team Meeting 4",
+          "description": "Our fourth team meeting",
+          "actualStartDate": "2018-12-04",
+          "projectedCompletedDate": "2018-12-04",
+          "actualCompletedDate": "2018-12-04",
+          "hoursWorkedPerTeamMember": {
+            "1": "1",
+            "2": "1",
+            "3": "1",
+            "4": "1",
+            "5": "1",
+            "6": "1",
+            "7": "1"
+          }
+        },
+        {
+          "taskId": "8",
+          "taskName": "Team Meeting 5",
+          "description": "Our fifth team meeting",
+          "actualStartDate": "2018-12-11",
+          "projectedCompletedDate": "2018-12-11",
+          "actualCompletedDate": "2018-12-11",
+          "hoursWorkedPerTeamMember": {
+            "1": "1.5",
+            "2": "1.5",
+            "3": "1.5",
+            "4": "1.5",
+            "5": "1.5",
+            "6": "1.5",
+            "7": "1.5"
+          }
+        },
+        {
+          "taskId": "9",
+          "taskName": "Team Meeting 6",
+          "description": "Our sixth team meeting",
+          "actualStartDate": "2018-12-18",
+          "projectedCompletedDate": "2018-12-18",
+          "actualCompletedDate": "2018-12-18",
+          "hoursWorkedPerTeamMember": {
+            "1": "1.5",
+            "2": "1.5",
+            "3": "1.5",
+            "5": "1.5",
+            "6": "1.5",
+            "7": "1.5"
+          }
+        },
+        {
+          "taskId": "10",
+          "taskName": "Create Time Tracking Form",
+          "description": "Set up of Google Time Tracking Form",
+          "actualStartDate": "2018-11-27",
+          "projectedCompletedDate": "2018-11-27",
+          "actualCompletedDate": "2018-11-27",
+          "hoursWorkedPerTeamMember": {
+            "3": "0.5"
+          }
+        },        {
+          "taskId": "11",
+          "taskName": "Risk Class",
+          "description": "Development of a Risk Class",
+          "actualStartDate": "2018-11-28",
+          "projectedCompletedDate": "2018-12-11",
+          "actualCompletedDate": "2018-12-11",
+          "hoursWorkedPerTeamMember": {
+            "1": "4",
+            "3": "1.5"
+          }
+        },
+        {
+          "taskId": "12",
+          "taskName": "Requirements Analysis",
+          "description": "Requirements Analysis for our project",
+          "actualStartDate": "2018-11-15",
+          "projectedCompletedDate": "2018-11-20",
+          "actualCompletedDate": "2018-11-18",
+          "hoursWorkedPerTeamMember": {
+            "1": "4",
+            "6": "2",
+            "7": "4"
           }
         }
       ],
       "riskList": [
         {
           "riskId": "1",
-          "riskName": "BadCommunication",
+          "riskName": "Usage of new technology - JSON, JAVA Swing",
           "probability": "0.2",
           "impact": "2"
         },
         {
           "riskId": "2",
-          "riskName": "LateForMeeting",
+          "riskName": "Using GitHub",
           "probability": "0.9",
           "impact": "4"
+        },
+        {
+          "riskId": "3",
+          "riskName": "Dividing the workload properly",
+          "probability": "0.3",
+          "impact": "2"
         }
       ]
     }
