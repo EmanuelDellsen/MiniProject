@@ -1,13 +1,17 @@
 package Main;
 
 import Classes.Project;
-import Classes.TeamMember;
 import Output.Output;
 
-import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Menu {
+
+    private final static int PROJECT_SCHEDULE = 1;
+    private final static int PROJECT_VARIANCE = 2;
+    private final static int RISK_MATRIX = 3;
+    private final static int TASKS_BY_MEMBER = 4;
+    private final static int HOURS_BY_MEMBER = 5;
 
     public static final String[] menuOptions = {
             "1. Project Schedule",
@@ -18,35 +22,40 @@ public class Menu {
             "6. Exit program"
     };
 
-    public void runMenu(Project currentProject, Output currentOutput) {
+    public void runMenu(Project project, Output output) {
 
         Scanner sc = new Scanner(System.in);
         int option;
 
         do {
-            showMenu();
-            System.out.println("Select an option...");
+            output.displayMenu(menuOptions);
+            while (!sc.hasNextInt()){
+                output.displayMessage("Select an option...");
+                String input = sc.next();
+                output.displayMessage(String.format("\"%s\" is not a valid option.\n",input));
+                output.displayMenu(menuOptions);
+            }
             option = sc.nextInt();
             sc.nextLine();
 
             switch (option) {
-                case 1:
-                    currentOutput.displayProjectSchedule(currentProject);
+                case PROJECT_SCHEDULE:
+                    output.displayProjectSchedule(project);
                     break;
-                case 2:
-                    currentOutput.displayProjectVariance(currentProject);
+                case PROJECT_VARIANCE:
+                    output.displayProjectVariance(project);
                     break;
-                case 3:
-                    currentOutput.displayRiskMatrix(currentProject);
+                case RISK_MATRIX:
+                    output.displayRiskMatrix(project);
                     break;
-                case 4:
-                    showTeamMembers(currentProject);
-                    System.out.println("Enter team member ID");
+                case TASKS_BY_MEMBER:
+                    output.displayTeamMembers(project);
+                    output.displayMessage("Enter team member ID:");
                     int teamMemberId = sc.nextInt();
-                    currentOutput.displayTaskByMember(currentProject,teamMemberId);
+                    output.displayTaskByMember(project,teamMemberId);
                     break;
-                case 5:
-                    currentOutput.displayHoursPerTeamMember(currentProject);
+                case HOURS_BY_MEMBER:
+                    output.displayHoursPerTeamMember(project);
                     break;
 
                 default:
@@ -54,41 +63,5 @@ public class Menu {
             }
         } while (option!=6);
     }
-
-    private void showMenu() {
-
-        System.out.println();
-        System.out.println();
-        printSymbol("=",32);
-        System.out.println();
-        System.out.println(String.format("|%-30s|", "Option"));
-
-        for (String menuOption: menuOptions){
-            System.out.println(String.format("|%30s|", menuOption));
-        }
-
-        printSymbol("=",32);
-        System.out.println();
-    }
-
-    private void printSymbol(String symbol, int printLength){
-        for (int i = 0; i < printLength; i++){
-            System.out.print(symbol);
-        }
-    }
-    private void showTeamMembers(Project project){
-        System.out.println();
-        System.out.println();
-        printSymbol("=",32);
-        System.out.println();
-        System.out.println(String.format("|%-30s|", "choose team Member"));
-
-        for (TeamMember teamMember: project.getTeamMemberList()){
-            System.out.println(String.format("|%30s| %s", teamMember.getTeamMemberName(), teamMember.getTeamMemberId()));
-        }
-
-        printSymbol("=",32);
-        System.out.println();
-    }
-    }
+}
 
