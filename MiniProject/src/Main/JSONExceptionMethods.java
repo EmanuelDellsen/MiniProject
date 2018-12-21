@@ -4,7 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDate;
 
-public class JsonExceptionMethods {
+public class JSONExceptionMethods {
 
     public void checkDate(String dateRetrieved) {
         if (!dateRetrieved.matches("\\d{4}-\\d{2}-\\d{2}")) {

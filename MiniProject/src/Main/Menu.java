@@ -13,7 +13,7 @@ public class Menu {
     private final static int TASKS_BY_MEMBER = 4;
     private final static int HOURS_BY_MEMBER = 5;
 
-    public static final String[] menuOptions = {
+    private static final String[] menuOptions = {
             "1. Project Schedule",
             "2. Project Variances",
             "3. Risk Matrix",

@@ -2,7 +2,6 @@ package Main;
 
 import Classes.*;
 
-import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -16,7 +15,7 @@ import java.util.*;
 
 public class JSONReader {
 
-    private JsonExceptionMethods exceptionsClass = new JsonExceptionMethods();
+    private JSONExceptionMethods exceptionsClass = new JSONExceptionMethods();
 
     //creating a formatter for dates read from the JSON to match our calculations
 

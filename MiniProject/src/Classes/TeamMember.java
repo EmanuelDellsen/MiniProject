@@ -16,26 +16,13 @@ public class TeamMember {
         return teamMemberName;
     }
 
-    public void setTeamMemberName(String teamMemberName) {
-        this.teamMemberName = teamMemberName;
-    }
-
     public double getSalaryPerHour() {
         return this.salaryPerHour;
-    }
-
-    public void setSalaryPerHour(double salaryPerHour) {
-        this.salaryPerHour = salaryPerHour;
     }
 
     public int getTeamMemberId() {
         return teamMemberId;
     }
-
-    public void setID(int id) {
-        this.teamMemberId = id;
-    }
-
 
     public String toString() {
         return  "Name: "+teamMemberName+"\n"+
