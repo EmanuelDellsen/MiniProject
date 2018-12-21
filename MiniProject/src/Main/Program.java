@@ -7,49 +7,68 @@ import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Scanner;
 
 public class Program {
 
     private List<Project> listOfProjects;
-    JSONReader myJSONReader = new JSONReader();
+    private JSONReader myJSONReader = new JSONReader();
 
+    private Scanner sc = new Scanner(System.in);
+
+    private final static String QUIT = "q";
 
     public void run() throws IOException, ParseException {
         setUpProgram();
         startProgram(this.listOfProjects);
     }
 
-    public void setUpProgram() throws IOException, ParseException {
+    private void setUpProgram() throws IOException, ParseException {
         setListOfProjects(myJSONReader.createProjects());
     }
 
-    public void startProgram(List<Project> listOfProjects){
-
-        //This is only for this current setup
-        Project currentProject = listOfProjects.get(0);
-        //This is only for this current setup
+    private void startProgram(List<Project> listOfProjects){
 
         Output currentOutput = new Output();
         Menu currentMenu = new Menu();
-        currentMenu.runMenu(currentProject,currentOutput);
+        String projectOption;
 
+        do {
+            currentOutput.displayMessage("List of projects:");
+            for (Project project:listOfProjects) {
+                currentOutput.displayMessage(project.toString());
+            }
+            currentOutput.displayMessage("Please choose project by id: / Quit program by typing Q");
+            projectOption = sc.next().toLowerCase();
+
+            if (projectOption.equals(QUIT)){
+                currentOutput.displayMessage("Bye bye!!");
+            } else if (!isInteger(projectOption)){
+                currentOutput.displayMessage("Please type a valid option!");
+            } else {
+/*
+                Project currentProject = listOfProjects.get(Integer.parseInt(projectOption));
+*/
+                String finalProjectOption = projectOption;
+                Project currentProject = listOfProjects.stream().filter(project -> Integer.parseInt(finalProjectOption) == project.getProjectId()).findAny().orElse(null);
+                if(currentProject==null){
+                    currentOutput.displayMessage("Cannot find project with ID "+projectOption);
+                } else {
+                    currentMenu.runMenu(currentProject,currentOutput);
+                }
+            }
+        } while (!projectOption.equals(QUIT));
     }
 
-
-
-    public List<Project> getListOfProjects() {
-        return listOfProjects;
-    }
-
-    public void setListOfProjects(List<Project> listOfProjects) {
+    private void setListOfProjects(List<Project> listOfProjects) {
         this.listOfProjects = listOfProjects;
     }
-
-    public JSONReader getMyJSONReader() {
-        return myJSONReader;
-    }
-
-    public void setMyJSONReader(JSONReader myJSONReader) {
-        this.myJSONReader = myJSONReader;
+    private static boolean isInteger(String s){
+        try{
+            Integer.parseInt(s);
+        } catch (NumberFormatException | NullPointerException exception){
+            return false;
+        }
+        return true;
     }
 }

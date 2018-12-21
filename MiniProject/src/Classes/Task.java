@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Map;
 
-
 public class Task {
 
     private int taskId;
@@ -32,23 +31,8 @@ public class Task {
 
     }
 
-    public String toString() {
-        return  "Name: " + taskName + "\n" +
-                "Description: " + description + "\n" +
-                "Start date: " + actualStartDate + "\n" +
-                "Projected completed date: " + projectedCompletedDate + "\n" +
-                "Task members"+taskMembers+
-                // should call retrieve taskMembers ", TaskMembers="+taskMembers+
-                taskMembers + "\n" +
-                '}';
-    }
-
     public long returnTaskDurationInDays(){
         return ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
-    }
-
-    public long returnTaskDurationInWeeks(){
-        return ChronoUnit.WEEKS.between(this.actualStartDate,this.projectedCompletedDate);
     }
 
     public boolean taskIsComplete(LocalDate date){
@@ -71,7 +55,6 @@ public class Task {
                 .sum();
     }
 
-
     public LocalDate getActualStartDate() {
         return actualStartDate;
     }
@@ -85,34 +68,19 @@ public class Task {
         return taskMembers;
     }
 
-    public void setTaskMembers(Map<Integer, Double> taskMembers) {
-        this.taskMembers = taskMembers;
-    }
-
-    public int getId() {
-        return taskId;
-    }
-
-    public void setId(int id) {
-        this.taskId = id;
-    }
-
     public String getName(){
         return taskName;
     }
 
-    public void setName(String name) {
-        this.taskName = name;
+    public String toString() {
+        return  "Name: " + taskName + "\n" +
+                "Description: " + description + "\n" +
+                "Start date: " + actualStartDate + "\n" +
+                "Projected completed date: " + projectedCompletedDate + "\n" +
+                "Task members"+taskMembers+
+                // should call retrieve taskMembers ", TaskMembers="+taskMembers+
+                taskMembers + "\n" +
+                '}';
     }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-
 }
 
