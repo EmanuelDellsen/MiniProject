@@ -220,7 +220,7 @@ public class JSONReader {
     //A method to create a Map assigned to each task containing ID(key) of the team member who worked on it
     // and the hours he/she worked(value). This is later returned as a Map of these members and assigned to each
     // individual task read from the createTask method
-    
+
     private Map<Integer, Double> createTaskMembers(JSONObject taskList) {
 
         Map<Integer, Double> mapOfTaskMembers = new HashMap<>();
