@@ -21,30 +21,33 @@ public class GantChart extends JFrame {
 
     public GantChart(String title) {
 
-        this.title= title;
+        this.title = title;
 
 
-        IntervalCategoryDataset dataset = getCategoryDatase(Project);
+        IntervalCategoryDataset dataset = categoryDatase(Project);
 
         JFreeChart chart = ChartFactory.createGanttChart(
                 "Schedule", "Weeks", "Tasks", dataset);
 
         ChartPanel panel = new ChartPanel(chart);
         setContentPane(panel);
-    }
 
-    private IntervalCategoryDataset getCategoryDatase(Classes.Project project) {
 
-        TaskSeries series1 = new TaskSeries("Start Date");
+            TaskSeries series1 = new TaskSeries("Start Date");
 
-        for (Classes.Task t: project.getTaskList()) {
+            for (Classes.Task t : project.getTaskList()) {
 
-        String description = t.getName();
-        TimePeriod startDate = (TimePeriod) Date.valueOf(t.getActualStartDate());
+                String description = t.getName();
+                TimePeriod startDate = (TimePeriod) Date.valueOf(t.getActualStartDate());
 
-        series1.add(new Task(description, startDate));
+                series1.add(new Task(description, startDate));
 
-        }
+            }
+
+
+            TaskSeriesCollection dataset = new TaskSeriesCollection();
+            dataset.add(series1);
+            return dataset;
 /*
         series1.add(new Task());
         series1.add(new Task("Requirement",
@@ -68,15 +71,11 @@ public class GantChart extends JFrame {
                 Date.from(LocalDate.of(2018, 11, 25).atStartOfDay().toInstant(ZoneOffset.UTC))
         ));*/
 
-        TaskSeriesCollection dataset = new TaskSeriesCollection();
-        dataset.add(series1);
-        return dataset;
 
+        }
     }
-
-
-
 }
+
 
 
 
