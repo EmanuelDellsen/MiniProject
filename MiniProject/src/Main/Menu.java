@@ -45,6 +45,7 @@ public class Menu {
             switch (option) {
                 case PROJECT_SCHEDULE:
                     output.displayProjectSchedule(project);
+                    GantChart.categoryDatabase();
                     break;
                 case PROJECT_VARIANCE:
                     output.displayProjectVariance(project);
