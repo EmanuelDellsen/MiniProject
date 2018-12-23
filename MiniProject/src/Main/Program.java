@@ -6,10 +6,12 @@ import Output.Output;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Program {
+
 
     private List<Project> listOfProjects;
     private JSONReader myJSONReader = new JSONReader();
@@ -49,6 +51,7 @@ public class Program {
 /*
                 Project currentProject = listOfProjects.get(Integer.parseInt(projectOption));
 */
+                //this is because it has to be sure of being a string in order to parse it.
                 String finalProjectOption = projectOption;
                 Project currentProject = listOfProjects.stream().filter(project -> Integer.parseInt(finalProjectOption) == project.getProjectId()).findAny().orElse(null);
                 if(currentProject==null){
@@ -71,4 +74,6 @@ public class Program {
         }
         return true;
     }
+
+
 }

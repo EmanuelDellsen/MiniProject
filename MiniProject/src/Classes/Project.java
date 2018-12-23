@@ -29,6 +29,10 @@ public class Project {
 
     }
 
+    public Project(){
+
+    }
+
     public int getProjectId() {
         return projectId;
     }
@@ -143,6 +147,9 @@ public class Project {
                 .sorted(Comparator.comparing(Task::getActualStartDate))
                 .collect(Collectors.toList());
     }
+
+
+
 
     public List<Task> getTaskList() {
         return this.taskList;

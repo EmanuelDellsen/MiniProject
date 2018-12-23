@@ -82,5 +82,14 @@ public class Task {
                 taskMembers + "\n" +
                 '}';
     }
+
+
+    public LocalDate getProjectedCompletedDate() {
+        return projectedCompletedDate;
+    }
+
+    public void setProjectedCompletedDate(LocalDate projectedCompletedDate) {
+        this.projectedCompletedDate = projectedCompletedDate;
+    }
 }
 

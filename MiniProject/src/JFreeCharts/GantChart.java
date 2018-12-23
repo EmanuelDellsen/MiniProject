@@ -1,4 +1,4 @@
-package Main;
+/*package JFreeCharts;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -71,10 +71,6 @@ public class GantChart extends JFrame {
                 Date.from(LocalDate.of(2018, 11, 25).atStartOfDay().toInstant(ZoneOffset.UTC))
         ));*/
 
-
-        }
-    }
-}
 
 
 
