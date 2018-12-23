@@ -1,9 +1,9 @@
 package Main;
 
 import Classes.Project;
+import JFreeCharts.ganttChart;
 import Output.Output;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -17,6 +17,7 @@ public class Menu {
     private final static int EXIT_PROGRAM = 7;
 
     private final Scanner sc = new Scanner(System.in);
+
 
     private static final String[] menuOptions = {
             "1. Project Schedule",
@@ -45,7 +46,8 @@ public class Menu {
             switch (option) {
                 case PROJECT_SCHEDULE:
                     output.displayProjectSchedule(project);
-                    GantChart.categoryDatabase();
+                    ganttChart ganttChart = new ganttChart(project);
+                    ganttChart.setupMainFrame();
                     break;
                 case PROJECT_VARIANCE:
                     output.displayProjectVariance(project);
