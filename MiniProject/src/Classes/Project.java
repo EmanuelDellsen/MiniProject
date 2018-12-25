@@ -29,8 +29,32 @@ public class Project {
 
     }
 
-    public Project(){
+    public void setProjectId(int projectId) {
+        this.projectId = projectId;
+    }
 
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public LocalDate getActualStartDate() {
+        return actualStartDate;
+    }
+
+    public void setActualStartDate(LocalDate actualStartDate) {
+        this.actualStartDate = actualStartDate;
+    }
+
+    public LocalDate getProjectedCompletedDate() {
+        return projectedCompletedDate;
+    }
+
+    public void setProjectedCompletedDate(LocalDate projectedCompletedDate) {
+        this.projectedCompletedDate = projectedCompletedDate;
+    }
+
+    public void setBudgetAtCompletion(double budgetAtCompletion) {
+        this.budgetAtCompletion = budgetAtCompletion;
     }
 
     public int getProjectId() {

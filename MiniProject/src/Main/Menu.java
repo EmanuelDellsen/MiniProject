@@ -47,7 +47,7 @@ public class Menu {
                 case PROJECT_SCHEDULE:
                     output.displayProjectSchedule(project);
                     ganttChart ganttChart = new ganttChart(project);
-                    ganttChart.setupMainFrame();
+                    //ganttChart.setStage();
                     break;
                 case PROJECT_VARIANCE:
                     output.displayProjectVariance(project);

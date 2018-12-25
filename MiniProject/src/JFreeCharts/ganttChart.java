@@ -2,7 +2,6 @@ package JFreeCharts;
 
 import Classes.Project;
 import Classes.Task;
-import net.miginfocom.swing.MigLayout;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -24,7 +23,8 @@ import java.util.Date;
 
 public class ganttChart extends JFrame {
 
-
+    private static JFrame MAIN_FRAME = new JFrame();
+    private static JPanel guinew = new JPanel();
     public JFreeChart chart;
     public ChartPanel panel;
     TaskSeries series1 = new TaskSeries("Task");
@@ -54,7 +54,14 @@ public class ganttChart extends JFrame {
 
         DateAxis axis = (DateAxis) plot.getRangeAxis();
         axis.setDateFormatOverride(new SimpleDateFormat("yyyy-MM-dd"));
-        axis.setMaximumDate(new Date());
+
+        Instant instant = Instant.from(project.getActualStartDate().atStartOfDay(ZoneId.of("GMT")));
+        Date projectStart = Date.from(instant);
+        axis.setMinimumDate(projectStart);
+        instant = Instant.from(project.getProjectedCompletedDate().atStartOfDay(ZoneId.of("GMT")));
+        Date projectEndDate = Date.from(instant);
+        axis.setMaximumDate(projectEndDate);
+
 
         panel = new ChartPanel(chart);
         setContentPane(panel);
@@ -83,16 +90,12 @@ public class ganttChart extends JFrame {
 
         }
 
-        private static JFrame MAIN_FRAME = new JFrame();
-         private static JPanel guinew = new JPanel();
 
 
 
-    public static void setupMainFrame() {
-        MAIN_FRAME.setLayout(new MigLayout(
-                "insets 0, gap 0, wrap", // Layout Constraints
-                "[fill, grow]", // Column constraints
-                "[fill, grow]")); // Row constraints
+
+    /*public static void setStage() {
+        MAIN_FRAME.setLayout();
         MAIN_FRAME.getContentPane().setBackground(Color.black);
         MAIN_FRAME.setPreferredSize(new Dimension(1024, 768));
         MAIN_FRAME.setSize(1024,768);
@@ -110,6 +113,6 @@ public class ganttChart extends JFrame {
         //need to add a loading popup
         MAIN_FRAME.setVisible(true);
     }
-
+*/
     }
 
