@@ -7,38 +7,49 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.DateAxis;
 import org.jfree.chart.plot.CategoryPlot;
-import org.jfree.chart.renderer.category.BarRenderer;
-import org.jfree.chart.renderer.category.CategoryItemRenderer;
 import org.jfree.data.category.IntervalCategoryDataset;
 import org.jfree.data.gantt.TaskSeries;
 import org.jfree.data.gantt.TaskSeriesCollection;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.geom.Ellipse2D;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.util.Date;
 
-public class ganttChart extends JFrame {
+public class GanttChart extends JFrame {
 
     private static JFrame MAIN_FRAME = new JFrame();
     private static JPanel guinew = new JPanel();
     public JFreeChart chart;
     public ChartPanel panel;
-    TaskSeries series1 = new TaskSeries("Task");
-    TaskSeries series2 = new TaskSeries("Week");
+    private TaskSeries series1 = new TaskSeries("Task");
 
-    public ganttChart(Project project){
+    public GanttChart(Project project){
 
+        //Set title of project chart
         super(project.getProjectName());
 
+        //Create dataset
         IntervalCategoryDataset dataset = getCategoryDataset(project);
 
-        chart = ChartFactory.createGanttChart("Project Schedule", "Tasks", "Weeks", dataset);
+        //Create chart
+        JFreeChart chart = ChartFactory.createGanttChart("Project Schedule", "Tasks", null, dataset);
+
+        ChartPanel panel = new ChartPanel(chart);
+        setContentPane(panel);
 
         CategoryPlot plot = chart.getCategoryPlot();
+
+        DateAxis axis = (DateAxis) plot.getRangeAxis();
+
+        Date startDateOfProject = Date.from(project.getActualStartDate().atStartOfDay(ZoneId.systemDefault()).toInstant());
+        Date endDateOfProject = Date.from(project.getProjectedCompletedDate().atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+        axis.setRange(startDateOfProject,endDateOfProject);
+
+
+
+       /* CategoryPlot plot = chart.getCategoryPlot();
         Shape shape = new Ellipse2D.Double(-.5, -.5, 1, 1 );
         plot.setRenderer(new BarRenderer());
         BarRenderer barRenderer = (BarRenderer) plot.getRenderer();
@@ -66,25 +77,29 @@ public class ganttChart extends JFrame {
         panel = new ChartPanel(chart);
         setContentPane(panel);
         setVisible(true);
-        setSize(800, 600);
+        setSize(800, 600);*/
 
         }
 
-        private  IntervalCategoryDataset getCategoryDataset(Project project){
+        private IntervalCategoryDataset getCategoryDataset(Project project){
 
             for (Task task: project.getTaskList()) {
+                series1.add(new ChartTask(task.getName(),
+                        Date.from(task.getActualStartDate().atStartOfDay().toInstant(ZoneOffset.UTC)),
+                        Date.from(task.getProjectedCompletedDate().atStartOfDay().toInstant(ZoneOffset.UTC))));
+
+/*                Date.from(task.getActualStartDate().atStartOfDay().toInstant(ZoneOffset.UTC));
                 Instant instant = Instant.from(task.getActualStartDate().atStartOfDay(ZoneId.of("GMT")));
                 Date startDate = Date.from(instant);
                 instant = Instant.from(task.getProjectedCompletedDate().atStartOfDay(ZoneId.of("GMT")));
                 Date projectedCompletedDate = Date.from(instant);
 
-                series1.add(new chartTask(task.getName(), startDate, projectedCompletedDate));
+                series1.add(new ChartTask(task.getName(), startDate, projectedCompletedDate));*/
                // series2.add();
 
             }
 
             TaskSeriesCollection dataset = new TaskSeriesCollection();
-
             dataset.add(series1);
             return dataset;
 
