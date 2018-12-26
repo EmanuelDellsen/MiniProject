@@ -15,6 +15,8 @@ import static java.lang.Math.toIntExact;
 public class Output {
 
     private TemporalField woy = WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear();
+    private static final int MAX_LENGTH = 30;
+    private static final String ENDING = "...";
 
     private String createRiskAsterisks(double Risk) {
         StringBuilder asteriskBuilder = new StringBuilder("*");
@@ -54,7 +56,7 @@ public class Output {
         System.out.println(String.format("%15s", "Risk Matrix"));
 
         for(Risk risk: project.getRiskList()){
-            System.out.println(String.format("%-20s %-20s %s", risk.getRiskName(), createRiskAsterisks(risk.returnRisk()), risk.riskDescription()+" risk"));
+                System.out.printf("%-30.30s %-10.10s %s %n",risk.getRiskName(),createRiskAsterisks(risk.returnRisk()),risk.riskDescription()+" risk");
         }
     }
 
@@ -94,12 +96,12 @@ public class Output {
         System.out.println(project.returnTeamMember(teamMemberId).getTeamMemberName());
 
         for(Task task: project.returnTasksByTeamMember(teamMemberId)){
-            System.out.print(String.format("%-25s", task.getName()));
+            System.out.print(String.format("%-25.25s", task.getName()));
             System.out.print(String.format("%10s",task.returnHoursByMember(teamMemberId)));
             System.out.println();
         }
 
-        System.out.print(String.format("%25s%10s","Total Hours", project.returnHoursByTeamMember(teamMemberId)));
+        System.out.print(String.format("%25s %10s","Total Hours", project.returnHoursByTeamMember(teamMemberId)));
 
     }
 
@@ -119,7 +121,7 @@ public class Output {
 
         for (Task task : project.returnTasksSortedByStartDate()) {
 
-            System.out.printf("%-30s", task.getName());
+            System.out.printf("%-30s.30", task.getName());
 
             String taskLength = createScheduleAsterisks(task.returnTaskDurationInDays());
             long taskSpace = project.returnDaysBetweenProjectAndTask(task) + task.returnTaskDurationInDays();
@@ -132,7 +134,8 @@ public class Output {
     public void displayHoursPerTeamMember(Project project){
 
         for(TeamMember teamMember: project.returnTeamMembersSortedByHours()){
-            System.out.println(String.format("%-30s %s", teamMember.getTeamMemberName(),project.returnHoursByTeamMember(teamMember.getTeamMemberId())));
+            System.out.println(String.format("%-30s.30 %s", StringUtils.capitalize(teamMember.getTeamMemberName())
+                    ,project.returnHoursByTeamMember(teamMember.getTeamMemberId())));
         }
         System.out.println("==============================");
         System.out.println(String.format("%-30s %s","Total Hours",project.returnAllHoursWorked()));
@@ -160,7 +163,7 @@ public class Output {
         System.out.println(String.format("|%-30s|", "Choose team member:"));
 
         for (TeamMember teamMember: project.getTeamMemberList()){
-            System.out.println(String.format("|%30s| %s", teamMember.getTeamMemberName(), teamMember.getTeamMemberId()));
+            System.out.println(String.format("|%30s| %s", StringUtils.capitalize(teamMember.getTeamMemberName()), teamMember.getTeamMemberId()));
         }
         System.out.println(createSymbolString("=", 32));
         System.out.println();

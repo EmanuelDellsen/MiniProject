@@ -3,9 +3,9 @@
     {
       "projectId": "1",
       "projectName": "Duckies",
-      "actualStartDate": "2018-11-12",
-      "projectedCompletedDate": "2019-01-12",
-      "budgetAtCompletion": "10000",
+      "actualStartDate": "2018-11-01",
+      "projectedCompletedDate": "2019-01-01",
+      "budgetAtCompletion": "420000",
       "teamMemberList": [
         {
           "teamMemberName": "Nafen Haj Ahmad",
@@ -48,9 +48,9 @@
           "taskId": "1",
           "taskName": "Create Trello Workspace",
           "description": "We need a Trello workspace",
-          "actualStartDate": "2018-11-12",
-          "projectedCompletedDate": "2018-11-12",
-          "actualCompletedDate": "2018-11-12",
+          "actualStartDate": "2018-11-01",
+          "projectedCompletedDate": "2018-11-07",
+          "actualCompletedDate": "2018-11-07",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
@@ -59,9 +59,9 @@
           "taskId": "2",
           "taskName": "Create Slack Workspace",
           "description": "We need a Slack workspace",
-          "actualStartDate": "2018-11-12",
-          "projectedCompletedDate": "2018-11-12",
-          "actualCompletedDate": "2018-11-12",
+          "actualStartDate": "2018-11-07",
+          "projectedCompletedDate": "2018-11-14",
+          "actualCompletedDate": "2018-11-14",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
@@ -70,9 +70,9 @@
           "taskId": "3",
           "taskName": "Team Meeting 1",
           "description": "Our first team meeting",
-          "actualStartDate": "2018-11-13",
-          "projectedCompletedDate": "2018-11-13",
-          "actualCompletedDate": "2018-11-13",
+          "actualStartDate": "2018-11-15",
+          "projectedCompletedDate": "2018-11-21",
+          "actualCompletedDate": "2018-11-21",
           "hoursWorkedPerTeamMember": {
             "1": "1",
             "2": "1",
@@ -87,9 +87,9 @@
           "taskId": "4",
           "taskName": "Team Meeting 2",
           "description": "Our second team meeting",
-          "actualStartDate": "2018-11-20",
-          "projectedCompletedDate": "2018-11-20",
-          "actualCompletedDate": "2018-11-20",
+          "actualStartDate": "2018-11-22",
+          "projectedCompletedDate": "2018-11-29",
+          "actualCompletedDate": "2018-11-29",
           "hoursWorkedPerTeamMember": {
             "1": "1",
             "2": "1",
@@ -103,9 +103,9 @@
           "taskId": "5",
           "taskName": "Buy Duckies",
           "description": "We need Ducks",
-          "actualStartDate": "2018-11-04",
-          "projectedCompletedDate": "2018-11-19",
-          "actualCompletedDate": "2018-11-18",
+          "actualStartDate": "2018-11-29",
+          "projectedCompletedDate": "2018-12-07",
+          "actualCompletedDate": "2018-12-07",
           "hoursWorkedPerTeamMember": {
             "3": "1"
           }

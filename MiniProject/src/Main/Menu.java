@@ -1,9 +1,10 @@
 package Main;
 
 import Classes.Project;
-import JFreeCharts.ganttChart;
+import JFreeCharts.GanttChart;
 import Output.Output;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Menu {
@@ -29,47 +30,74 @@ public class Menu {
             "7. Exit program"
     };
 
-    public void runMenu(Project project, Output output) {
+    public void runMenu(Project currentProject, Output currentOutput, Helper currentHelper) {
 
         int option;
 
         do {
-            output.displayMenu(menuOptions);
-            output.displayMessage("Select an option...");
+            currentOutput.displayMenu(menuOptions);
+            currentOutput.displayMessage("Select an option...");
             while (!sc.hasNextInt()){
                 String input = sc.next();
-                output.displayMessage(String.format("\"%s\" is not a valid option.\n",input));
-                output.displayMenu(menuOptions);
+                currentOutput.displayMessage(String.format("\"%s\" is not a valid option.\n",input));
+                currentOutput.displayMenu(menuOptions);
             }
             option = sc.nextInt();
 
             switch (option) {
                 case PROJECT_SCHEDULE:
-                    output.displayProjectSchedule(project);
-                    ganttChart ganttChart = new ganttChart(project);
-                    //ganttChart.setStage();
+                    currentOutput.displayProjectSchedule(currentProject);
+                    SwingUtilities.invokeLater(()->{
+                        GanttChart ganttChart = new GanttChart(currentProject);
+                            ganttChart.setSize(800,400);
+                            ganttChart.setLocationRelativeTo(null);
+                            ganttChart.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                            ganttChart.setVisible(true);
+                    });
                     break;
                 case PROJECT_VARIANCE:
-                    output.displayProjectVariance(project);
+                    currentOutput.displayProjectVariance(currentProject);
                     break;
                 case RISK_MATRIX:
-                    output.displayRiskMatrix(project);
+                    currentOutput.displayRiskMatrix(currentProject);
                     break;
                 case TASKS_BY_MEMBER:
-                    output.displayTeamMembers(project);
-                    output.displayMessage("Enter team member ID:");
-                    int teamMemberId = sc.nextInt();
-                    output.displayTaskByMember(project,teamMemberId);
+                    boolean caseIsActive = true;
+                    do {
+                        currentOutput.displayTeamMembers(currentProject);
+                        currentOutput.displayMessage("Enter team member ID:");
+                        String teamMemberId = sc.next();
+
+                        if (!currentHelper.isInteger(teamMemberId)){
+                            currentOutput.displayMessage("Please type a valid option");
+                        } else if (currentProject.returnTeamMember(Integer.parseInt(teamMemberId))==null){
+                            currentOutput.displayMessage("Couldn't not find any team member with ID: "+teamMemberId);
+                        } else {
+                            currentOutput.displayTaskByMember(currentProject,Integer.parseInt(teamMemberId));
+                            caseIsActive = false;
+                        }
+
+                    } while (caseIsActive);
                     break;
                 case HOURS_BY_MEMBER:
-                    output.displayHoursPerTeamMember(project);
+                    currentOutput.displayHoursPerTeamMember(currentProject);
                     break;
                 case EXIT_PROGRAM:
+                    currentOutput.displayMessage("See you soon!");
                     System.exit(0);
                 default:
                     // The user input an unexpected choice.
             }
         } while (option!=CHANGE_PROJECT);
+    }
+
+    private static boolean isInteger(String s){
+        try{
+            Integer.parseInt(s);
+        } catch (NumberFormatException | NullPointerException exception){
+            return false;
+        }
+        return true;
     }
 }
 

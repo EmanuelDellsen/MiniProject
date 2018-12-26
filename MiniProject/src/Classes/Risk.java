@@ -6,14 +6,9 @@ public class Risk {
     private String riskName;
     private double probability;
     private int impact;
-    private final double CATASTROPHIC_Threshold = 6.0;
-
+    private final double CATASTROPHIC_THRESHOLD = 6.0;
     private final double SEVERE_THRESHOLD= 4.0;
-
     private final double MODERATE_THRESHOLD= 2.0;
-
-
-
 
 
     public Risk(int riskId, String riskName, double probability, int impact){
@@ -23,16 +18,13 @@ public class Risk {
         this.impact = impact;
     }
 
-
-
-
     public double returnRisk(){
         return this.probability*this.impact;
     }
 
     public String riskDescription(){
         String description;
-        if(returnRisk() >= CATASTROPHIC_Threshold) {
+        if(returnRisk() >= CATASTROPHIC_THRESHOLD) {
             description = "Catastrophic";
         }
         else if(returnRisk() >= SEVERE_THRESHOLD){
