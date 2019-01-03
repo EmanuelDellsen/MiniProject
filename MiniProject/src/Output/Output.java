@@ -7,6 +7,7 @@ import Classes.TeamMember;
 import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalField;
 import java.time.temporal.WeekFields;
 import java.util.Locale;
@@ -121,8 +122,8 @@ public class Output {
 
             System.out.printf("%-30s", task.getName());
 
-            String taskLength = createScheduleAsterisks(task.returnTaskDurationInDays());
-            long taskSpace = project.returnDaysBetweenProjectAndTask(task) + task.returnTaskDurationInDays();
+            String taskLength = createScheduleAsterisks(ChronoUnit.DAYS.between(task.getActualStartDate(),task.getProjectedCompletedDate()));
+            long taskSpace = project.returnDaysBetweenProjectAndTask(task) + ChronoUnit.DAYS.between(project.getActualStartDate(),task.getProjectedCompletedDate());
             int taskSpaceAsInt = toIntExact(taskSpace);
 
             System.out.println(StringUtils.leftPad(taskLength, taskSpaceAsInt, " "));
