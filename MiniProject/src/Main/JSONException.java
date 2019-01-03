@@ -6,7 +6,7 @@ public class JSONException extends RuntimeException {
         super("This is a default message, printing from JSONException method");
     }
 
-    public JSONException(String message){
+    JSONException(String message){
         super(message);
     }
 

@@ -32,8 +32,9 @@ public class Task {
 
     }
 
-    public long returnTaskDurationInDays(){
+    long returnTaskDurationInDays(){
 
+        // returns the amount of days depending on if the task has been completed before or after the projected completed date
         if (this.actualCompletedDate.isAfter(projectedCompletedDate)){
             return ChronoUnit.DAYS.between(this.actualStartDate,this.actualCompletedDate);
         } else {
@@ -42,11 +43,12 @@ public class Task {
 
     }
 
-    public boolean taskIsComplete(LocalDate date){
+    boolean taskIsComplete(LocalDate date){
         return this.actualCompletedDate.isBefore(date);
     }
 
-    public double taskProgress(LocalDate date){
+    double taskProgress(LocalDate date){
+        //returns the percentage of the task that is complete
         if (taskIsComplete(date)){
             return COMPLETE;
         } else {
@@ -59,7 +61,8 @@ public class Task {
         }
     }
 
-    public double returnHoursInTask(){
+    double returnHoursInTask(){
+        //returns all of the hours that has been worked with the task
         return this.taskMembers.values()
                 .stream()
                 .mapToDouble(i->i)
@@ -71,11 +74,12 @@ public class Task {
     }
 
     public double returnHoursByMember(int teamMemberId){
+        //returns the amount of hours by teamMember. if team Member is not found, it returns 0
         return this.taskMembers.getOrDefault(teamMemberId,0.0);
 
     }
 
-    public Map<Integer, Double> getTaskMembers() {
+    Map<Integer, Double> getTaskMembers() {
         return taskMembers;
     }
 
