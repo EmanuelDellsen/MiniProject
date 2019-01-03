@@ -18,7 +18,10 @@ import java.util.Date;
 
 public class GanttChart extends JFrame {
 
-    private TaskSeries series1 = new TaskSeries("Task");
+    TaskSeriesCollection dataset = new TaskSeriesCollection();
+    private TaskSeries projectedDate = new TaskSeries("Projected to be complete");
+    private TaskSeries completedDate = new TaskSeries("Actually complete");
+
 
     public GanttChart(Project project){
 
@@ -41,20 +44,27 @@ public class GanttChart extends JFrame {
         Date startDateOfProject = Date.from(project.getActualStartDate().atStartOfDay(ZoneId.systemDefault()).toInstant());
         Date endDateOfProject = Date.from(project.getProjectedCompletedDate().atStartOfDay(ZoneId.systemDefault()).toInstant());
         axis.setRange(startDateOfProject,endDateOfProject);
-        }
-
-        private IntervalCategoryDataset getCategoryDataset(Project project){
-
-            for (Task task: project.returnTasksSortedByStartDate()) {
-                series1.add(new ChartTask(task.getName(),
-                        Date.from(task.getActualStartDate().atStartOfDay().toInstant(ZoneOffset.UTC)),
-                        Date.from(task.getProjectedCompletedDate().atStartOfDay().toInstant(ZoneOffset.UTC))));
-            }
-
-            TaskSeriesCollection dataset = new TaskSeriesCollection();
-            dataset.add(series1);
-            return dataset;
-
-        }
     }
 
+    private IntervalCategoryDataset getCategoryDataset(Project project){
+
+        for (Task task: project.returnTasksSortedByStartDate()) {
+            projectedDate.add(new ChartTask(task.getName(),
+                    Date.from(task.getActualStartDate().atStartOfDay().toInstant(ZoneOffset.UTC)),
+                    Date.from(task.getProjectedCompletedDate().atStartOfDay().toInstant(ZoneOffset.UTC))));
+        }
+
+        dataset.add(projectedDate);
+
+
+        for (Task task: project.returnTasksSortedByStartDate()) {
+            completedDate.add(new ChartTask(task.getName(),
+                    Date.from(task.getActualStartDate().atStartOfDay().toInstant(ZoneOffset.UTC)),
+                    Date.from(task.getActualCompletedDate().atStartOfDay().toInstant(ZoneOffset.UTC))));
+        }
+
+        dataset.add(completedDate);
+        return dataset;
+
+    }
+}
