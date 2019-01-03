@@ -17,6 +17,7 @@ public class Task {
     private LocalDate actualCompletedDate;
 
     private final static double COMPLETE = 1.0;
+    private final static double TASK_NOT_STARTED = 0.0;
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
@@ -32,7 +33,13 @@ public class Task {
     }
 
     public long returnTaskDurationInDays(){
-        return ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
+
+        if (this.actualCompletedDate.isAfter(projectedCompletedDate)){
+            return ChronoUnit.DAYS.between(this.actualStartDate,this.actualCompletedDate);
+        } else {
+            return ChronoUnit.DAYS.between(this.actualStartDate,this.projectedCompletedDate);
+        }
+
     }
 
     public boolean taskIsComplete(LocalDate date){
@@ -44,7 +51,7 @@ public class Task {
             return COMPLETE;
         } else {
             if (date.isBefore(this.actualStartDate)){
-                return 0.0;
+                return TASK_NOT_STARTED;
             } else {
                 long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
                 return (double) daysFromStartToDate /(double) returnTaskDurationInDays();
