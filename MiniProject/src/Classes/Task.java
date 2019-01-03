@@ -101,5 +101,13 @@ public class Task {
     public void setProjectedCompletedDate(LocalDate projectedCompletedDate) {
         this.projectedCompletedDate = projectedCompletedDate;
     }
+
+    public LocalDate getActualCompletedDate() {
+        return actualCompletedDate;
+    }
+
+    public void setActualCompletedDate(LocalDate actualCompletedDate) {
+        this.actualCompletedDate = actualCompletedDate;
+    }
 }
 

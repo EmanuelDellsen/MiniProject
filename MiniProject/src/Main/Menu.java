@@ -50,7 +50,7 @@ public class Menu {
                         GanttChart ganttChart = new GanttChart(currentProject);
                             ganttChart.setSize(800,400);
                             ganttChart.setLocationRelativeTo(null);
-                            ganttChart.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                            ganttChart.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                             ganttChart.setVisible(true);
                     });
                     break;
