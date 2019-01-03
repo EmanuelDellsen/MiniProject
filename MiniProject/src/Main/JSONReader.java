@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-public class JSONReader {
+class JSONReader {
 
     private JSONExceptionMethods exceptionsClass = new JSONExceptionMethods();
 
@@ -33,7 +33,7 @@ public class JSONReader {
 
     //Method to create an array of projects found in the JSON-file and returning it to the class "Program"
 
-    protected List<Project> createProjects() throws IOException, ParseException {
+    List<Project> createProjects() throws IOException, ParseException {
 
         List<Project> arrayListOfProjects = new ArrayList<>();
 

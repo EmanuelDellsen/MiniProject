@@ -7,7 +7,7 @@ import Output.Output;
 import javax.swing.*;
 import java.util.Scanner;
 
-public class Menu {
+class Menu {
 
     private final static int PROJECT_SCHEDULE = 1;
     private final static int PROJECT_VARIANCE = 2;
@@ -29,7 +29,7 @@ public class Menu {
             "7. Exit program"
     };
 
-    public void runMenu(Project currentProject, Output currentOutput, Helper currentHelper) {
+    void runMenu(Project currentProject, Output currentOutput, Helper currentHelper) {
 
         int option;
 
@@ -45,12 +45,17 @@ public class Menu {
 
             switch (option) {
                 case PROJECT_SCHEDULE:
+                    //Displays the project schedule in ascii
                     currentOutput.displayProjectSchedule(currentProject);
+
+                    //Displays the project schedule as a ganttChart in a seperate frame
                     SwingUtilities.invokeLater(()->{
                         GanttChart ganttChart = new GanttChart(currentProject);
                             ganttChart.setSize(800,400);
                             ganttChart.setLocationRelativeTo(null);
-                            ganttChart.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+                            //When the Ganttchart is closed, the system continues to run
+                            ganttChart.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                             ganttChart.setVisible(true);
                     });
                     break;
@@ -61,12 +66,14 @@ public class Menu {
                     currentOutput.displayRiskMatrix(currentProject);
                     break;
                 case TASKS_BY_MEMBER:
+
                     boolean caseIsActive = true;
                     do {
                         currentOutput.displayTeamMembers(currentProject);
                         currentOutput.displayMessage("Enter team member ID:");
                         String teamMemberId = sc.next();
 
+                        //Validation of user input when choosing team member to be displayed
                         if (!currentHelper.isInteger(teamMemberId)){
                             currentOutput.displayMessage("Please type a valid option");
                         } else if (currentProject.returnTeamMember(Integer.parseInt(teamMemberId))==null){
