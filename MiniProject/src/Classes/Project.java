@@ -29,32 +29,12 @@ public class Project {
 
     }
 
-    public void setProjectId(int projectId) {
-        this.projectId = projectId;
-    }
-
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
-    }
-
     public LocalDate getActualStartDate() {
         return actualStartDate;
     }
 
-    public void setActualStartDate(LocalDate actualStartDate) {
-        this.actualStartDate = actualStartDate;
-    }
-
     public LocalDate getProjectedCompletedDate() {
         return projectedCompletedDate;
-    }
-
-    public void setProjectedCompletedDate(LocalDate projectedCompletedDate) {
-        this.projectedCompletedDate = projectedCompletedDate;
-    }
-
-    public void setBudgetAtCompletion(double budgetAtCompletion) {
-        this.budgetAtCompletion = budgetAtCompletion;
     }
 
     public int getProjectId() {
@@ -98,10 +78,6 @@ public class Project {
         return ChronoUnit.DAYS.between(this.actualStartDate,task.getActualStartDate());
     }
 
-    public long returnNumberOfWeeksInProject(){
-        return ChronoUnit.WEEKS.between(this.actualStartDate,this.projectedCompletedDate);
-    }
-
     public TeamMember returnTeamMember(int teamMemberId){
         return this.teamMemberList.stream()
                 .filter(teamMember -> teamMemberId == teamMember.getTeamMemberId())
@@ -131,9 +107,15 @@ public class Project {
                 .collect(Collectors.toList());
     }
 
+    public List<Task> returnTasksSortedByStartDate(){
+        return this.taskList.stream()
+                .sorted(Comparator.comparing(Task::getActualStartDate))
+                .collect(Collectors.toList());
+    }
+
     private double percentageOfCompletedTasks(LocalDate date){
-        double valueOfCompletedTasks = 0.0;
-        double valueOfAllTasks = 0.0;
+        double valueOfCompletedTasks = 1.0;
+        double valueOfAllTasks = 1.0;
 
         for(Task task : this.taskList){
             valueOfAllTasks += task.returnTaskDurationInDays();
@@ -154,7 +136,7 @@ public class Project {
     }
 
     private double calculateAC(LocalDate date){
-        double sumOfProgress = 0.0;
+        double sumOfProgress = 1.0;
 
         for (TeamMember teamMember: this.teamMemberList){
             for (Task task: returnTasksByTeamMember(teamMember.getTeamMemberId())){
@@ -165,15 +147,6 @@ public class Project {
 
         return sumOfProgress;
     }
-
-    public List<Task> returnTasksSortedByStartDate(){
-        return this.taskList.stream()
-                .sorted(Comparator.comparing(Task::getActualStartDate))
-                .collect(Collectors.toList());
-    }
-
-
-
 
     public List<Task> getTaskList() {
         return this.taskList;
@@ -191,10 +164,6 @@ public class Project {
         this.teamMemberList = teamMemberList;
     }
 
-    public List<Risk> getRiskList() {
-        return riskList;
-    }
-
     public void setRiskList(List<Risk> riskList) {
         this.riskList = riskList;
     }
@@ -203,12 +172,36 @@ public class Project {
         return projectName;
     }
 
+    @Override
+    public String toString() {
+        return this.getProjectId()+": "+this.getProjectName();
+    }
+
+    public List<Risk> getRiskList() {
+        return riskList;
+    }
+
     public double getBudgetAtCompletion() {
         return budgetAtCompletion;
     }
 
-    @Override
-    public String toString() {
-        return this.getProjectId()+": "+this.getProjectName();
+    public void setProjectId(int projectId) {
+        this.projectId = projectId;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public void setActualStartDate(LocalDate actualStartDate) {
+        this.actualStartDate = actualStartDate;
+    }
+
+    public void setProjectedCompletedDate(LocalDate projectedCompletedDate) {
+        this.projectedCompletedDate = projectedCompletedDate;
+    }
+
+    public void setBudgetAtCompletion(double budgetAtCompletion) {
+        this.budgetAtCompletion = budgetAtCompletion;
     }
 }

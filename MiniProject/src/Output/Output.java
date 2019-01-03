@@ -15,8 +15,6 @@ import static java.lang.Math.toIntExact;
 public class Output {
 
     private TemporalField woy = WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear();
-    private static final int MAX_LENGTH = 30;
-    private static final String ENDING = "...";
 
     private String createRiskAsterisks(double Risk) {
         StringBuilder asteriskBuilder = new StringBuilder("*");
@@ -55,7 +53,7 @@ public class Output {
 
         System.out.println(String.format("%15s", "Risk Matrix"));
 
-        for(Risk risk: project.getRiskList()){
+        for(Risk risk: project.returnRisks()){
                 System.out.printf("%-30.30s %-10.10s %s %n",risk.getRiskName(),createRiskAsterisks(risk.returnRisk()),risk.riskDescription()+" risk");
         }
     }
@@ -121,7 +119,7 @@ public class Output {
 
         for (Task task : project.returnTasksSortedByStartDate()) {
 
-            System.out.printf("%-30s.30", task.getName());
+            System.out.printf("%-30s", task.getName());
 
             String taskLength = createScheduleAsterisks(task.returnTaskDurationInDays());
             long taskSpace = project.returnDaysBetweenProjectAndTask(task) + task.returnTaskDurationInDays();

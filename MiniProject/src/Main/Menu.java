@@ -19,7 +19,6 @@ public class Menu {
 
     private final Scanner sc = new Scanner(System.in);
 
-
     private static final String[] menuOptions = {
             "1. Project Schedule",
             "2. Project Variances",
@@ -91,13 +90,5 @@ public class Menu {
         } while (option!=CHANGE_PROJECT);
     }
 
-    private static boolean isInteger(String s){
-        try{
-            Integer.parseInt(s);
-        } catch (NumberFormatException | NullPointerException exception){
-            return false;
-        }
-        return true;
-    }
 }
 
