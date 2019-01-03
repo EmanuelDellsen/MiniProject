@@ -16,7 +16,7 @@ public class Task {
     private LocalDate projectedCompletedDate;
     private LocalDate actualCompletedDate;
 
-    private final static long COMPLETE = 1;
+    private final static double COMPLETE = 1.0;
 
     public Task(int taskId, String taskName, String description,
                 LocalDate actualStartDate, LocalDate projectedCompletedDate,
@@ -43,8 +43,12 @@ public class Task {
         if (taskIsComplete(date)){
             return COMPLETE;
         } else {
-            long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
-            return (double)daysFromStartToDate /(double) returnTaskDurationInDays();
+            if (date.isBefore(this.actualStartDate)){
+                return 0.0;
+            } else {
+                long daysFromStartToDate = ChronoUnit.DAYS.between(this.actualStartDate,date);
+                return (double) daysFromStartToDate /(double) returnTaskDurationInDays();
+            }
         }
     }
 
@@ -82,7 +86,6 @@ public class Task {
                 taskMembers + "\n" +
                 '}';
     }
-
 
     public LocalDate getProjectedCompletedDate() {
         return projectedCompletedDate;

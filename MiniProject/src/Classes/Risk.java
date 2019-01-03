@@ -6,10 +6,9 @@ public class Risk {
     private String riskName;
     private double probability;
     private int impact;
-    private final double CATASTROPHIC_THRESHOLD = 6.0;
-    private final double SEVERE_THRESHOLD= 4.0;
-    private final double MODERATE_THRESHOLD= 2.0;
-
+    private final static double CATASTROPHIC_THRESHOLD = 6.0;
+    private final static double SEVERE_THRESHOLD= 4.0;
+    private final static double MODERATE_THRESHOLD= 2.0;
 
     public Risk(int riskId, String riskName, double probability, int impact){
         this.riskId = riskId;
@@ -41,12 +40,12 @@ public class Risk {
         return description;
     }
 
+    public String getRiskName(){
+        return this.riskName;
+    }
 
     public int getRiskId(){
         return this.riskId;
-    }
-    public String getRiskName(){
-        return this.riskName;
     }
     public double getProbability() {
         return this.probability;
