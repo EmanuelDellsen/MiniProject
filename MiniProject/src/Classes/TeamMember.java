@@ -16,7 +16,7 @@ public class TeamMember {
         return teamMemberName;
     }
 
-    public double getSalaryPerHour() {
+    double getSalaryPerHour() {
         return this.salaryPerHour;
     }
 
