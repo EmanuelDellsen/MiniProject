@@ -5,6 +5,7 @@ import JFreeCharts.GanttChart;
 import Output.Output;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Scanner;
 
 class Menu {
