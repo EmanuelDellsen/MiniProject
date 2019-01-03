@@ -48,9 +48,9 @@
           "taskId": "1",
           "taskName": "Create Trello Workspace",
           "description": "We need a Trello workspace",
-          "actualStartDate": "2018-11-01",
+          "actualStartDate": "2018-11-02",
           "projectedCompletedDate": "2018-11-07",
-          "actualCompletedDate": "2018-11-07",
+          "actualCompletedDate": "2018-12-01",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
@@ -61,7 +61,7 @@
           "description": "We need a Slack workspace",
           "actualStartDate": "2018-11-07",
           "projectedCompletedDate": "2018-11-14",
-          "actualCompletedDate": "2018-11-14",
+          "actualCompletedDate": "2018-12-14",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
@@ -72,7 +72,7 @@
           "description": "We need Ducks",
           "actualStartDate": "2018-11-29",
           "projectedCompletedDate": "2018-12-07",
-          "actualCompletedDate": "2018-12-07",
+          "actualCompletedDate": "2018-12-10",
           "hoursWorkedPerTeamMember": {
             "3": "1"
           }
@@ -82,8 +82,8 @@
           "taskName": "Create Time Tracking Form",
           "description": "Set up of Google Time Tracking Form",
           "actualStartDate": "2018-11-27",
-          "projectedCompletedDate": "2018-11-27",
-          "actualCompletedDate": "2018-11-27",
+          "projectedCompletedDate": "2018-12-10",
+          "actualCompletedDate": "2018-11-30",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
@@ -93,7 +93,7 @@
           "description": "Development of a Risk Class",
           "actualStartDate": "2018-11-28",
           "projectedCompletedDate": "2018-12-11",
-          "actualCompletedDate": "2018-12-11",
+          "actualCompletedDate": "2018-11-30",
           "hoursWorkedPerTeamMember": {
             "1": "4",
             "3": "1.5"

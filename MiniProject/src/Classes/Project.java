@@ -29,18 +29,6 @@ public class Project {
 
     }
 
-    public LocalDate getActualStartDate() {
-        return actualStartDate;
-    }
-
-    public LocalDate getProjectedCompletedDate() {
-        return projectedCompletedDate;
-    }
-
-    public int getProjectId() {
-        return projectId;
-    }
-
     public double calculateEV(LocalDate date){
         return (this.percentageOfCompletedTasks(date)*this.budgetAtCompletion);
     }
@@ -114,8 +102,8 @@ public class Project {
     }
 
     private double percentageOfCompletedTasks(LocalDate date){
-        double valueOfCompletedTasks = 1.0;
-        double valueOfAllTasks = 1.0;
+        double valueOfCompletedTasks = 0.0;
+        double valueOfAllTasks = 0.0;
 
         for(Task task : this.taskList){
             valueOfAllTasks += task.returnTaskDurationInDays();
@@ -136,7 +124,7 @@ public class Project {
     }
 
     private double calculateAC(LocalDate date){
-        double sumOfProgress = 1.0;
+        double sumOfProgress = 0.0;
 
         for (TeamMember teamMember: this.teamMemberList){
             for (Task task: returnTasksByTeamMember(teamMember.getTeamMemberId())){
@@ -170,6 +158,18 @@ public class Project {
 
     public String getProjectName() {
         return projectName;
+    }
+
+    public LocalDate getActualStartDate() {
+        return actualStartDate;
+    }
+
+    public LocalDate getProjectedCompletedDate() {
+        return projectedCompletedDate;
+    }
+
+    public int getProjectId() {
+        return projectId;
     }
 
     @Override
