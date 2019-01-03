@@ -18,7 +18,7 @@ import java.util.Date;
 
 public class GanttChart extends JFrame {
 
-    TaskSeriesCollection dataset = new TaskSeriesCollection();
+    private TaskSeriesCollection dataset = new TaskSeriesCollection();
     private TaskSeries projectedDate = new TaskSeries("Projected to be complete");
     private TaskSeries completedDate = new TaskSeries("Actually complete");
 
@@ -48,6 +48,7 @@ public class GanttChart extends JFrame {
 
     private IntervalCategoryDataset getCategoryDataset(Project project){
 
+        //Creating start and end of the task depending on the projected completed date of the task
         for (Task task: project.returnTasksSortedByStartDate()) {
             projectedDate.add(new ChartTask(task.getName(),
                     Date.from(task.getActualStartDate().atStartOfDay().toInstant(ZoneOffset.UTC)),
@@ -56,7 +57,7 @@ public class GanttChart extends JFrame {
 
         dataset.add(projectedDate);
 
-
+        //Creating start and end of the task depending on the actual completed date of the task
         for (Task task: project.returnTasksSortedByStartDate()) {
             completedDate.add(new ChartTask(task.getName(),
                     Date.from(task.getActualStartDate().atStartOfDay().toInstant(ZoneOffset.UTC)),
