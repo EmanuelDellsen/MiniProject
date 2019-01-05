@@ -192,6 +192,11 @@ public class Project {
 
         return sumOfProgress;
     }
+    public List<TeamMember> returnTeamMembersSortedById(){
+        return this.teamMemberList.stream()
+                .sorted(Comparator.comparing(TeamMember::getTeamMemberId))
+                .collect(Collectors.toList());
+    }
 
     public List<Task> getTaskList() {
         return this.taskList;
