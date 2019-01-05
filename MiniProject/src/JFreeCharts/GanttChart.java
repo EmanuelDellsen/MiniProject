@@ -19,8 +19,8 @@ import java.util.Date;
 public class GanttChart extends JFrame {
 
     private TaskSeriesCollection dataset = new TaskSeriesCollection();
-    private TaskSeries projectedDate = new TaskSeries("Projected to be complete");
-    private TaskSeries completedDate = new TaskSeries("Actually complete");
+    private TaskSeries projectedDate = new TaskSeries("Projected completion");
+    private TaskSeries completedDate = new TaskSeries("Actual completion");
 
 
     public GanttChart(Project project){
