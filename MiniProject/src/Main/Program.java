@@ -57,7 +57,7 @@ class Program {
                     //If the project with the user projectID is not found, it displays the following message
                     currentOutput.displayMessage("Cannot find project with ID "+projectOption);
                 } else {
-                    //If user has typed an existing projectID, then the project starts up by displaying the menu
+                    //If user has typed an existing projectID, then the program displays the menu for the project
                     currentMenu.runMenu(currentProject,currentOutput,currentHelper);
                 }
             }
