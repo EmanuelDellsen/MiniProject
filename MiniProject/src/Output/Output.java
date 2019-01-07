@@ -24,9 +24,9 @@ public class Output {
         int weekNumFromProjectStart = 0;
 
         //Prints the amount of per each 2 weeks from the start of the project, starting on the 2nd week
-        for (int i = 0; i < project.returnDatesPerInterval(0).size(); i++){
-            weekNumFromProjectStart += 2;
+        for (int i = 0; i <= project.returnDatesPerInterval(0).size(); i++){
             System.out.print(String.format("%-14s", "Week " + weekNumFromProjectStart));
+            weekNumFromProjectStart += 2;
         }
 
         System.out.println();
@@ -37,10 +37,13 @@ public class Output {
         for (Task task : project.returnTasksSortedByStartDate()) {
             System.out.printf("%-30s", task.getName());
 
-            String taskLength = createScheduleAsterisks(ChronoUnit.DAYS.between(task.getActualStartDate(),task.getProjectedCompletedDate()));
-            long taskSpace = project.returnDaysBetweenProjectAndTask(task) + ChronoUnit.DAYS.between(project.getActualStartDate(),task.getProjectedCompletedDate());
+            String taskLength = createScheduleAsterisks(task.returnTaskDurationInDays());
+
+            //taskSpace is a representation of the amount of days between the start of the project and the projected or actual ending of the task
+            long taskSpace = project.returnDaysBetweenProjectAndTask(task) + task.returnTaskDurationInDays();
             int taskSpaceAsInt = toIntExact(taskSpace);
 
+            //Prints empty up until the point of the start date of the task from the project start date
             System.out.println(StringUtils.leftPad(taskLength, taskSpaceAsInt, " "));
         }
     }
@@ -74,7 +77,7 @@ public class Output {
         for(LocalDate date: project.returnDatesPerInterval(1)){
             System.out.print(String.format("%-25.2f",project.calculateCV(date)));
         }
-
+        System.out.println();
     }
 
     public void displayRiskMatrix(Project project){

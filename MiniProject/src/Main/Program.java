@@ -12,7 +12,7 @@ class Program {
 
     private List<Project> listOfProjects;
     private JSONReader myJSONReader = new JSONReader();
-    private Scanner sc = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
     private final static String QUIT = "q";
 
     void run() throws IOException, ParseException {
@@ -42,7 +42,7 @@ class Program {
             currentOutput.displayMessage("Please choose project by ID: / Quit program by typing Q");
 
             //Users type option
-            projectOption = sc.next().toLowerCase();
+            projectOption = scanner.next().toLowerCase();
 
             if (projectOption.equals(QUIT)){
                 currentOutput.displayMessage("See you soon!");
