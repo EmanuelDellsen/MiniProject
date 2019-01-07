@@ -3,8 +3,8 @@
     {
       "projectId": "1",
       "projectName": "Duckies",
-      "actualStartDate": "2018-11-01",
-      "projectedCompletedDate": "2019-01-01",
+      "actualStartDate": "2018-11-12",
+      "projectedCompletedDate": "2019-01-12",
       "budgetAtCompletion": "420000",
       "teamMemberList": [
         {
@@ -18,7 +18,7 @@
           "salaryPerHour": "200"
         },
         {
-          "teamMemberName": "Karl Westgardh",
+          "teamMemberName": "Karl Westgårdh",
           "teamMemberId": "3",
           "salaryPerHour": "200"
         },
@@ -33,7 +33,7 @@
           "salaryPerHour": "300"
         },
         {
-          "teamMemberName": "Niklas Moller",
+          "teamMemberName": "Niklas Möller",
           "teamMemberId": "6",
           "salaryPerHour": "200"
         },
@@ -48,9 +48,9 @@
           "taskId": "1",
           "taskName": "Create Trello Workspace",
           "description": "We need a Trello workspace",
-          "actualStartDate": "2018-11-02",
-          "projectedCompletedDate": "2018-11-07",
-          "actualCompletedDate": "2018-12-01",
+          "actualStartDate": "2018-11-12",
+          "projectedCompletedDate": "2018-11-12",
+          "actualCompletedDate": "2018-11-12",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
@@ -59,48 +59,62 @@
           "taskId": "2",
           "taskName": "Create Slack Workspace",
           "description": "We need a Slack workspace",
-          "actualStartDate": "2018-11-07",
-          "projectedCompletedDate": "2018-11-14",
-          "actualCompletedDate": "2018-12-14",
+          "actualStartDate": "2018-11-12",
+          "projectedCompletedDate": "2018-11-12",
+          "actualCompletedDate": "2018-11-12",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
         },
         {
-          "taskId": "5",
+          "taskId": "2",
+          "taskName": "Assignment 1",
+          "description": "Writing the first assignment",
+          "actualStartDate": "2018-11-20",
+          "projectedCompletedDate": "2018-11-30",
+          "actualCompletedDate": "2018-11-29",
+          "hoursWorkedPerTeamMember": {
+            "1": "1",
+            "3": "2",
+            "5": "2",
+            "6": "1.5"
+          }
+        },
+        {
+          "taskId": "3",
           "taskName": "Buy Duckies",
           "description": "We need Ducks",
-          "actualStartDate": "2018-11-29",
-          "projectedCompletedDate": "2018-12-07",
-          "actualCompletedDate": "2018-12-10",
+          "actualStartDate": "2018-11-04",
+          "projectedCompletedDate": "2018-11-20",
+          "actualCompletedDate": "2018-12-11",
           "hoursWorkedPerTeamMember": {
             "3": "1"
           }
         },
         {
-          "taskId": "10",
+          "taskId": "4",
           "taskName": "Create Time Tracking Form",
           "description": "Set up of Google Time Tracking Form",
           "actualStartDate": "2018-11-27",
-          "projectedCompletedDate": "2018-12-10",
-          "actualCompletedDate": "2018-11-30",
+          "projectedCompletedDate": "2018-11-27",
+          "actualCompletedDate": "2018-11-27",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
         },        {
-          "taskId": "11",
+          "taskId": "5",
           "taskName": "Risk Class",
           "description": "Development of a Risk Class",
           "actualStartDate": "2018-11-28",
-          "projectedCompletedDate": "2018-12-11",
-          "actualCompletedDate": "2018-11-30",
+          "projectedCompletedDate": "2018-12-10",
+          "actualCompletedDate": "2018-12-20",
           "hoursWorkedPerTeamMember": {
             "1": "4",
             "3": "1.5"
           }
         },
         {
-          "taskId": "12",
+          "taskId": "6",
           "taskName": "Requirements Analysis",
           "description": "Requirements Analysis for our project",
           "actualStartDate": "2018-11-15",
@@ -111,12 +125,222 @@
             "6": "2",
             "7": "4"
           }
+        },
+        {
+          "taskId": "7",
+          "taskName": "Assignment 2",
+          "description": "Writing the second assignment",
+          "actualStartDate": "2018-12-07",
+          "projectedCompletedDate": "2018-12-14",
+          "actualCompletedDate": "2018-12-13",
+          "hoursWorkedPerTeamMember": {
+            "2": "2.5",
+            "3": "4",
+            "5": "6.5",
+            "7": "5.5"
+          }
+        },
+        {
+          "taskId": "8",
+          "taskName": "Budget Project",
+          "description": "Create a budget for the project",
+          "actualStartDate": "2018-11-28",
+          "projectedCompletedDate": "2018-11-29",
+          "actualCompletedDate": "2018-11-29",
+          "hoursWorkedPerTeamMember": {
+            "1": "1",
+            "3": "1"
+          }
+        },
+        {
+          "taskId": "9",
+          "taskName": "System Design & Class Diagram",
+          "description": "Designing the system and creating a class diagram",
+          "actualStartDate": "2018-11-25",
+          "projectedCompletedDate": "2018-11-30",
+          "actualCompletedDate": "2018-12-02",
+          "hoursWorkedPerTeamMember": {
+            "1": "3",
+            "2": "2",
+            "5": "6"
+          }
+        },
+        {
+          "taskId": "10",
+          "taskName": "GanttChart Class",
+          "description": "Create a class with a Gantt Chart",
+          "actualStartDate": "2018-12-14",
+          "projectedCompletedDate": "2018-12-28",
+          "actualCompletedDate": "2019-01-03",
+          "hoursWorkedPerTeamMember": {
+            "3": "3",
+            "5": "4"
+          }
+        },
+        {
+          "taskId": "11",
+          "taskName": "Set up GitHub repository",
+          "description": "Setting up and managing Git Hub",
+          "actualStartDate": "2018-11-13",
+          "projectedCompletedDate": "2018-11-13",
+          "actualCompletedDate": "2018-11-13",
+          "hoursWorkedPerTeamMember": {
+            "3": "8",
+            "5": "1",
+            "7": "2"
+          }
+        },        {
+          "taskId": "12",
+          "taskName": "Java FX",
+          "description": "Research and implementation of Java FX",
+          "actualStartDate": "2018-12-10",
+          "projectedCompletedDate": "2018-12-22",
+          "actualCompletedDate": "2019-01-03",
+          "hoursWorkedPerTeamMember": {
+            "1": "4",
+            "2": "3"
+          }
+        },
+        {
+          "taskId": "13",
+          "taskName": "Exceptions for JSON",
+          "description": "Handling I/O exceptions related to JSON-file",
+          "actualStartDate": "2018-12-13",
+          "projectedCompletedDate": "2018-12-18",
+          "actualCompletedDate": "2018-12-18",
+          "hoursWorkedPerTeamMember": {
+            "6": "8",
+            "7": "10"
+          }
+        },
+        {
+          "taskId": "14",
+          "taskName": "Updating JSON file",
+          "description": "Updating the JSON-file with additional information",
+          "actualStartDate": "2018-11-29",
+          "projectedCompletedDate": "2019-01-10",
+          "actualCompletedDate": "2019-01-10",
+          "hoursWorkedPerTeamMember": {
+            "5": "1",
+            "6": "4"
+          }
+        },
+        {
+          "taskId": "15",
+          "taskName": "JSON Reader Class",
+          "description": "Creating a class that parses and instantiate objects out of information in our JSON-file",
+          "actualStartDate": "2018-11-20",
+          "projectedCompletedDate": "2018-12-14",
+          "actualCompletedDate": "2018-12-21",
+          "hoursWorkedPerTeamMember": {
+            "3": "1",
+            "5": "18",
+            "6": "39.5",
+            "7": "1"
+          }
+        },
+        {
+          "taskId": "16",
+          "taskName": "Menu Class",
+          "description": "Creating a class displaying a menu for the user",
+          "actualStartDate": "2018-12-13",
+          "projectedCompletedDate": "2018-12-21",
+          "actualCompletedDate": "2019-01-05",
+          "hoursWorkedPerTeamMember": {
+            "1": "2",
+            "2": "6",
+            "3": "4",
+            "5": "2"
+          }
+        },
+        {
+          "taskId": "17",
+          "taskName": "Output Class",
+          "description": "Creating a class for output",
+          "actualStartDate": "2018-12-13",
+          "projectedCompletedDate": "2018-12-29",
+          "actualCompletedDate": "2019-01-05",
+          "hoursWorkedPerTeamMember": {
+            "2": "13",
+            "3": "7"
+          }
+        },
+        {
+          "taskId": "18",
+          "taskName": "Project Class",
+          "description": "Develop a project class",
+          "actualStartDate": "2018-11-30",
+          "projectedCompletedDate": "2018-12-21",
+          "actualCompletedDate": "2019-01-05",
+          "hoursWorkedPerTeamMember": {
+            "1": "5.5",
+            "3": "13"
+          }
+        },
+        {
+          "taskId": "19",
+          "taskName": "Project Report",
+          "description": "Writing the Project Report",
+          "actualStartDate": "2018-12-18",
+          "projectedCompletedDate": "2019-01-11",
+          "actualCompletedDate": "2019-01-09",
+          "hoursWorkedPerTeamMember": {
+            "3": "7",
+            "5": "8",
+            "6": "9",
+            "7": "6"
+          }
+        },        {
+          "taskId": "20",
+          "taskName": "Create Google Drive folder",
+          "description": "Setting up a Google Drive",
+          "actualStartDate": "2018-11-29",
+          "projectedCompletedDate": "2018-11-29",
+          "actualCompletedDate": "2018-11-29",
+          "hoursWorkedPerTeamMember": {
+            "3": "0.5"
+          }
+        },
+        {
+          "taskId": "21",
+          "taskName": "Task Class",
+          "description": "Create a task class",
+          "actualStartDate": "2018-12-04",
+          "projectedCompletedDate": "2018-12-14",
+          "actualCompletedDate": "2018-12-26",
+          "hoursWorkedPerTeamMember": {
+            "3": "7"
+          }
+        },
+        {
+          "taskId": "22",
+          "taskName": "Team Contract",
+          "description": "Writing the Team Contract",
+          "actualStartDate": "2018-11-23",
+          "projectedCompletedDate": "2018-11-30",
+          "actualCompletedDate": "2018-11-30",
+          "hoursWorkedPerTeamMember": {
+            "1": "5",
+            "3": "5",
+            "6": "2"
+          }
+        },
+        {
+          "taskId": "23",
+          "taskName": "TeamMember Class",
+          "description": "Developing a class to hold Team Members",
+          "actualStartDate": "2018-12-04",
+          "projectedCompletedDate": "2018-12-18",
+          "actualCompletedDate": "2018-12-26",
+          "hoursWorkedPerTeamMember": {
+            "3": "2.5"
+          }
         }
       ],
       "riskList": [
         {
           "riskId": "1",
-          "riskName": "Usage of new technology - JSON, JAVA Swing",
+          "riskName": "Usage of new technology - JSON, JAVA Swing, Java FX",
           "probability": "0.2",
           "impact": "2"
         },
@@ -130,6 +354,18 @@
           "riskId": "3",
           "riskName": "Dividing the workload properly",
           "probability": "0.3",
+          "impact": "2"
+        },
+        {
+          "riskId": "4",
+          "riskName": "Miscommunication",
+          "probability": "0.4",
+          "impact": "1"
+        },
+        {
+          "riskId": "5",
+          "riskName": "Work in big group",
+          "probability": "0.5",
           "impact": "2"
         }
       ]

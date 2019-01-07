@@ -57,7 +57,7 @@ class Menu {
                     //Displays the project schedule as a ganttChart in a seperate frame
                     SwingUtilities.invokeLater(()->{
                         GanttChart ganttChart = new GanttChart(currentProject);
-                            ganttChart.setSize(800,400);
+                        ganttChart.setSize(1000,700);
                             ganttChart.setLocationRelativeTo(null);
 
                             //When the Ganttchart is closed, the system continues to run
