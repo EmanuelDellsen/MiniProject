@@ -2,3 +2,4 @@
 *.idea/
 *.out/
 *./.idea
+*.DS_Store
