@@ -16,7 +16,7 @@ You should be fine running this software from the terminal.
 
 ## Built with
 - [IntelliJ](https://www.jetbrains.com/idea/)
-- [JFreeCHart](http://www.jfree.org/jfreechart/)
+- [JFreeChart](http://www.jfree.org/jfreechart/)
 - [JSONSimple](https://code.google.com/archive/p/json-simple/)
 - [CommonLangs](https://commons.apache.org/proper/commons-lang/)
 
