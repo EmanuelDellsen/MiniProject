@@ -20,7 +20,7 @@ You should be fine running this software from the terminal.
 - [JSONSimple](https://code.google.com/archive/p/json-simple/)
 - [CommonLangs](https://commons.apache.org/proper/commons-lang/)
 
-# Authors
+## Authors
 - Niklas Möller
 - Emanuel Dellsén
 - Karl Westgårdh
@@ -29,5 +29,5 @@ You should be fine running this software from the terminal.
 - Thiago Olivia
 - Simon Johansson
 
-# Acknowledgments
+## Acknowledgments
 - [Benjamin Kanawega](https://kanagwa.com/)
