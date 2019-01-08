@@ -49,8 +49,8 @@
           "taskName": "Create Trello Workspace",
           "description": "We need a Trello workspace",
           "actualStartDate": "2018-11-12",
-          "projectedCompletedDate": "2018-11-12",
-          "actualCompletedDate": "2018-11-12",
+          "projectedCompletedDate": "2018-11-13",
+          "actualCompletedDate": "2018-11-13",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
@@ -60,8 +60,8 @@
           "taskName": "Create Slack Workspace",
           "description": "We need a Slack workspace",
           "actualStartDate": "2018-11-12",
-          "projectedCompletedDate": "2018-11-12",
-          "actualCompletedDate": "2018-11-12",
+          "projectedCompletedDate": "2018-11-13",
+          "actualCompletedDate": "2018-11-13",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
@@ -96,8 +96,8 @@
           "taskName": "Create Time Tracking Form",
           "description": "Set up of Google Time Tracking Form",
           "actualStartDate": "2018-11-27",
-          "projectedCompletedDate": "2018-11-27",
-          "actualCompletedDate": "2018-11-27",
+          "projectedCompletedDate": "2018-11-28",
+          "actualCompletedDate": "2018-11-28",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
@@ -182,8 +182,8 @@
           "taskName": "Set up GitHub repository",
           "description": "Setting up and managing Git Hub",
           "actualStartDate": "2018-11-13",
-          "projectedCompletedDate": "2018-11-13",
-          "actualCompletedDate": "2018-11-13",
+          "projectedCompletedDate": "2018-11-14",
+          "actualCompletedDate": "2018-11-14",
           "hoursWorkedPerTeamMember": {
             "3": "8",
             "5": "1",
@@ -296,8 +296,8 @@
           "taskName": "Create Google Drive folder",
           "description": "Setting up a Google Drive",
           "actualStartDate": "2018-11-29",
-          "projectedCompletedDate": "2018-11-29",
-          "actualCompletedDate": "2018-11-29",
+          "projectedCompletedDate": "2018-11-30",
+          "actualCompletedDate": "2018-11-30",
           "hoursWorkedPerTeamMember": {
             "3": "0.5"
           }
