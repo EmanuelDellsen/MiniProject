@@ -333,14 +333,26 @@
           "projectedCompletedDate": "2018-12-18",
           "actualCompletedDate": "2018-12-26",
           "hoursWorkedPerTeamMember": {
-            "3": "2.5"
+            "3": "2.5",
+          }
+        },
+         {
+          "taskId": "24",
+          "taskName": "Book study rooms",
+          "description": "Booking study rooms at Kuggen",
+          "actualStartDate": "2018-11-12",
+          "projectedCompletedDate": "2019-01-11",
+          "actualCompletedDate": "2019-01-11",
+          "hoursWorkedPerTeamMember": {
+            "1": "0.5"
+            "6": "1"
           }
         }
       ],
       "riskList": [
         {
           "riskId": "1",
-          "riskName": "Usage of new technology - JSON, JAVA Swing, Java FX",
+          "riskName": "Usage of external libraries",
           "probability": "0.2",
           "impact": "2"
         },
@@ -352,7 +364,7 @@
         },
         {
           "riskId": "3",
-          "riskName": "Dividing the workload properly",
+          "riskName": "Dividing the workload",
           "probability": "0.3",
           "impact": "2"
         },
