@@ -5,7 +5,7 @@ DIT092 - Mini Project: Team Programming - Team Duckies - Gothenburg University -
 Simple project management softWware that reads project data from JSON file and displays project information as schedule variance, cost variance, earned valued during project, risk matrix and project schedule.
 
 ## Getting started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 You should be fine running this software from the terminal. 
