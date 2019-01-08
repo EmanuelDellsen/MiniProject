@@ -32,7 +32,7 @@ public class Task {
 
     }
 
-    long returnTaskDurationInDays(){
+    public long returnTaskDurationInDays(){
 
         // returns the amount of days depending on if the task has been completed before or after the projected completed date
         if (this.actualCompletedDate.isAfter(projectedCompletedDate)){
@@ -104,6 +104,14 @@ public class Task {
 
     public void setProjectedCompletedDate(LocalDate projectedCompletedDate) {
         this.projectedCompletedDate = projectedCompletedDate;
+    }
+
+    public LocalDate getActualCompletedDate() {
+        return actualCompletedDate;
+    }
+
+    public void setActualCompletedDate(LocalDate actualCompletedDate) {
+        this.actualCompletedDate = actualCompletedDate;
     }
 }
 

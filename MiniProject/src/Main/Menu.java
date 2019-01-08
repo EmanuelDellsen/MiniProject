@@ -5,7 +5,6 @@ import JFreeCharts.GanttChart;
 import Output.Output;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.Scanner;
 
 class Menu {
@@ -35,8 +34,14 @@ class Menu {
         int option;
 
         do {
+            //Makes sure the menu is not displayed directly after displayed feature
+            currentOutput.displayMessage("----------------------------");
+            currentOutput.displayMessage("Press ENTER to display menu");
+            sc.nextLine();
+
             currentOutput.displayMenu(menuOptions);
             currentOutput.displayMessage("Select an option...");
+
             while (!sc.hasNextInt()){
                 String input = sc.next();
                 currentOutput.displayMessage(String.format("\"%s\" is not a valid option.\n",input));
@@ -52,19 +57,25 @@ class Menu {
                     //Displays the project schedule as a ganttChart in a seperate frame
                     SwingUtilities.invokeLater(()->{
                         GanttChart ganttChart = new GanttChart(currentProject);
-                            ganttChart.setSize(800,400);
+                        ganttChart.setSize(1000,700);
                             ganttChart.setLocationRelativeTo(null);
 
                             //When the Ganttchart is closed, the system continues to run
                             ganttChart.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                             ganttChart.setVisible(true);
                     });
+
+                    sc.nextLine();
                     break;
                 case PROJECT_VARIANCE:
                     currentOutput.displayProjectVariance(currentProject);
+
+                    sc.nextLine();
                     break;
                 case RISK_MATRIX:
                     currentOutput.displayRiskMatrix(currentProject);
+
+                    sc.nextLine();
                     break;
                 case TASKS_BY_MEMBER:
 
@@ -85,9 +96,13 @@ class Menu {
                         }
 
                     } while (caseIsActive);
+
+                    sc.nextLine();
                     break;
                 case HOURS_BY_MEMBER:
                     currentOutput.displayHoursPerTeamMember(currentProject);
+
+                    sc.nextLine();
                     break;
                 case EXIT_PROGRAM:
                     currentOutput.displayMessage("See you soon!");
