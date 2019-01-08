@@ -11,17 +11,21 @@ These instructions will get you a copy of the project up and running on your loc
 You should be fine running this software from the terminal. 
 
 ### Installing
-1. Clone repository / download ZIP
+1. Clone repository / download ZIP to desktop or other directory
 2. Open Intellj
-3. File 
-4. New
-5. Module from existing sources
-6. Select your cloned repository / unzipped file
-7. Select "Create module from existing sources" -> press next
-8. If there are source files from the file you selected they will be chosen otherwise make sure the previous steps are done correctly -> press next
-9. Choose the libraries that are displayed to your right (this is to make sure the code runs as expected) -> Next
-10. The folder "MiniProject" should be chosen -> Next
-11. Finish
+3. Click "File"
+4. Click "New"
+5. Click "Project from existing sources"
+5. Select folder for the downloaded files (Example: C:\Users\Karl Douglas\Documents\MiniProject-master) 
+6. Click "OK"
+7. Choose "Create project from existing sources"
+8. Click "Next" 
+9. Click "Next" (Project name will be MiniProject as default)
+10. Click "Next" (source files will be selected from miniproject\src)
+11. Click "Next" (external libraries will be imported)
+12. Click "Next"
+
+Project should now be able to run from Main.java
 
 ## Built with
 - [IntelliJ](https://www.jetbrains.com/idea/)
