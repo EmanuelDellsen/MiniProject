@@ -16,7 +16,7 @@ You should be fine running this software from the terminal.
 3. Click "File"
 4. Click "New"
 5. Click "Project from existing sources"
-5. Select folder for the downloaded files (Example: C:\Users\Karl Douglas\Documents\MiniProject-master) 
+5. Select folder for the downloaded files (Example: C:\Users\Karl Douglas\Documents\MiniProject-master\MiniProject) 
 6. Click "OK"
 7. Choose "Create project from existing sources"
 8. Click "Next" 
