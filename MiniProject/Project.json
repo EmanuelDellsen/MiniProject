@@ -345,7 +345,7 @@
           "projectedCompletedDate": "2019-01-11",
           "actualCompletedDate": "2019-01-11",
           "hoursWorkedPerTeamMember": {
-            "1": "0.5"
+            "1": "0.5",
             "6": "1"
           }
         }
