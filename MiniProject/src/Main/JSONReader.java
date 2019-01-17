@@ -23,7 +23,7 @@ class JSONReader {
 
     //creating a jsonObject to use for parsing the information from the local JSON-file
 
-    private JSONObject createJSONObject() throws ParseException, IOException {
+    private JSONObject createJSONObject() throws ParseException, IOException, JSONException{
         JSONParser parser = new JSONParser();
         Object object = parser.parse(new FileReader("Project.json"));
         JSONObject jsonObject = (JSONObject) object;
@@ -33,7 +33,7 @@ class JSONReader {
 
     //Method to create an array of projects found in the JSON-file and returning it to the class "Program"
 
-    List<Project> createProjects() throws IOException, ParseException {
+    List<Project> createProjects() throws IOException, ParseException, JSONException {
 
         List<Project> arrayListOfProjects = new ArrayList<>();
 
@@ -139,7 +139,7 @@ class JSONReader {
 
     //The method that the createProjects() method calls to read through the JSON and parse the values found from the keys provided
 
-    private List<Task> createTask(JSONArray taskList) throws IOException, ParseException {
+    private List<Task> createTask(JSONArray taskList){
 
         List<Task> arrayListOfTasks = new ArrayList<>();
         Iterator taskIterator = taskList.iterator();

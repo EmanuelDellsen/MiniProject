@@ -8,8 +8,8 @@ public class Main {
 
         try{
             newProgram.run();
-        } catch (Exception exception){
-            exception.getMessage();
+        } catch (Exception e){
+            e.getMessage();
         }
     }
 }
