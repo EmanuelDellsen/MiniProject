@@ -3,7 +3,7 @@ package Main;
 public class JSONException extends RuntimeException {
 
     public JSONException(){
-        super("This is a default message, printing from JSONException method");
+        super("Something went wrong. Please try again");
     }
 
     JSONException(String message){
