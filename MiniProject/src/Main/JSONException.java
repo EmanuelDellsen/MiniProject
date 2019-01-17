@@ -8,6 +8,8 @@ public class JSONException extends RuntimeException {
 
     JSONException(String message){
         super(message);
+
+        System.out.println(message);
     }
 
 }
