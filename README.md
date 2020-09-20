@@ -36,7 +36,6 @@ Project should now be able to run from Main.java
 ## Authors
 - Niklas Möller
 - Emanuel Dellsén
-- Karl Westgårdh
 - Clemens Lans
 - Nafen Haj Ahmed
 - Thiago Olivia
